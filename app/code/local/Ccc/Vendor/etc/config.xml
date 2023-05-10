@@ -1,0 +1,86 @@
+<config>
+    <modules>
+        <Ccc_Vendor>
+            <version>1.0.0.0</version>                
+        </Ccc_Vendor>
+    </modules>
+    <frontend>
+        <routers>
+            <vendor>
+                <use>standard</use>
+                <args>
+                    <module>Ccc_Vendor</module>
+                    <frontName>vendor</frontName>
+                </args>
+            </vendor>
+        </routers>
+        <layout>
+            <updates>
+                <vendor>
+                    <file>vendor.xml</file>
+                </vendor>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <models>
+            <vendor>
+                <class>Ccc_Vendor_Model</class>
+                <resourceModel>vendor_resource</resourceModel>
+            </vendor>
+            <vendor_resource>
+                <class>Ccc_Vendor_Model_Resource</class>
+                <entities>
+                    <vendor>
+                        <table>vendor</table>
+                    </vendor>
+                    <vendor_address>
+                        <table>vendor_address</table>
+                    </vendor_address>  
+                </entities>
+            </vendor_resource>
+        </models>
+        <!-- <resources>
+             <vendor_setup>
+                 <setup>
+                 <module>Ccc_Vendor</module>
+                 </setup>
+             </vendor_setup>
+
+        <vendor_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </vendor_write>
+
+        <vendor_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </vendor_read>
+         </resources> -->
+        <blocks>
+            <vendor>
+                <class>Ccc_Vendor_Block</class>
+            </vendor>
+        </blocks>
+        <helpers>
+            <vendor>
+                <class>Ccc_Vendor_Helper</class>
+            </vendor>
+        </helpers>
+        
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <ccc_vendor before="Mage_Adminhtml">Ccc_Vendor_Adminhtml</ccc_vendor>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+  </admin>
+  
+</config>
