@@ -1,13 +1,13 @@
 <?php
  
-class Ccc_Vendor_Block_Adminhtml_Vendor_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Ccc_Product_Block_Adminhtml_Product_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
     public function __construct()
     {
         parent::__construct();
          
-        $this->setDefaultSort('vendor_id');
-        $this->setId('adminhtmlVendorGrid');
+        $this->setDefaultSort('product_id');
+        $this->setId('adminhtmlProductGrid');
         $this->setUseAjax(true);
         $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
@@ -16,7 +16,7 @@ class Ccc_Vendor_Block_Adminhtml_Vendor_Grid extends Mage_Adminhtml_Block_Widget
 
     protected function _getCollectionClass()
     {
-        return 'vendor/vendor_collection';
+        return 'product/product_collection';
     }
      
     protected function _prepareCollection()
@@ -30,47 +30,54 @@ class Ccc_Vendor_Block_Adminhtml_Vendor_Grid extends Mage_Adminhtml_Block_Widget
     protected function _prepareColumns()
     {
 
-        $this->addColumn('vendor_id',
+        $this->addColumn('product_id',
             array(
-                'header'=> $this->__('Vendor Id'),
+                'header'=> $this->__('Product Id'),
                 'align' =>'right',
                 'width' => '50px',
-                'index' => 'vendor_id'
+                'index' => 'product_id'
             )
         );
          
-        $this->addColumn('first_name',
+        $this->addColumn('name',
             array(
-                'header'=> $this->__('First name'),
-                'index' => 'first_name'
+                'header'=> $this->__('Name'),
+                'index' => 'name'
             )
         );    
 
-        $this->addColumn('last_name',
+        $this->addColumn('sku',
             array(
-                'header'=> $this->__('Last name'),
-                'index' => 'last_name'
+                'header'=> $this->__('Sku'),
+                'index' => 'sku'
             )
         );       
 
-        $this->addColumn('email',
+        $this->addColumn('cost',
             array(
-                'header'=> $this->__('Email'),
-                'index' => 'email'
+                'header'=> $this->__('Cost'),
+                'index' => 'cost'
             )
         );         
 
-        $this->addColumn('gender',
+        $this->addColumn('price',
             array(
-                'header'=> $this->__('Gender'),
-                'index' => 'gender'
+                'header'=> $this->__('Price'),
+                'index' => 'price'
             )
         );
 
-        $this->addColumn('mobile',
+        $this->addColumn('quantity',
             array(
-                'header'=> $this->__('Gender'),
-                'index' => 'mobile'
+                'header'=> $this->__('Quantity'),
+                'index' => 'quantity'
+            )
+        );
+
+        $this->addColumn('description',
+            array(
+                'header'=> $this->__('Description'),
+                'index' => 'description'
             )
         );
 
@@ -81,10 +88,17 @@ class Ccc_Vendor_Block_Adminhtml_Vendor_Grid extends Mage_Adminhtml_Block_Widget
             )
         );
 
-        $this->addColumn('company',
+        $this->addColumn('color',
             array(
-                'header'=> $this->__('Company'),
-                'index' => 'company'
+                'header'=> $this->__('Color'),
+                'index' => 'color'
+            )
+        );
+
+        $this->addColumn('material',
+            array(
+                'header'=> $this->__('Material'),
+                'index' => 'material'
             )
         );
 
@@ -104,13 +118,13 @@ class Ccc_Vendor_Block_Adminhtml_Vendor_Grid extends Mage_Adminhtml_Block_Widget
 
         $this->addColumn('action',
             array(
-                'header'    =>  Mage::helper('vendor')->__('Action'),
+                'header'    =>  Mage::helper('product')->__('Action'),
                 'width'     => '100',
                 'type'      => 'action',
                 'getter'    => 'getId',
                 'actions'   => array(
                     array(
-                        'caption'   => Mage::helper('vendor')->__('Edit'),
+                        'caption'   => Mage::helper('product')->__('Edit'),
                         'url'       => array('base'=> '*/*/edit'),
                         'field'     => 'id'
                     )
@@ -121,20 +135,20 @@ class Ccc_Vendor_Block_Adminhtml_Vendor_Grid extends Mage_Adminhtml_Block_Widget
                 'is_system' => true,
         ));
 
-        $this->addExportType('*/*/exportCsv', Mage::helper('vendor')->__('CSV'));
-        $this->addExportType('*/*/exportXml', Mage::helper('vendor')->__('Excel XML'));
+        $this->addExportType('*/*/exportCsv', Mage::helper('product')->__('CSV'));
+        $this->addExportType('*/*/exportXml', Mage::helper('product')->__('Excel XML'));
         return parent::_prepareColumns();
     }
 
     protected function _prepareMassaction()
     {
-        $this->setMassactionIdField('vendor_id');
-        $this->getMassactionBlock()->setFormFieldName('vendor_id');
+        $this->setMassactionIdField('product_id');
+        $this->getMassactionBlock()->setFormFieldName('product_id');
 
         $this->getMassactionBlock()->addItem('delete', array(
-             'label'    => Mage::helper('vendor')->__('Delete'),
+             'label'    => Mage::helper('product')->__('Delete'),
              'url'      => $this->getUrl('*/*/massDelete'),
-             'confirm'  => Mage::helper('vendor')->__('Are you sure?')
+             'confirm'  => Mage::helper('product')->__('Are you sure?')
         ));
 
         return $this;
