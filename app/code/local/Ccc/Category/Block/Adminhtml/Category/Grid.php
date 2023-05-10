@@ -9,7 +9,7 @@ class Ccc_Category_Block_Adminhtml_Category_Grid extends Mage_Adminhtml_Block_Wi
         $this->setDefaultSort('category_id');
         $this->setId('cdminhtmlCategoryGrid');
         $this->setUseAjax(true);
-        $this->setDefaultDir('asc');
+        $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
 
     }
