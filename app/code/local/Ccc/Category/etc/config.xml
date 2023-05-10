@@ -1,0 +1,82 @@
+<config>
+    <modules>
+        <Ccc_Category>
+            <version>1.0.0.0</version>                
+        </Ccc_Category>
+    </modules>
+    <frontend>
+        <routers>
+            <category>
+                <use>standard</use>
+                <args>
+                    <module>Ccc_Category</module>
+                    <frontName>category</frontName>
+                </args>
+            </category>
+        </routers>
+    </frontend>
+    <global>
+        <models>
+            <category>
+                <class>Ccc_Category_Model</class>
+                <resourceModel>category_resource</resourceModel>
+            </category>
+            <category_resource>
+                <class>Ccc_Category_Model_Resource</class>
+                <entities>
+                    <category>
+                        <table>category</table>
+                    </category>
+                </entities>
+            </category_resource>
+        </models>
+        <!-- <resources>
+             <category_setup>
+                 <setup>
+                 <module>Ccc_Category</module>
+                 </setup>
+             </category_setup>
+
+        <category_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </category_write>
+
+        <category_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </category_read>
+         </resources> -->
+        <blocks>
+            <category>
+                <class>Ccc_Category_Block</class>
+            </category>
+        </blocks>
+        <helpers>
+            <category>
+                <class>Ccc_Category_Helper</class>
+            </category>
+        </helpers>
+        
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <ccc_category before="Mage_Adminhtml">Ccc_Category_Adminhtml</ccc_category>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+  </admin>
+  <layout>
+      <updates>
+        <category>
+          <file>category.xml</file>
+        </category>
+      </updates>
+    </layout>
+</config>
