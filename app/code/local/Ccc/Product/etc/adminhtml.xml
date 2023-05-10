@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+   <menu>
+        <product translate="title" module="product">
+            <title>Products</title>
+            <sort_order>10</sort_order>
+            <children>
+                <manage translate="title" module="product">
+                    <title>Manage Products</title>
+                    <action>adminhtml/product/index</action>
+                    <sort_order>0</sort_order>
+                </manage>
+            </children>
+         </product>
+    </menu>
+    <acl>
+      <resources>
+        <all>
+          <title>Allow Everything</title>
+        </all>
+        <admin>
+            <children>
+                <product translate="title" module="product">
+                <title>product</title>
+                <sort_order>1000</sort_order>
+                <children>
+                <productbackend translate="title">
+                    <title>Manage Products</title>
+                </productbackend>
+                </children>
+            </product>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+</config>
