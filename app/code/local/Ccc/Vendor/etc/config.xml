@@ -1,7 +1,7 @@
 <config>
     <modules>
         <Ccc_Vendor>
-            <version>1.0.0.0</version>                
+            <version>0.2.0</version>                
         </Ccc_Vendor>
     </modules>
     <frontend>
@@ -23,6 +23,46 @@
         </layout>
     </frontend>
     <global>
+        <resources>
+            <vendor_setup>
+                <setup>
+                    <module>Ccc_Vendor</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </vendor_setup>
+            <vendor_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </vendor_write>
+            <vendor_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </vendor_read>
+        </resources>
+        <resources>
+            <vendor_setup>
+                <setup>
+                    <module>Ccc_Vendor</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </vendor_setup>
+            <vendor_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </vendor_write>
+            <vendor_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </vendor_read>
+        </resources>
         <models>
             <vendor>
                 <class>Ccc_Vendor_Model</class>

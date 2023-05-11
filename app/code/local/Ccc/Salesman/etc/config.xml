@@ -1,7 +1,7 @@
 <config>
     <modules>
         <Ccc_Salesman>
-            <version>1.0.0.0</version>                
+            <version>0.3.0</version>                
         </Ccc_Salesman>
     </modules>
     <frontend>
@@ -42,7 +42,7 @@
                     <use>core_read</use>
                 </connection>
             </salesman_read>
-        </resources> 
+        </resources>
         <models>
             <salesman>
                 <class>Ccc_Salesman_Model</class>

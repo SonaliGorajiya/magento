@@ -41,14 +41,14 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Grid extends Mage_Adminhtml_Block_Wi
          
         $this->addColumn('first_name',
             array(
-                'header'=> $this->__('First name'),
+                'header'=> $this->__('First Name'),
                 'index' => 'first_name'
             )
         );    
 
         $this->addColumn('last_name',
             array(
-                'header'=> $this->__('Last name'),
+                'header'=> $this->__('Last Name'),
                 'index' => 'last_name'
             )
         );       
@@ -69,7 +69,7 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Grid extends Mage_Adminhtml_Block_Wi
 
         $this->addColumn('mobile',
             array(
-                'header'=> $this->__('Gender'),
+                'header'=> $this->__('Mobile'),
                 'index' => 'mobile'
             )
         );
@@ -90,39 +90,39 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Grid extends Mage_Adminhtml_Block_Wi
 
         $this->addColumn('created_at',
             array(
-                'header'=> $this->__('Created At'),
+                'header'=> $this->__('Created Date'),
                 'index' => 'created_at'
             )
         );
 
         $this->addColumn('updated_at',
             array(
-                'header'=> $this->__('Updated At'),
+                'header'=> $this->__('Updated Date'),
                 'index' => 'updated_at'
             )
         );
 
-        $this->addColumn('action',
-            array(
-                'header'    =>  Mage::helper('salesman')->__('Action'),
-                'width'     => '100',
-                'type'      => 'action',
-                'getter'    => 'getId',
-                'actions'   => array(
-                    array(
-                        'caption'   => Mage::helper('salesman')->__('Edit'),
-                        'url'       => array('base'=> '*/*/edit'),
-                        'field'     => 'id'
-                    )
-                ),
-                'filter'    => false,
-                'sortable'  => false,
-                'index'     => 'stores',
-                'is_system' => true,
-        ));
+        // $this->addColumn('action',
+        //     array(
+        //         'header'    =>  Mage::helper('salesman')->__('Action'),
+        //         'width'     => '100',
+        //         'type'      => 'action',
+        //         'getter'    => 'getId',
+        //         'actions'   => array(
+        //             array(
+        //                 'caption'   => Mage::helper('salesman')->__('Edit'),
+        //                 'url'       => array('base'=> '*/*/edit'),
+        //                 'field'     => 'id'
+        //             )
+        //         ),
+        //         'filter'    => false,
+        //         'sortable'  => false,
+        //         'index'     => 'stores',
+        //         'is_system' => true,
+        // ));
 
-        $this->addExportType('*/*/exportCsv', Mage::helper('salesman')->__('CSV'));
-        $this->addExportType('*/*/exportXml', Mage::helper('salesman')->__('Excel XML'));
+        // $this->addExportType('*/*/exportCsv', Mage::helper('salesman')->__('CSV'));
+        // $this->addExportType('*/*/exportXml', Mage::helper('salesman')->__('Excel XML'));
         return parent::_prepareColumns();
     }
 

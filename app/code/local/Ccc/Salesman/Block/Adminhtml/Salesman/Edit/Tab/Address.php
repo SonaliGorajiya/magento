@@ -34,7 +34,7 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Edit_Tab_Address extends Mage_Adminh
 
         $fieldset->addField('zip_code', 'text', array(
             'name'      => 'address[zip_code]',
-            'label'     => Mage::helper('salesman')->__('zip code'),
+            'label'     => Mage::helper('salesman')->__('Zip Code'),
             'required'  => true,
         ));
 

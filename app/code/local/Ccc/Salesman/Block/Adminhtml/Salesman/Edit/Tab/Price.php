@@ -9,7 +9,7 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Edit_Tab_Price extends Mage_Adminhtm
         $this->setDefaultSort('entity_id');
         $this->setId('adminhtmlsalesmanPriceGrid');
         $this->setUseAjax(true);
-        $this->setDefaultDir('asc');
+        $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
 
     }
@@ -32,6 +32,23 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Edit_Tab_Price extends Mage_Adminhtm
 
     protected function _prepareColumns()
     {
+        $this->addColumn('entity_id',
+            array(
+                'header'=> $this->__('Entity Id'),
+                'align' =>'right',
+                'width' => '50px',
+                'index' => 'entity_id'
+            )
+        );
+
+        $this->addColumn('salesman_id',
+            array(
+                'header'=> $this->__('Salesman Id'),
+                'align' =>'right',
+                'width' => '50px',
+                'index' => 'salesman_id'
+            )
+        );
 
         $this->addColumn('product_id',
             array(
@@ -42,7 +59,7 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Edit_Tab_Price extends Mage_Adminhtm
             )
         );
 
-        $this->addColumn('name',
+       /* $this->addColumn('name',
             array(
                 'header'=> $this->__('Name'),
                 'align' =>'right',
@@ -68,7 +85,7 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Edit_Tab_Price extends Mage_Adminhtm
                 'index' => 'price'
             )
         );
-
+*/
         $this->addColumn('salesman_price',
             array(
                 'header'=> $this->__('Salesman Price'),
@@ -97,8 +114,8 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Edit_Tab_Price extends Mage_Adminhtm
                 'is_system' => true,
         ));
 
-        $this->addExportType('*/*/exportCsv', Mage::helper('salesman')->__('CSV'));
-        $this->addExportType('*/*/exportXml', Mage::helper('salesman')->__('Excel XML'));
+        // $this->addExportType('*/*/exportCsv', Mage::helper('salesman')->__('CSV'));
+        // $this->addExportType('*/*/exportXml', Mage::helper('salesman')->__('Excel XML'));
         return parent::_prepareColumns();
     }
 

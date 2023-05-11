@@ -16,6 +16,26 @@
         </routers>
     </frontend>
     <global>
+        <resources>
+            <category_setup>
+                <setup>
+                    <module>Ccc_Category</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </category_setup>
+            <category_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </category_write>
+            <category_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </category_read>
+        </resources>
         <models>
             <category>
                 <class>Ccc_Category_Model</class>
