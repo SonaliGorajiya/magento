@@ -1,145 +1,130 @@
 <?php
- 
 class Ccc_Salesman_Block_Adminhtml_Salesman_Edit_Tab_Price extends Mage_Adminhtml_Block_Widget_Grid
 {
+
     public function __construct()
     {
         parent::__construct();
-         
-        $this->setDefaultSort('entity_id');
-        $this->setId('adminhtmlsalesmanPriceGrid');
-        $this->setUseAjax(true);
+        $this->setId('salesmanAdminhtmlSalesmanPriceGrid');
+        $this->setDefaultSort('salesman_id');
         $this->setDefaultDir('DESC');
-        $this->setSaveParametersInSession(true);
-
     }
 
-    protected function _getCollectionClass()
-    {
-        return 'salesman/salesman_price_collection';
-    }
-     
     protected function _prepareCollection()
     {
-        // $query = "SELECT SP.*,P.* FROM `product` P LEFT JOIN `salesman_price` SP ON P.`product_id`=SP.`product_id` AND SP.`salesman_id` = {$id}";
-        // $salesmanPrices = Ccc::getModel('Salesman_Price')->fetchAll($query);
+        $collection = Mage::getModel('salesman/salesman_price')->getCollection();
+        $collection->getSelect()
+                    ->joinRight(
+                        array('p'=> 'product'),
+                        "p.product_id = main_table.product_id"
+                    );
 
-        $collection = Mage::getResourceModel($this->_getCollectionClass());//->getSelect()->joinLeft(array('sp' => 'salesman_price'),'`product`.`product_id` = `sp`.`product_id`');
         $this->setCollection($collection);
-         
+        Mage::register('salesman_price', $collection->getData());
+
         return parent::_prepareCollection();
     }
 
     protected function _prepareColumns()
     {
-        $this->addColumn('entity_id',
-            array(
-                'header'=> $this->__('Entity Id'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'entity_id'
-            )
-        );
+        $baseUrl = $this->getUrl();
 
-        $this->addColumn('salesman_id',
-            array(
-                'header'=> $this->__('Salesman Id'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'salesman_id'
-            )
-        );
-
-        $this->addColumn('product_id',
-            array(
-                'header'=> $this->__('Product Id'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'product_id'
-            )
-        );
-
-       /* $this->addColumn('name',
-            array(
-                'header'=> $this->__('Name'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'name'
-            )
-        );
-
-        $this->addColumn('sku',
-            array(
-                'header'=> $this->__('Sku'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'sku'
-            )
-        );
-
-        $this->addColumn('price',
-            array(
-                'header'=> $this->__('Price'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'price'
-            )
-        );
-*/
-        $this->addColumn('salesman_price',
-            array(
-                'header'=> $this->__('Salesman Price'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'salesman_price'
-            )
-        );
-         
-        $this->addColumn('action',
-            array(
-                'header'    =>  Mage::helper('salesman')->__('Action'),
-                'width'     => '100',
-                'type'      => 'action',
-                'getter'    => 'getId',
-                'actions'   => array(
-                    array(
-                        'caption'   => Mage::helper('salesman')->__('Remove'),
-                        'url'       => array('base'=> '*/*/delete'),
-                        'field'     => 'id'
-                    )
-                ),
-                'filter'    => false,
-                'sortable'  => false,
-                'index'     => 'stores',
-                'is_system' => true,
+        $this->addColumn('entity_id', array(
+            'header'    => Mage::helper('salesman')->__('Entity Id'),
+            'align'     => 'left',
+            'index'     => 'entity_id',
         ));
 
-        // $this->addExportType('*/*/exportCsv', Mage::helper('salesman')->__('CSV'));
-        // $this->addExportType('*/*/exportXml', Mage::helper('salesman')->__('Excel XML'));
+        $this->addColumn('product_id', array(
+            'header'    => Mage::helper('salesman')->__('Product Id'),
+            'align'     => 'left',
+            'index'     => 'product_id',
+        ));
+
+        $this->addColumn('name', array(
+            'header'    => Mage::helper('salesman')->__('Name'),
+            'align'     => 'left',
+            'index'     => 'name',
+        ));
+
+        $this->addColumn('sku', array(
+            'header'    => Mage::helper('salesman')->__('SKU'),
+            'align'     => 'left',
+            'index'     => 'sku',
+        ));
+
+        $this->addColumn('cost', array(
+            'header'    => Mage::helper('salesman')->__('Cost'),
+            'align'     => 'left',
+            'index'     => 'cost',
+        ));
+
+        $this->addColumn('price', array(
+            'header'    => Mage::helper('salesman')->__('Price'),
+            'align'     => 'left',
+            'index'     => 'price',
+        ));
+
+        $this->addColumn('salesman_price', array(
+            'header'    => Mage::helper('salesman')->__('Salesman Price'),
+            'align'     => 'left',
+            'index'     => 'salesman_price[]',
+            'type'      => 'input'
+        ));
+
+
         return parent::_prepareColumns();
     }
 
-    // protected function _prepareMassaction()
+    protected function _prepareMassaction()
+    {
+        $this->setMassactionIdField('salesman_price');
+        $this->getMassactionBlock()->setFormFieldName('product_id');
+        
+        $this->getMassactionBlock()->addItem('update', array(
+        'label'=> Mage::helper('salesman')->__('Update'),
+        'url'  => $this->getUrl('*/*/massUpdate', array('salesman_id' => $this->getRequest()->getParam('salesman_id'))),
+        'confirm' => Mage::helper('salesman')->__('Are you sure?')
+        ));
+
+        $this->getMassactionBlock()->addItem('delete', array(
+        'label'=> Mage::helper('salesman')->__('Delete'),
+        'url'  => $this->getUrl('*/*/massDelete', array('' => '')),
+        'confirm' => Mage::helper('salesman')->__('Are you sure?')
+        ));
+         
+        return $this;
+    }
+
+
+    // protected function _afterLoadCollection()
     // {
-    //     $this->setMassactionIdField('salesman_id');
-    //     $this->getMassactionBlock()->setFormFieldName('salesman_id');
-
-    //     $this->getMassactionBlock()->addItem('delete', array(
-    //          'label'    => Mage::helper('salesman')->__('Delete'),
-    //          'url'      => $this->getUrl('*/*/massDelete'),
-    //          'confirm'  => Mage::helper('salesman')->__('Are you sure?')
-    //     ));
-
-    //     return $this;
+    //     $this->getCollection()->walk('afterLoad');
+    //     parent::_afterLoadCollection();
     // }
 
-    public function getGridUrl()
-    {
-        return $this->getUrl('*/*/grid', array('_current'=> true));
-    }
+    // protected function _filterStoreCondition($collection, $column)
+    // {
+    //     if (!$value = $column->getFilter()->getValue()) {
+    //         return;
+    //     }
 
+    //     $this->getCollection()->addStoreFilter($value);
+    // }
+
+    /**
+     * Row click url
+     *
+     * @return string
+     */
     public function getRowUrl($row)
     {
-        return $this->getUrl('*/*/edit', array('id'=>$row->getId()));
+        return $this->getUrl('*/*/edit', array('salesman_id' => $row->getId()));
     }
 }
+
+
+
+
+
+    

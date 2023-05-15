@@ -26,13 +26,17 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Edit_Tab_Salesman extends Mage_Admin
             'required'  => true,
         ));
 
-        $fieldset->addField('gender', 'radios', array(
-            'label' => Mage::helper('salesman')->__('Gender'),
+        $fieldset->addField('gender', 'select', array(
+            'label'     => Mage::helper('salesman')->__('Gender'),
+            'title'     => Mage::helper('salesman')->__('Gender'),
             'name'      => 'salesman[gender]',
-            'values' => array(
-            array('value'=>'1','label'=>'Male'),
-            array('value'=>'2','label'=>'Female')),
+            'required'  => true,
+            'options'   => array(
+                '1' => Mage::helper('salesman')->__('Male'),
+                '2' => Mage::helper('salesman')->__('Female'),
+            ),
         ));
+
 
         $fieldset->addField('mobile', 'text', array(
             'name'      => 'salesman[mobile]',
