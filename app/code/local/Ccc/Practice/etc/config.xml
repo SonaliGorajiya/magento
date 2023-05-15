@@ -1,0 +1,82 @@
+<config>
+    <modules>
+        <Ccc_Practice>
+            <version>1.0.0.0</version>                
+        </Ccc_Practice>
+    </modules>
+    <frontend>
+        <routers>
+            <practice>
+                <use>standard</use>
+                <args>
+                    <module>Ccc_Practice</module>
+                    <frontName>practice</frontName>
+                </args>
+            </practice>
+        </routers>
+    </frontend>
+    <global>
+        <models>
+            <practice>
+                <class>Ccc_Practice_Model</class>
+                <resourceModel>practice_resource</resourceModel>
+            </practice>
+            <practice_resource>
+                <class>Ccc_Practice_Model_Resource</class>
+                <entities>
+                    <practice>
+                        <table>product</table>
+                    </practice>
+                </entities>
+            </practice_resource>
+        </models>
+        <!-- <resources>
+             <practice_setup>
+                 <setup>
+                 <module>Ccc_Practice</module>
+                 </setup>
+             </practice_setup>
+
+        <practice_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </practice_write>
+
+        <practice_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </practice_read>
+         </resources> -->
+        <blocks>
+            <practice>
+                <class>Ccc_Practice_Block</class>
+            </practice>
+        </blocks>
+        <helpers>
+            <practice>
+                <class>Ccc_Practice_Helper</class>
+            </practice>
+        </helpers>
+        
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <ccc_practice before="Mage_Adminhtml">Ccc_Practice_Adminhtml</ccc_practice>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+  </admin>
+  <layout>
+      <updates>
+        <practice>
+          <file>practice.xml</file>
+        </practice>
+      </updates>
+    </layout>
+</config>

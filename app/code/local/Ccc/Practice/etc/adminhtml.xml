@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+   <menu>
+        <practice translate="title" module="practice">
+            <title>Practices</title>
+            <sort_order>10</sort_order>
+            <children>
+                <manage translate="title" module="practice">
+                    <title>Manage Practices</title>
+                    <action>adminhtml/one/index</action>
+                    <sort_order>0</sort_order>
+                </manage>
+            </children>
+         </practice>
+    </menu>
+    <acl>
+      <resources>
+        <all>
+          <title>Allow Everything</title>
+        </all>
+        <admin>
+            <children>
+                <practice translate="title" module="practice">
+                <title>practice</title>
+                <sort_order>1000</sort_order>
+                <children>
+                <practicebackend translate="title">
+                    <title>Manage Practices</title>
+                </practicebackend>
+                </children>
+            </practice>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+</config>
