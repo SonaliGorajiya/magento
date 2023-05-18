@@ -7,7 +7,7 @@
             <children>
                 <manage translate="title" module="practice">
                     <title>Manage Practices</title>
-                    <action>adminhtml/one/index</action>
+                    <action>adminhtml/First/index</action>
                     <sort_order>0</sort_order>
                 </manage>
             </children>
