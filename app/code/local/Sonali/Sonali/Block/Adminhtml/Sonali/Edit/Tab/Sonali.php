@@ -8,13 +8,13 @@ class Sonali_Sonali_Block_Adminhtml_Sonali_Edit_Tab_Sonali extends Mage_Adminhtm
         $form = new Varien_Data_Form();
         $fieldset = $form->addFieldset('sonali_form',array('legend'=>Mage::helper('sonali')->__('Sonali Information')));
 
-        $fieldset->addField('first_name', 'text', array(
-            'name'      => 'sonali[first_name]',
-            'label'     => Mage::helper('sonali')->__('First Name'),
+        $fieldset->addField('name', 'text', array(
+            'name'      => 'sonali[name]',
+            'label'     => Mage::helper('sonali')->__('Name'),
             'required'  => true,
         ));
 
-        $fieldset->addField('last_name', 'text', array(
+        /*$fieldset->addField('last_name', 'text', array(
             'name'      => 'sonali[last_name]',
             'label'     => Mage::helper('sonali')->__('Last Name'),
             'required'  => true,
@@ -59,7 +59,7 @@ class Sonali_Sonali_Block_Adminhtml_Sonali_Edit_Tab_Sonali extends Mage_Adminhtm
             'name'      => 'sonali[company]',
             'label'     => Mage::helper('sonali')->__('Company'),
             'required'  => true,
-        ));
+        ));*/
 
         $this->setForm($form);
         $form->setValues($model->getData());

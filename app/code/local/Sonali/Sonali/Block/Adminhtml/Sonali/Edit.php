@@ -6,7 +6,7 @@ class Sonali_Sonali_Block_Adminhtml_Sonali_Edit extends Mage_Adminhtml_Block_Wid
 
     {
         parent::__construct();
-        $this->_objectId = 'sonali_id';
+        $this->_objectId = 'entity_id';
         $this->_blockGroup = 'sonali';
         $this->_controller = 'adminhtml_sonali';
 

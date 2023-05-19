@@ -70,7 +70,7 @@ class Sonali_Sonali_Adminhtml_SonaliController extends Mage_Adminhtml_Controller
             $model = Mage::getModel('sonali/sonali');
             $model->setData($sonali)->setId($this->getRequest()->getParam('id'));
             try {
-                if ($model->sonali_id != null) {
+                if ($model->entity_id != null) {
                     $model->updated_at = date('Y-m-d H:i:s');
                 } else {
                     $model->created_at = date('Y-m-d H:i:s');
@@ -138,7 +138,7 @@ class Sonali_Sonali_Adminhtml_SonaliController extends Mage_Adminhtml_Controller
 
     public function massDeleteAction()
     {
-        $sonaliIDs = $this->getRequest()->getParam('sonali_id');
+        $sonaliIDs = $this->getRequest()->getParam('entity_id');
         if(!is_array($sonaliIDs)) {
              Mage::getSingleton('adminhtml/session')->addError(Mage::helper('adminhtml')->__('Please select sonali(s).'));
         } else {

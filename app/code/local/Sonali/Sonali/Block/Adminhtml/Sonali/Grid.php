@@ -6,7 +6,7 @@ class Sonali_Sonali_Block_Adminhtml_Sonali_Grid extends Mage_Adminhtml_Block_Wid
     {
         parent::__construct();
          
-        $this->setDefaultSort('sonali_id');
+        $this->setDefaultSort('entity_id');
         $this->setId('adminhtmlSonaliGrid');
         $this->setUseAjax(true);
         $this->setDefaultDir('DESC');
@@ -30,23 +30,23 @@ class Sonali_Sonali_Block_Adminhtml_Sonali_Grid extends Mage_Adminhtml_Block_Wid
     protected function _prepareColumns()
     {
 
-        $this->addColumn('sonali_id',
+        $this->addColumn('entity_id',
             array(
                 'header'=> $this->__('Sonali Id'),
                 'align' =>'right',
                 'width' => '50px',
-                'index' => 'sonali_id'
+                'index' => 'entity_id'
             )
         );
          
-        $this->addColumn('first_name',
+        $this->addColumn('name',
             array(
-                'header'=> $this->__('First Name'),
-                'index' => 'first_name'
+                'header'=> $this->__('Name'),
+                'index' => 'name'
             )
         );    
 
-        $this->addColumn('last_name',
+        /*$this->addColumn('last_name',
             array(
                 'header'=> $this->__('Last Name'),
                 'index' => 'last_name'
@@ -86,7 +86,7 @@ class Sonali_Sonali_Block_Adminhtml_Sonali_Grid extends Mage_Adminhtml_Block_Wid
                 'header'=> $this->__('Company'),
                 'index' => 'company'
             )
-        );
+        );*/
 
         $this->addColumn('created_at',
             array(
@@ -128,8 +128,8 @@ class Sonali_Sonali_Block_Adminhtml_Sonali_Grid extends Mage_Adminhtml_Block_Wid
 
     protected function _prepareMassaction()
     {
-        $this->setMassactionIdField('sonali_id');
-        $this->getMassactionBlock()->setFormFieldName('sonali_id');
+        $this->setMassactionIdField('entity_id');
+        $this->getMassactionBlock()->setFormFieldName('entity_id');
 
         $this->getMassactionBlock()->addItem('delete', array(
              'label'    => Mage::helper('sonali')->__('Delete'),
