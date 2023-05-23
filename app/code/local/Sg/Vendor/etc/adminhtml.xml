@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+   <menu>
+        <vendor translate="title" module="vendor">
+            <title>Sg_Vendor</title>
+            <sort_order>10</sort_order>
+            <children>
+                <manage translate="title" module="vendor">
+                    <title>Manage Vendors</title>
+                    <action>adminhtml/vendor/index</action>
+                    <sort_order>0</sort_order>
+                </manage>
+            </children>
+         </vendor>
+    </menu>
+    <acl>
+      <resources>
+        <all>
+          <title>Allow Everything</title>
+        </all>
+        <admin>
+            <children>
+                <vendor translate="title" module="vendor">
+                <title>vendor</title>
+                <sort_order>1000</sort_order>
+                <children>
+                <vendorbackend translate="title">
+                    <title>Manage Vendors</title>
+                </vendorbackend>
+                </children>
+            </vendor>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+</config>
