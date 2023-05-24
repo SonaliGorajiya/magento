@@ -30,6 +30,17 @@
                 </entities>
             </practice_resource>
         </models>
+        <events>
+           <cms_page_prepare_save>
+            <observers>
+               <Ccc_Practice_Model_Observer>
+                   <type>singleton</type>
+                   <class>Ccc_Practice_Model_Observer</class>
+                   <method>saveCmsPageObserve</method>
+                </Ccc_Practice_Model_Observer>
+               </observers>
+          </cms_page_prepare_save>
+    </events>
         <!-- <resources>
              <practice_setup>
                  <setup>
@@ -52,11 +63,17 @@
         <blocks>
             <practice>
                 <class>Ccc_Practice_Block</class>
+                <rewrite>
+                    <adminhtml_practice>Ccc_Practice_Block_Adminhtml_NewPractice</adminhtml_practice>
+                </rewrite>
             </practice>
         </blocks>
         <helpers>
             <practice>
                 <class>Ccc_Practice_Helper</class>
+                <rewrite>
+                    <data>Ccc_Practice_Helper_NewData</data>
+                </rewrite>
             </practice>
         </helpers>
         
@@ -66,7 +83,8 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <ccc_practice before="Mage_Adminhtml">Ccc_Practice_Adminhtml</ccc_practice>
+                        <!-- <ccc_practice before="Mage_Adminhtml">Ccc_Practice_Adminhtml</ccc_practice> -->
+                        <ccc_practice before="Ccc_Product">Ccc_Practice</ccc_practice>
                     </modules>
                 </args>
             </adminhtml>
