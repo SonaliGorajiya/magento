@@ -1,23 +1,29 @@
-<?php 
-
-/**
- * 
- */
+<?php
 class Sonali_Sonali_Model_Sonali extends Mage_Core_Model_Abstract
 {
-    protected $_attributes;
-    const ENTITY = 'sonali';
-	protected function _construct()
-    {  
+	protected $_attributes;
+	const ENTITY = 'sonali';
+
+	public function _construct()
+	{
+		parent::_construct();
         $this->_init('sonali/sonali');
-    }  
+	}
 
-    public function reset()
+    public function checkInGroup($attributeId, $setId, $groupId)
     {
-        $this->setData(array());
-        $this->setOrigData();
-        $this->_attributes = null;
+        $resource = Mage::getSingleton('core/resource');
+        $readConnection = $resource->getConnection('core_read');
 
-        return $this;
+        $query = ' SELECT * FROM ' . $resource->getTableName('eav/entity_attribute')
+            . ' WHERE `attribute_id` =' . $attributeId
+            . ' AND `attribute_group_id` =' . $groupId
+            . ' AND `attribute_set_id` =' . $setId ;
+
+        $results = $readConnection->fetchRow($query);
+        if ($results) {
+            return true;
+        }
+        return false;
     }
 }
