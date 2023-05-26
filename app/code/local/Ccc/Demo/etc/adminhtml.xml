@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+   <menu>
+        <demo translate="title" module="demo">
+            <title>Demos</title>
+            <sort_order>10</sort_order>
+            <children>
+                <manage translate="title" module="demo">
+                    <title>Manage Demos</title>
+                    <action>adminhtml/demo/index</action>
+                    <sort_order>0</sort_order>
+                </manage>
+            </children>
+         </demo>
+    </menu>
+    <acl>
+      <resources>
+        <all>
+          <title>Allow Everything</title>
+        </all>
+        <admin>
+            <children>
+                <demo translate="title" module="demo">
+                <title>demo</title>
+                <sort_order>1000</sort_order>
+                <children>
+                <demobackend translate="title">
+                    <title>Manage Demos</title>
+                </demobackend>
+                </children>
+            </demo>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+</config>

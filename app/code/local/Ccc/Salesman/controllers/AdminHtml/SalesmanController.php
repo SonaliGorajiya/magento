@@ -16,6 +16,7 @@ class Ccc_Salesman_Adminhtml_SalesmanController extends Mage_Adminhtml_Controlle
     public function indexAction()
     {
         $this->loadLayout();
+        $this->_setActiveMenu('salesman/manage');
         $this->_title($this->__("Salesman Grid"));
         $this->_addContent($this->getLayout()->createBlock('salesman/adminhtml_salesman'));
         $this->renderLayout();
@@ -166,6 +167,17 @@ class Ccc_Salesman_Adminhtml_SalesmanController extends Mage_Adminhtml_Controlle
         }
 
         $this->_redirect('*/*/index');
+    }
+
+    public function massUpdateAction()
+    {
+        // $salesman_id = $this->getRequest()->getParam('id');
+        // $data = $this->getRequest()->getPost();
+        // echo "<pre>";
+        // print_r($data);
+        // print_r($salesman_id);
+        // die;
+        
     }
 
 }

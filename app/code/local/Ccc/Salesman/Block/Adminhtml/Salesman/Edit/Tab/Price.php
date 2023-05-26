@@ -35,6 +35,12 @@ class Ccc_Salesman_Block_Adminhtml_Salesman_Edit_Tab_Price extends Mage_Adminhtm
             'index'     => 'entity_id',
         ));
 
+         $this->addColumn('salesman_id', array(
+            'header'    => Mage::helper('salesman')->__('Salesman Id'),
+            'align'     => 'left',
+            'index'     => 'salesman_id',
+        ));
+
         $this->addColumn('product_id', array(
             'header'    => Mage::helper('salesman')->__('Product Id'),
             'align'     => 'left',

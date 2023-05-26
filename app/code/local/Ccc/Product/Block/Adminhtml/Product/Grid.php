@@ -21,6 +21,8 @@ class Ccc_Product_Block_Adminhtml_Product_Grid extends Mage_Adminhtml_Block_Widg
      
     protected function _prepareCollection()
     {
+        // echo "<pre>";
+        // print_r(Mage::getModel("product/product"));
         $collection = Mage::getResourceModel($this->_getCollectionClass());
         $this->setCollection($collection);
          
