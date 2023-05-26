@@ -37,7 +37,7 @@
             </brand_read>
         </resources>
         <fieldsets>
-            <catalog_product>
+            <catalog_eavmgmt>
                 <brand>
                     <brand_attribute>
                         <is_global>0</is_global>
@@ -49,7 +49,7 @@
                         <apply_to>simple,configurable,virtual,bundle,downloadable</apply_to>
                     </brand_attribute>
                 </brand>
-            </catalog_product>
+            </catalog_eavmgmt>
         </fieldsets>
         <models>
             <brand>

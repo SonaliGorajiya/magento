@@ -15,13 +15,7 @@ class Ccc_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Ac
 
     public function indexAction()
     {
-        // echo '<pre>';
-        // $model = Mage::getModel('vendor/vendor')->load(2);
-        // $model->name = 'vijay thakor';
-        // $model->email = 'v@gmial.com';
-        // $model->save();
-        // print_r($model->getCollection()->toArray());
-        // die();
+        
         $this->loadLayout();
         $this->_setActiveMenu('vendor/manage');
         $this->_title($this->__("vendor Grid"));

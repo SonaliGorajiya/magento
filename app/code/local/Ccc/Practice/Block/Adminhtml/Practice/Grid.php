@@ -154,10 +154,10 @@ class Ccc_Practice_Block_Adminhtml_Practice_Grid extends Mage_Adminhtml_Block_Wi
         return $this;
     }
 
-    public function getGridUrl()
-    {
-        return $this->getUrl('*/*/grid', array('_current'=> true));
-    }
+    // public function getGridUrl()
+    // {
+    //     return $this->getUrl('*/*/grid', array('_current'=> true));
+    // }
 
     public function getRowUrl($row)
     {
