@@ -9,7 +9,7 @@ class Ccc_Category_Block_Adminhtml_Category_Grid extends Mage_Adminhtml_Block_Wi
         $this->setDefaultSort('category_id');
         $this->setId('cdminhtmlCategoryGrid');
         $this->setUseAjax(true);
-        $this->setDefaultDir('asc');
+        $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
 
     }
@@ -32,7 +32,7 @@ class Ccc_Category_Block_Adminhtml_Category_Grid extends Mage_Adminhtml_Block_Wi
 
         $this->addColumn('category_id',
             array(
-                'header'=> $this->__('category Id'),
+                'header'=> $this->__('Category Id'),
                 'align' =>'right',
                 'width' => '50px',
                 'index' => 'category_id'
@@ -77,39 +77,39 @@ class Ccc_Category_Block_Adminhtml_Category_Grid extends Mage_Adminhtml_Block_Wi
 
         $this->addColumn('created_at',
             array(
-                'header'=> $this->__('Created At'),
+                'header'=> $this->__('Created Date'),
                 'index' => 'created_at'
             )
         );
 
         $this->addColumn('updated_at',
             array(
-                'header'=> $this->__('Updated At'),
+                'header'=> $this->__('Updated Date'),
                 'index' => 'updated_at'
             )
         );
 
-        $this->addColumn('action',
-            array(
-                'header'    =>  Mage::helper('category')->__('Action'),
-                'width'     => '100',
-                'type'      => 'action',
-                'getter'    => 'getId',
-                'actions'   => array(
-                    array(
-                        'caption'   => Mage::helper('category')->__('Edit'),
-                        'url'       => array('base'=> '*/*/edit'),
-                        'field'     => 'id'
-                    )
-                ),
-                'filter'    => false,
-                'sortable'  => false,
-                'index'     => 'stores',
-                'is_system' => true,
-        ));
+        // $this->addColumn('action',
+        //     array(
+        //         'header'    =>  Mage::helper('category')->__('Action'),
+        //         'width'     => '100',
+        //         'type'      => 'action',
+        //         'getter'    => 'getId',
+        //         'actions'   => array(
+        //             array(
+        //                 'caption'   => Mage::helper('category')->__('Edit'),
+        //                 'url'       => array('base'=> '*/*/edit'),
+        //                 'field'     => 'id'
+        //             )
+        //         ),
+        //         'filter'    => false,
+        //         'sortable'  => false,
+        //         'index'     => 'stores',
+        //         'is_system' => true,
+        // ));
 
-        $this->addExportType('*/*/exportCsv', Mage::helper('category')->__('CSV'));
-        $this->addExportType('*/*/exportXml', Mage::helper('category')->__('Excel XML'));
+        // $this->addExportType('*/*/exportCsv', Mage::helper('category')->__('CSV'));
+        // $this->addExportType('*/*/exportXml', Mage::helper('category')->__('Excel XML'));
         return parent::_prepareColumns();
     }
 

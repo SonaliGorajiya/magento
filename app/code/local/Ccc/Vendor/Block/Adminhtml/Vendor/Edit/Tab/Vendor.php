@@ -26,12 +26,15 @@ class Ccc_Vendor_Block_Adminhtml_Vendor_Edit_Tab_Vendor extends Mage_Adminhtml_B
             'required'  => true,
         ));
 
-        $fieldset->addField('gender', 'radios', array(
-            'label' => Mage::helper('vendor')->__('Gender'),
+        $fieldset->addField('gender', 'select', array(
+            'label'     => Mage::helper('vendor')->__('Gender'),
+            'title'     => Mage::helper('vendor')->__('Gender'),
             'name'      => 'vendor[gender]',
-            'values' => array(
-            array('value'=>'1','label'=>'Male'),
-            array('value'=>'2','label'=>'Female')),
+            'required'  => true,
+            'options'   => array(
+                '1' => Mage::helper('vendor')->__('Male'),
+                '2' => Mage::helper('vendor')->__('Female'),
+            ),
         ));
 
         $fieldset->addField('mobile', 'text', array(
