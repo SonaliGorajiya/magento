@@ -46,7 +46,6 @@ class Sonali_Sonali_Block_Adminhtml_Sonali_Edit_Tabs extends Mage_Adminhtml_Bloc
                 if ($defaultGroupId == 0 or $group->getIsDefault()) {
                     $defaultGroupId = $group->getId();
                 }
-
             }	
 
             foreach ($groupCollection as $group) {
