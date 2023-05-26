@@ -15,13 +15,7 @@ class Sonali_Sonali_Adminhtml_SonaliController extends Mage_Adminhtml_Controller
 
     public function indexAction()
     {
-        // echo '<pre>';
-        // $model = Mage::getModel('sonali/sonali')->load(2);
-        // $model->name = 'vijay thakor';
-        // $model->email = 'v@gmial.com';
-        // $model->save();
-        // print_r($model->getCollection()->toArray());
-        // die();
+       
         $this->loadLayout();
         $this->_setActiveMenu('sonali/manage');
         $this->_title($this->__("Sonali Grid"));
