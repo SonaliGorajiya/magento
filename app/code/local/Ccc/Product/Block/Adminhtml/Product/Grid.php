@@ -8,7 +8,7 @@ class Ccc_Product_Block_Adminhtml_Product_Grid extends Mage_Adminhtml_Block_Widg
          
         $this->setDefaultSort('product_id');
         $this->setId('adminhtmlProductGrid');
-        $this->setUseAjax(true);
+        // $this->setUseAjax(true);
         $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
 
@@ -156,10 +156,10 @@ class Ccc_Product_Block_Adminhtml_Product_Grid extends Mage_Adminhtml_Block_Widg
         return $this;
     }
 
-    public function getGridUrl()
-    {
-        return $this->getUrl('*/*/grid', array('_current'=> true));
-    }
+    // public function getGridUrl()
+    // {
+    //     return $this->getUrl('*/*/grid', array('_current'=> true));
+    // }
 
     public function getRowUrl($row)
     {

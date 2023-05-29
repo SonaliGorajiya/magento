@@ -8,7 +8,7 @@ class Ccc_Practice_Block_Adminhtml_Practice_Grid extends Mage_Adminhtml_Block_Wi
          
         $this->setDefaultSort('product_id');
         $this->setId('adminhtmlPracticeGrid');
-        $this->setUseAjax(true);
+        // $this->setUseAjax(true);
         $this->setDefaultDir('asc');
         $this->setSaveParametersInSession(true);
 
@@ -154,10 +154,10 @@ class Ccc_Practice_Block_Adminhtml_Practice_Grid extends Mage_Adminhtml_Block_Wi
         return $this;
     }
 
-    public function getGridUrl()
-    {
-        return $this->getUrl('*/*/grid', array('_current'=> true));
-    }
+    // public function getGridUrl()
+    // {
+    //     return $this->getUrl('*/*/grid', array('_current'=> true));
+    // }
 
     public function getRowUrl($row)
     {
