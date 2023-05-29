@@ -2,15 +2,15 @@
 
 class Sonali_Sonali_Adminhtml_SonaliController extends Mage_Adminhtml_Controller_Action
 {
-	public function indexAction(){
-		$this->loadLayout();
-		$this->_setActiveMenu('sonali');
-		$this->_title('Sonali Grid');
-		$this->_addContent($this->getLayout()->createBlock('sonali/adminhtml_sonali'));
-		$this->renderLayout();
-	}
+    public function indexAction(){
+        $this->loadLayout();
+        $this->_setActiveMenu('sonali');
+        $this->_title('Sonali Grid');
+        $this->_addContent($this->getLayout()->createBlock('sonali/adminhtml_sonali'));
+        $this->renderLayout();
+    }
 
-	protected function _initSonali()
+    protected function _initSonali()
     {
         $this->_title($this->__('Sonali'))
             ->_title($this->__('Manage Sonalis'));
@@ -31,12 +31,12 @@ class Sonali_Sonali_Adminhtml_SonaliController extends Mage_Adminhtml_Controller
         return $sonali;
     }
 
-	public function newAction(){
-		$this->_forward('edit');
-	}
+    public function newAction(){
+        $this->_forward('edit');
+    }
 
-	public function editAction(){ 
-		$sonaliId = (int) $this->getRequest()->getParam('id');
+    public function editAction(){ 
+        $sonaliId = (int) $this->getRequest()->getParam('id');
         $sonali   = $this->_initSonali();
         
         if ($sonaliId && !$sonali->getId()) {
@@ -54,9 +54,9 @@ class Sonali_Sonali_Adminhtml_SonaliController extends Mage_Adminhtml_Controller
         $this->getLayout()->getBlock('head')->setCanLoadExtJs(true);
 
         $this->renderLayout();
-	}
+    }
 
-	public function saveAction()
+    public function saveAction()
     {
         try {
             $setId = (int) $this->getRequest()->getParam('set');

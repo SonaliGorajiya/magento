@@ -1,6 +1,6 @@
 <?php
 
-class Ccc_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Action
+class Sg_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Action
 {
     protected function _isAllowed()
     {
@@ -15,9 +15,16 @@ class Ccc_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Ac
 
     public function indexAction()
     {
+        // echo '<pre>';
+        // $model = Mage::getModel('vendor/vendor')->load(2);
+        // $model->name = 'vijay thakor';
+        // $model->email = 'v@gmial.com';
+        // $model->save();
+        // print_r($model->getCollection()->toArray());
+        // die();
         $this->loadLayout();
         $this->_setActiveMenu('vendor/manage');
-        $this->_title($this->__("Vendor Grid"));
+        $this->_title($this->__("vendor Grid"));
         $this->_addContent($this->getLayout()->createBlock('vendor/adminhtml_vendor'));
         $this->renderLayout();
     }

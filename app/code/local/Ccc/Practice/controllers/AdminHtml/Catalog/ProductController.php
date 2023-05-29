@@ -1,9 +1,8 @@
 // Task : 19. How to overweite core or local controller action into local folder? Prepare 3 examples.
 
 <?php 
-require_once(Mage::getModuleDir('controllers','Ccc_Product').DS.'IndexController.php');
-// require_once('C:\xampp\htdocs\2023\magento\magento-mirror\app\code\local\Ccc\Product\controllers\IndexController.php');
-class Ccc_Practice_IndexController extends Ccc_Product_IndexController
+require_once(Mage::getModuleDir('controllers','Mage_Adminhtml').DS.'Catalog'.DS.'ProductController.php');
+class Ccc_Practice_Adminhtml_Catalog_ProductController extends Mage_Adminhtml_Catalog_ProductController
 {
     public function indexAction()
     {
