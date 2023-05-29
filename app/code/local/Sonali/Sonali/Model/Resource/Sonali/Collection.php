@@ -1,8 +1,9 @@
 <?php
-class Sonali_Sonali_Model_Resource_Sonali_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
+class Sonali_Sonali_Model_Resource_Sonali_Collection extends Mage_Catalog_Model_Resource_Collection_Abstract
 {
-    protected function _construct()
-    {  
-        $this->_init('sonali/sonali');
-    }  
+	public function __construct()
+	{
+		$this->setEntity('sonali');
+		parent::__construct();	
+	}
 }

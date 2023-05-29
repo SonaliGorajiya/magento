@@ -8,7 +8,7 @@ class Ccc_Demo_Block_Adminhtml_Demo_Grid extends Mage_Adminhtml_Block_Widget_Gri
          
         $this->setDefaultSort('attribute_id');
         $this->setId('adminhtmlDemoGrid');
-        $this->setUseAjax(true);
+        // $this->setUseAjax(true);
         $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
 
@@ -138,10 +138,10 @@ class Ccc_Demo_Block_Adminhtml_Demo_Grid extends Mage_Adminhtml_Block_Widget_Gri
         return $this;
     }
 
-    public function getGridUrl()
-    {
-        return $this->getUrl('*/*/grid', array('_current'=> true));
-    }
+    // public function getGridUrl()
+    // {
+    //     return $this->getUrl('*/*/grid', array('_current'=> true));
+    // }
 
     public function getRowUrl($row)
     {
