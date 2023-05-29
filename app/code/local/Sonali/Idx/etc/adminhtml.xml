@@ -2,11 +2,11 @@
 <config>
     <menu>
         <idx translate="title" module="idx">
-            <title>idxs</title>
+            <title>Idxs</title>
             <sort_order>10</sort_order>
             <children>
                 <idx translate="title" module="idx">
-                    <title>Manage idxs</title>
+                    <title>Manage Idxs</title>
                     <action>idx/adminhtml_idx/index</action>
                     <sort_order>0</sort_order>
                 </idx>

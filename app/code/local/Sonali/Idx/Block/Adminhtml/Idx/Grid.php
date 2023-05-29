@@ -3,8 +3,16 @@ class Sonali_Idx_Block_Adminhtml_Idx_Grid extends Mage_Adminhtml_Block_Widget_Gr
 {
     public function __construct()
     {
+        // parent::__construct();
+        // $this->setId('index');
+
         parent::__construct();
-        $this->setId('index');
+         
+        $this->setDefaultSort('product_id');
+        $this->setId('adminhtmlIdxGrid');
+        $this->setDefaultDir('ASC');
+        $this->setSaveParametersInSession(true);
+
     }
 
     protected function _prepareCollection()
@@ -74,6 +82,20 @@ class Sonali_Idx_Block_Adminhtml_Idx_Grid extends Mage_Adminhtml_Block_Widget_Gr
         ));
 
         return parent::_prepareColumns();
+    }
+
+    protected function _prepareMassaction()
+    {
+        $this->setMassactionIdField('product_id');
+        $this->getMassactionBlock()->setFormFieldName('product_id');
+
+        $this->getMassactionBlock()->addItem('delete', array(
+             'label'    => Mage::helper('idx')->__('Delete'),
+             'url'      => $this->getUrl('*/*/massDelete'),
+             'confirm'  => Mage::helper('idx')->__('Are you sure?')
+        ));
+
+        return $this;
     }
 
     public function getRowUrl($row)
