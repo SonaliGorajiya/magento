@@ -79,17 +79,7 @@ class Sonali_Eavmgmt_Block_Adminhtml_eavmgmt_Grid extends Mage_Eav_Block_Adminht
                 'width'     => '100',
                 'type'      => 'action',
                 'getter'    => 'getId',
-                'actions'   => array(
-                    array(
-                        'caption'   => Mage::helper('eavmgmt')->__('show options'),
-                        'url'       => array('base'=> '*/*/showoption'),
-                        'field'     => 'eavmgmt_id',
-                    )
-                ),
-                'filter'    => false,
-                'sortable'  => false,
-                'index'     => 'stores',
-                'is_system' => true,
+                'renderer'  => 'Sonali_Eavmgmt_Block_Adminhtml_Eavmgmt_Csv_ShowOption',
         ));
 
         return $this;
