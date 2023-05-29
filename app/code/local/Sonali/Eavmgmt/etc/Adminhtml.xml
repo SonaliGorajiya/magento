@@ -1,29 +1,30 @@
 <config>
-    <menu>
-        <eavmgmt translate="title" module="eavmgmt">
+	<menu>
+		<eavmgmt module="eavmgmt">
             <title>Eavmgmt</title>
             <sort_order>10</sort_order>
             <children>
-                <manageeavmgmt translate="title" module="eavmgmt">
-                    <title>Manage Eavmgmt</title>
-                    <action>eavmgmt/adminhtml_eavmgmt/index</action>
+                <manageeavmgmt module="eavmgmt">
+                    <title>Manage Eavmgmts</title>
+            		<action>eavmgmt/adminhtml_eavmgmt/index</action>
                     <sort_order>10</sort_order>
                 </manageeavmgmt>
-                </children>
+            </children>
         </eavmgmt>
-       </menu>
-       <acl>
+	</menu>
+    <acl>
         <resources>
+            <all>
+                <title>Allow Everthing</title>
+            </all>
             <admin>
                 <children>
-                    <eavmgmt translate="title" module="eavmgmt">
-                        <title>Eavmgmt</title>
-                        <sort_order>40</sort_order>
+                    <eavmgmt template="title" module="eavmgmt">
+                        <title>Categoies</title>
+                        <sort_order>100</sort_order>
                         <children>
-                             <manageeavmgmt translate="title" module="eavmgmt">
+                            <manageeavmgmt template="title" >
                                 <title>Manage eavmgmt</title>
-                                <action>eavmgmt/adminhtml_eavmgmt/index</action>
-                                <sort_order>10</sort_order>
                             </manageeavmgmt>
                         </children>
                     </eavmgmt>
@@ -32,7 +33,7 @@
                             <config>
                                 <children>
                                     <eavmgmt translate="title" module="eavmgmt">
-                                        <title>Eavmgmt Section</title>
+                                        <title>eavmgmts Section</title>
                                         <sort_order>50</sort_order>
                                     </eavmgmt>
                                 </children>

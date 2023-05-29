@@ -1,93 +1,104 @@
 <?php
-class Sonali_Eavmgmt_Block_Adminhtml_Eavmgmt_Grid extends Mage_Adminhtml_Block_Widget_Grid
+
+class Sonali_Eavmgmt_Block_Adminhtml_eavmgmt_Grid extends Mage_Eav_Block_Adminhtml_Attribute_Grid_Abstract
 {
-    public function __construct()
-    {
-        parent::__construct();
-        $this->setId('eavmgmtAdminhtmlEavmgmtGrid');
-        $this->setDefaultSort('attribute_id');
-        $this->setDefaultDir('ASC');
-    }
+    // public function __construct()
+    // {
+    //     parent::__construct();
+    //     $this->setId('eavmgmtAdminhtmleavmgmtGrid');
+    //     $this->setDefaultSort('eavmgmt_id');
+    //     $this->setDefaultDir('ASC');
+    // }
 
-    protected function _prepareMassaction()
+   protected function _prepareCollection()
     {
-        $this->setMassactionIdField('attribute_id');
-        $this->getMassactionBlock()->setFormFieldName('attribute_id');
-         
-        $this->getMassactionBlock()->addItem('delete', array(
-        'label'=> Mage::helper('eavmgmt')->__('Delete'),
-        'url'  => $this->getUrl('*/*/massDelete', array('' => '')),
-        'confirm' => Mage::helper('eavmgmt')->__('Are you sure?')
-        ));
-         
-        return $this;
-    }
-    
-    protected function _prepareCollection()
-    {
-        $collection = Mage::getModel('eavmgmt/eavmgmt')->getCollection();
-        
+        $collection = Mage::getResourceModel('eavmgmt/eavmgmt_collection');
+        /* @var $collection Mage_Cms_Model_Mysql4_Page_Collection */
         $this->setCollection($collection);
-
         return parent::_prepareCollection();
+
     }
 
     protected function _prepareColumns()
     {
+        parent::_prepareColumns();
         $baseUrl = $this->getUrl();
 
-        $this->addColumn('attribute_id',
-            array(
-                'header'=> $this->__('Eavmgmt Id'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'attribute_id'
-            )
-        );
+         $this->addColumnAfter('is_visible', array(
+            'header'=>Mage::helper('eavmgmt')->__('Visible'),
+            'sortable'=>true,
+            'index'=>'is_visible_on_front',
+            'type' => 'options',
+            'options' => array(
+                '1' => Mage::helper('eavmgmt')->__('Yes'),
+                '0' => Mage::helper('eavmgmt')->__('No'),
+            ),
+            'align' => 'center',
+        ), 'frontend_label');
 
-        $this->addColumn('entity_type_code',
-            array(
-                'header'=> $this->__('Entity Type'),
-                'index' => 'entity_type_code',
-            )
-        );  
-         
-        $this->addColumn('attribute_code',
-            array(
-                'header'=> $this->__('Attribute Code'),
-                'index' => 'attribute_code'
-            )
-        );    
+        $this->addColumnAfter('is_global', array(
+            'header'=>Mage::helper('eavmgmt')->__('Scope'),
+            'sortable'=>true,
+            'index'=>'is_global',
+            'type' => 'options',
+            'options' => array(
+                Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE =>Mage::helper('eavmgmt')->__('Store View'),
+                Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_WEBSITE =>Mage::helper('eavmgmt')->__('Website'),
+                Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL =>Mage::helper('eavmgmt')->__('Global'),
+            ),
+            'align' => 'center',
+        ), 'is_visible');
 
-        $this->addColumn('frontend_label',
-            array(
-                'header'=> $this->__('Attribute Name'),
-                'index' => 'frontend_label'
-            )
-        );       
+        $this->addColumn('is_searchable', array(
+            'header'=>Mage::helper('eavmgmt')->__('Searchable'),
+            'sortable'=>true,
+            'index'=>'is_searchable',
+            'type' => 'options',
+            'options' => array(
+                '1' => Mage::helper('eavmgmt')->__('Yes'),
+                '0' => Mage::helper('eavmgmt')->__('No'),
+            ),
+            'align' => 'center',
+        ), 'is_user_defined');
 
-        $this->addColumn('frontend_input',
-            array(
-                'header'=> $this->__('Input Type'),
-                'index' => 'frontend_input'
-            )
-        );         
+        $this->addColumnAfter('is_filterable', array(
+            'header'=>Mage::helper('eavmgmt')->__('Use in Layered Navigation'),
+            'sortable'=>true,
+            'index'=>'is_filterable',
+            'type' => 'options',
+            'options' => array(
+                '1' => Mage::helper('eavmgmt')->__('Filterable (with results)'),
+                '2' => Mage::helper('eavmgmt')->__('Filterable (no results)'),
+                '0' => Mage::helper('eavmgmt')->__('No'),
+            ),
+            'align' => 'center',
+        ), 'is_searchable');
 
-        $this->addColumn('backend_type',
-            array(
-                'header'=> $this->__('Backend Type'),
-                'index' => 'backend_type'
-            )
-        );
+        $this->addColumnAfter('is_comparable', array(
+            'header'=>Mage::helper('eavmgmt')->__('Comparable'),
+            'sortable'=>true,
+            'index'=>'is_comparable',
+            'type' => 'options',
+            'options' => array(
+                '1' => Mage::helper('eavmgmt')->__('Yes'),
+                '0' => Mage::helper('eavmgmt')->__('No'),
+            ),
+            'align' => 'center',
+        ), 'is_filterable');
 
-        $this->addColumn('source_model',
-            array(
-                'header'=> $this->__('Source Model'),
-                'index' => 'source_model'
-            )
-        );
+        $this->addColumnAfter('is_comparable', array(
+            'header'=>Mage::helper('eavmgmt')->__('Comparable'),
+            'sortable'=>true,
+            'index'=>'is_comparable',
+            'type' => 'options',
+            'options' => array(
+                '1' => Mage::helper('eavmgmt')->__('Yes'),
+                '0' => Mage::helper('eavmgmt')->__('No'),
+            ),
+            'align' => 'center',
+        ), 'is_filterable');
 
-        $this->addColumn('action',
+         $this->addColumn('action',
             array(
                 'header'    =>  Mage::helper('eavmgmt')->__('Action'),
                 'width'     => '100',
@@ -95,9 +106,9 @@ class Sonali_Eavmgmt_Block_Adminhtml_Eavmgmt_Grid extends Mage_Adminhtml_Block_W
                 'getter'    => 'getId',
                 'actions'   => array(
                     array(
-                        'caption'   => Mage::helper('eavmgmt')->__('Edit'),
-                        'url'       => array('base'=> '*/*/edit'),
-                        'field'     => 'id'
+                        'caption'   => Mage::helper('eavmgmt')->__('show options'),
+                        'url'       => array('base'=> '*/*/showoption'),
+                        'field'     => 'eavmgmt_id'
                     )
                 ),
                 'filter'    => false,
@@ -106,15 +117,38 @@ class Sonali_Eavmgmt_Block_Adminhtml_Eavmgmt_Grid extends Mage_Adminhtml_Block_W
                 'is_system' => true,
         ));
 
+
+
         $this->addExportType('*/*/exportCsv', Mage::helper('eavmgmt')->__('CSV'));
         $this->addExportType('*/*/exportXml', Mage::helper('eavmgmt')->__('Excel XML'));
 
-        return parent::_prepareColumns();
+        return $this;
+
     }
 
+    
     public function getRowUrl($row)
     {
-        return $this->getUrl('*/*/edit', array('attribute_id' => $row->getId()));
+        return $this->getUrl('*/*/edit', array('eavmgmt_id' => $row->getId()));
     }
+
+    protected function _prepareMassaction()
+    {
+        $this->setMassactionIdField('attribute_id');
+        $this->getMassactionBlock()->setFormFieldName('attribute_id');
+
+        $this->getMassactionBlock()->addItem('import_attribute', array(
+             'label'    => Mage::helper('eavmgmt')->__('Export'),
+             'url'      => $this->getUrl('*/*/selectedExport'),
+             'confirm'  => Mage::helper('eavmgmt')->__('Are you sure?')
+        ));
+
+        $this->getMassactionBlock()->addItem('import_attribute_options', array(
+             'label'    => Mage::helper('eavmgmt')->__('Export Options'),
+             'url'      => $this->getUrl('*/*/selectedExportOptions'),
+             'confirm'  => Mage::helper('eavmgmt')->__('Are you sure?')
+        ));
+        return $this;
+    }  
    
-}   
+}
