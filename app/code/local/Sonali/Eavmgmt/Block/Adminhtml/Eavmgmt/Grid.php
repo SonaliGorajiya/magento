@@ -16,7 +16,6 @@ class Sonali_Eavmgmt_Block_Adminhtml_eavmgmt_Grid extends Mage_Eav_Block_Adminht
         /* @var $collection Mage_Cms_Model_Mysql4_Page_Collection */
         $this->setCollection($collection);
         return parent::_prepareCollection();
-
     }
 
     protected function _prepareColumns()

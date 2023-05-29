@@ -10,9 +10,6 @@ class Sonali_Eavmgmt_Block_Adminhtml_eavmgmt_Option extends Mage_Adminhtml_Block
         $this->setId('eavmgmtAdminhtmleavmgmtGrid');
         $this->setDefaultSort('eavmgmt_id');
         $this->setDefaultDir('ASC');
-        // $this->removeColumn();
-       // echo "<pre>";
-       // print_r(get_class_methods($this));
     }
 
    protected function _prepareCollection()
