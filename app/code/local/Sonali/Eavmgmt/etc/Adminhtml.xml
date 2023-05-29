@@ -1,0 +1,47 @@
+<config>
+	<menu>
+		<eavmgmt module="eavmgmt">
+            <title>Eavmgmt</title>
+            <sort_order>10</sort_order>
+            <children>
+                <manageeavmgmt module="eavmgmt">
+                    <title>Manage Eavmgmts</title>
+            		<action>eavmgmt/adminhtml_eavmgmt/index</action>
+                    <sort_order>10</sort_order>
+                </manageeavmgmt>
+            </children>
+        </eavmgmt>
+	</menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everthing</title>
+            </all>
+            <admin>
+                <children>
+                    <eavmgmt template="title" module="eavmgmt">
+                        <title>Categoies</title>
+                        <sort_order>100</sort_order>
+                        <children>
+                            <manageeavmgmt template="title" >
+                                <title>Manage eavmgmt</title>
+                            </manageeavmgmt>
+                        </children>
+                    </eavmgmt>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <eavmgmt translate="title" module="eavmgmt">
+                                        <title>eavmgmts Section</title>
+                                        <sort_order>50</sort_order>
+                                    </eavmgmt>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

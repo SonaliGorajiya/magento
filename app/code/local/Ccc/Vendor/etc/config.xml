@@ -81,24 +81,6 @@
                 </entities>
             </vendor_resource>
         </models>
-        <!-- <resources>
-             <vendor_setup>
-                 <setup>
-                    <module>Ccc_Vendor</module>
-                 </setup>
-             </vendor_setup>
-        </resources> 
-        <vendor_write>
-            <connection>
-                <use>core_write</use>
-            </connection>
-        </vendor_write>
-
-        <vendor_read>
-            <connection>
-                <use>core_read</use>
-            </connection>
-        </vendor_read> -->
         <blocks>
             <vendor>
                 <class>Ccc_Vendor_Block</class>

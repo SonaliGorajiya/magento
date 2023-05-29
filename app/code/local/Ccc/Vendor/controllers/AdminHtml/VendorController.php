@@ -15,6 +15,7 @@ class Ccc_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Ac
 
     public function indexAction()
     {
+
         $this->loadLayout();
         $this->_setActiveMenu('vendor/manage');
         $this->_title($this->__("Vendor Grid"));
