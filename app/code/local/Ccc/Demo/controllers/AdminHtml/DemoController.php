@@ -15,13 +15,6 @@ class Ccc_Demo_Adminhtml_DemoController extends Mage_Adminhtml_Controller_Action
 
     public function indexAction()
     {
-        // echo '<pre>';
-        // $model = Mage::getModel('category/category')->load(2);
-        // $model->name = 'vijay thakor';
-        // $model->email = 'v@gmial.com';
-        // $model->save();
-        // print_r($model->getCollection()->toArray());
-        // die();
         $this->loadLayout();
         $this->_setActiveMenu('demo/manage');
         $this->_title($this->__("Demo Grid"));

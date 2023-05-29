@@ -24,7 +24,7 @@ class Ccc_Category_Adminhtml_CategoryController extends Mage_Adminhtml_Controlle
         // die();
         $this->loadLayout();
         $this->_setActiveMenu('category/manage');
-        $this->_title($this->__("category Grid"));
+        $this->_title($this->__("Category Grid"));
         $this->_addContent($this->getLayout()->createBlock('category/adminhtml_category'));
         $this->renderLayout();
     }

@@ -18,7 +18,7 @@ class Ccc_Product_Adminhtml_ProductController extends Mage_Adminhtml_Controller_
         
         $this->loadLayout();
         $this->_setActiveMenu('product/manage');
-        $this->_title($this->__("product Grid"));
+        $this->_title($this->__("Product Grid"));
         $this->_addContent($this->getLayout()->createBlock('product/adminhtml_product'));
         $this->renderLayout();
     }
