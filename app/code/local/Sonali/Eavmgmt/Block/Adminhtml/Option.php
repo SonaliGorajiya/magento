@@ -1,9 +1,12 @@
 <?php
 
 class Sonali_eavmgmt_Block_Adminhtml_Option extends Mage_Adminhtml_Block_Widget_Grid_Container
-{  
+{
+
+   
     public function __construct()
-    {     
+    {
+        
         $this->_blockGroup = 'eavmgmt';
         $this->_controller = 'adminhtml_eavmgmt';
         $this->_headerText = Mage::helper('eavmgmt')->__('Manage Eavmgmts');

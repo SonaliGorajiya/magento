@@ -24,7 +24,7 @@
                 <deprecatedNode>eavmgmt_mysql4</deprecatedNode>
                 <entities>
                     <eavmgmt>
-                        <table>eavmgmt</table>
+                        <table>eav_attribute</table>
                     </eavmgmt>
                 </entities>
             </eavmgmt_resource>
@@ -71,12 +71,5 @@
                 </args>
             </eavmgmt>
         </routers>
-         <layout>
-            <updates>
-                <eavmgmt>
-                    <file>eavmgmt.xml</file>
-                </eavmgmt>
-            </updates>
-        </layout>
     </admin>
 </config>

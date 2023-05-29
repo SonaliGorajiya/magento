@@ -23,7 +23,7 @@ class Sonali_Eavmgmt_Adminhtml_EavmgmtController extends Mage_Adminhtml_Controll
         $this->renderLayout();
     }
 
-    public function exportCsvAction()
+    public function massExportAction()
     {
         print_r($_POST);
         $fileName   ='attribute_'.date('Ymd_His').'.csv';
@@ -67,7 +67,6 @@ class Sonali_Eavmgmt_Adminhtml_EavmgmtController extends Mage_Adminhtml_Controll
     {
        
         $this->_title($this->__('Eavmgmt'))
-             // ->_title($this->__('Manage Eavmgmts'))
              ->_title($this->__('Manage Eavmgmts'));
         $this->loadLayout();
         $this->_addContent($this->getLayout()->createBlock('eavmgmt/Adminhtml_eavmgmt_Option'));

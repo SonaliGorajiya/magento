@@ -11,6 +11,12 @@ class Sonali_Eavmgmt_Block_Adminhtml_Eavmgmt_Csv extends Mage_Eav_Block_Adminhtm
         ));
 
         $this->addColumn('attribute_id', array(
+            'header'=>Mage::helper('eav')->__('Attribute Id'),
+            'sortable'=>true,
+            'index'=>'attribute_id',
+        ));
+
+        $this->addColumn('attribute_id', array(
             'header'=>Mage::helper('eav')->__('Attribute Type'),
             'sortable'=>true,
             'index'=>'attribute_id',

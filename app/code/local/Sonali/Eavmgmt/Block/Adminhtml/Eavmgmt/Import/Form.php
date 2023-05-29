@@ -27,6 +27,10 @@ class Sonali_Eavmgmt_Block_Adminhtml_Eavmgmt_Import_Form extends Mage_Adminhtml_
             'name' => 'description',
         ));
 
+
+
+        
+
         if ( Mage::getSingleton('adminhtml/session')->geteavmgmtData() )
         {
             $form->setValues(Mage::getSingleton('adminhtml/session')->geteavmgmtData());

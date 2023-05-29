@@ -27,8 +27,8 @@ class Sonali_Eavmgmt_Model_Resource_Eavmgmt_Collection extends Mage_Eav_Model_Re
          $this->getSelect()
             ->from(array('main_table' => $this->getResource()->getMainTable()), $retColumns)
             ->join(
-                array('additional_table' => $this->getTable('catalog/eav_attribute')),
-                'additional_table.attribute_id = main_table.attribute_id'
+                array('eet' => 'eav_entity_type'),
+                'eet.entity_type_id = main_table.entity_type_id'
                 );
         return $this;
     }
