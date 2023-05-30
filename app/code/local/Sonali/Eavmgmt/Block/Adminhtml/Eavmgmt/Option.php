@@ -12,7 +12,7 @@ class Sonali_Eavmgmt_Block_Adminhtml_eavmgmt_Option extends Mage_Adminhtml_Block
 
    protected function _prepareCollection()
     {
-        $id = $this->getRequest()->getParam('attribute_id');
+        $id = $this->getRequest()->getParam('attribute_id ');
         $collection = Mage::getModel('eav/entity_attribute_option')->getCollection();
         $collection->getSelect()
             ->join('eav_attribute', 'main_table.attribute_id = eav_attribute.attribute_id', 'attribute_code')
