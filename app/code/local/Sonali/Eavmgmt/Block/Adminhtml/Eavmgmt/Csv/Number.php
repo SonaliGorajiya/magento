@@ -4,7 +4,7 @@ class Sonali_Eavmgmt_Block_Adminhtml_Eavmgmt_Csv_Number extends Mage_Adminhtml_B
 {
 	public $index = 0;
 	
-	function render($row)
+	public function render($row)
 	{
 		$this->setIndex($this->getIndex()+1);
 		return $this->getIndex();

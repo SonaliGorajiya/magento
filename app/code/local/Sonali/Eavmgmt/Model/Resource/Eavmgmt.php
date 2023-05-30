@@ -4,6 +4,6 @@ class Sonali_Eavmgmt_Model_Resource_Eavmgmt extends Mage_Core_Model_Resource_Db_
 {
     protected function _construct()
     {  
-        $this->_init('eavmgmt/eavmgmt', 'eavmgmt_id');
+        $this->_init('eav_attribute/eav_attribute', 'attribute_id');
     }  
 }

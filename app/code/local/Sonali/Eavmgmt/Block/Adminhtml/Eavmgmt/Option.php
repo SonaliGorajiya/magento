@@ -2,35 +2,29 @@
 
 class Sonali_Eavmgmt_Block_Adminhtml_eavmgmt_Option extends Mage_Adminhtml_Block_Widget_Grid
 {
-
-
     public function __construct()
     {
         parent::__construct();
         $this->setId('eavmgmtAdminhtmleavmgmtGrid');
         $this->setDefaultSort('eavmgmt_id');
         $this->setDefaultDir('ASC');
-        // $this->removeColumn();
-       // echo "<pre>";
-       // print_r(get_class_methods($this));
     }
 
    protected function _prepareCollection()
     {
-       
-            $id = $this->getRequest()->getParam('eavmgmt_id');
-           $collection = Mage::getModel('eav/entity_attribute_option')->getCollection();
-           $collection->getSelect() ->join('eav_attribute', 'main_table.attribute_id = eav_attribute.attribute_id', 'attribute_code')
-            // ->addFieldToFilter('main_table.attribute_id', array('attribute_id'=>$id));
+        $id = $this->getRequest()->getParam('attribute_id ');
+        $collection = Mage::getModel('eav/entity_attribute_option')->getCollection();
+        $collection->getSelect()
+            ->join('eav_attribute', 'main_table.attribute_id = eav_attribute.attribute_id', 'attribute_code')
             ->where('main_table.attribute_id = ?',$id);
+
         $this->setCollection($collection);
         return parent::_prepareCollection();
-
     }
 
     protected function _prepareColumns()
     {
-          $this->addColumn('option_id', array(
+        $this->addColumn('option_id', array(
             'header' => Mage::helper('eavmgmt')->__('Option ID'),
             'index' => 'option_id',
         ));
