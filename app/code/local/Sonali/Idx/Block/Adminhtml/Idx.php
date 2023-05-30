@@ -5,7 +5,7 @@ class Sonali_Idx_Block_Adminhtml_Idx extends Mage_Adminhtml_Block_Widget_Grid_Co
     {
         $this->_blockGroup = 'idx';
         $this->_controller = 'adminhtml_idx';
-        $this->_headerText = Mage::helper('idx')->__('Manage Salesmen');
+        $this->_headerText = Mage::helper('idx')->__('Import Product');
         parent::__construct();
         $this->_removeButton('add');
     }

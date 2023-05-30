@@ -18,6 +18,7 @@ class Sonali_Idx_Adminhtml_IdxController extends Mage_Adminhtml_Controller_Actio
         } catch (Exception $e) {
             Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
         }
+        
         $this->_redirect('*/*/index');
     }
 
