@@ -32,7 +32,7 @@ class Sonali_Idx_Block_Adminhtml_Idx_Grid extends Mage_Adminhtml_Block_Widget_Gr
         ));
 
         $this->addColumn('sku', array(
-            'header'    => Mage::helper('idx')->__('SKU'),
+            'header'    => Mage::helper('idx')->__('Sku'),
             'align'     => 'left',
             'index'     => 'sku'
         ));
@@ -112,4 +112,5 @@ class Sonali_Idx_Block_Adminhtml_Idx_Grid extends Mage_Adminhtml_Block_Widget_Gr
     {
         return $this->getUrl('*/*/edit', array('index' => $row->getId()));
     }
+    
 }
