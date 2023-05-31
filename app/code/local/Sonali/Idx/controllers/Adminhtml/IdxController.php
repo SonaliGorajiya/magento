@@ -103,13 +103,37 @@ class Sonali_Idx_Adminhtml_IdxController extends Mage_Adminhtml_Controller_Actio
     public function collectionAction()
     {
         try {
-            Mage::getModel('idx/idx')->updateTableColumn(Mage::getModel('collection/collection'), 'collection');
-            Mage::getSingleton('adminhtml/session')->addSuccess('Collection is up to date');
+            $idx = Mage::getModel('idx/idx');  
+            $idxCollection = $idx->getCollection();     
+            $idxCollectionData = $idx->getCollection()->getData();
+
+            $idxCollectionNames = array_column($idxCollectionData,'collection');
+            $newCollections = $idx->updateCollectionOption(array_unique($idxCollectionNames));
+
+            $resource = Mage::getSingleton('core/resource');
+            $writeAdapter = $resource->getConnection('core_write');
+
+            $idxTable = $resource->getTableName('idx/idx');
+            $optionValueTable = $resource->getTableName('eav_attribute_option_value');
+
+            $updateQuery = "
+                UPDATE {$idxTable} p
+                JOIN (
+                    SELECT option_id,value
+                    FROM {$optionValueTable}
+                ) o ON p.`collection` = o.`value`
+                SET p.`collection_id` = o.`option_id`
+            ";
+
+            $writeAdapter->query($updateQuery);
+    
+            Mage::getSingleton('adminhtml/session')->addSuccess('Collection is fine now');
         } catch (Exception $e) {
-            Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
+             Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
         }
-        $this->_redirect('*/*/index');
+        $this->_redirect('*/*/');
     }
+
 
     public function massDeleteAction()
     {
