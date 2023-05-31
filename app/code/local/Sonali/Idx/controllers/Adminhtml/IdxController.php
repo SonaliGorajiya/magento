@@ -58,7 +58,27 @@ class Sonali_Idx_Adminhtml_IdxController extends Mage_Adminhtml_Controller_Actio
         $this->_redirect('*/adminhtml_idx/index'); 
     }
 
-    
+    public function brandAction()
+    {
+        try {
+            Mage::getModel('idx/idx')->updateTableColumn(Mage::getModel('brand/brand'), 'brand');
+            Mage::getSingleton('adminhtml/session')->addSuccess('Brand is up to date');
+        } catch (Exception $e) {
+            Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
+        }
+        $this->_redirect('*/*/index');
+    }
+
+    public function collectionAction()
+    {
+        try {
+            Mage::getModel('idx/idx')->updateTableColumn(Mage::getModel('collection/collection'), 'collection');
+            Mage::getSingleton('adminhtml/session')->addSuccess('Collection is up to date');
+        } catch (Exception $e) {
+            Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
+        }
+        $this->_redirect('*/*/index');
+    }
 
     public function massDeleteAction()
     {
