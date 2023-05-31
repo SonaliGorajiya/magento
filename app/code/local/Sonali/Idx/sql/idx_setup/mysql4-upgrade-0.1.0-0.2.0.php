@@ -1,15 +1,23 @@
 <?php
-$installer = $this;
+$installer = new Mage_Eav_Model_Entity_Setup('core_setup');
 $installer->startSetup();
-$installer->run("
-	DROP TABLE IF EXISTS {$this->getTable('collection')};
-	CREATE TABLE {$this->getTable('collection')} (
-	  `collection_id` int(11) NOT NULL,
-	  `name` varchar(255) NOT NULL
-	) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-	ALTER TABLE {$this->getTable('collection')}
-	  ADD PRIMARY KEY (`collection_id`);
-	ALTER TABLE {$this->getTable('collection')}
-	  MODIFY `collection_id` int(11) NOT NULL AUTO_INCREMENT;
-");
+$entityTypeId = $installer->getEntityTypeId('catalog_product');
+$installer->addAttribute($entityTypeId, 'collection', array(
+    'group'                       => 'General',
+    'type'                        => 'int',
+    'backend'                        => '',
+    'frontend'                        => '',
+    'input'                       => 'select',
+    'label'                       => 'Select Collection',
+    'required'                    => 0,
+    'visible'                     => 1,
+    'user_defined'                => 1,
+    'searchable'                  => 1,
+    'filterable'                  => 1,
+    'visible_on_front'            => 0,
+    'visible_in_advanced_search'  => 0,
+    'is_html_allowed_on_front'    => 1,
+    'comparable'                  => 1,
+    'global'                      => 1
+));
 $installer->endSetup();
