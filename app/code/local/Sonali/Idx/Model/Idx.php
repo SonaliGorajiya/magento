@@ -83,6 +83,11 @@ class Sonali_Idx_Model_Idx extends Mage_Core_Model_Abstract
         }
     }
 
+    public function query($sql)
+    {
+        $adapter = Mage::getSingleton('core/resource')->getConnection('core_write');
+        return $adapter->query($sql);
+    }
 
     public function reset()
     {
