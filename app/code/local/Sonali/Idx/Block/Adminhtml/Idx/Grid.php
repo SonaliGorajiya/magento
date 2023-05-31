@@ -112,5 +112,4 @@ class Sonali_Idx_Block_Adminhtml_Idx_Grid extends Mage_Adminhtml_Block_Widget_Gr
     {
         return $this->getUrl('*/*/edit', array('index' => $row->getId()));
     }
-    
 }

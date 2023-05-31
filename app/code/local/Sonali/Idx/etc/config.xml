@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Sonali_Idx>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </Sonali_Idx>
     </modules>    
     <global>
@@ -63,11 +63,11 @@
             </idx>
         </routers>
     </admin>
-    <adminhtml>
+    <!-- <adminhtml>
         <menu>
             <idx translate="title" module="idx">
                 <title>Idx</title>
-                <sort_order>10</sort_order>
+                <sort_order>160</sort_order>
                 <children>
                     <manage translate="title" module="idx">
                         <title>Manage Product Idx</title>
@@ -108,5 +108,5 @@
                 </admin>
             </resources>
         </acl>
-    </adminhtml>
+    </adminhtml> -->
 </config>
