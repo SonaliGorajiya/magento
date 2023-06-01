@@ -91,14 +91,14 @@
     </global>
     <admin>
         <routers>
-            <!-- <adminhtml>
+            <adminhtml>
                 <args>
                     <modules>
-                        <ccc_practice before="Mage_Adminhtml_Catalog">Ccc_Practice_Adminhtml</ccc_practice>
+                        <!-- <ccc_practice before="Mage_Adminhtml_Catalog">Ccc_Practice_Adminhtml</ccc_practice> -->
                         <ccc_practice before="Ccc_Product">Ccc_Practice_Adminhtml</ccc_practice>
                     </modules>
                 </args>
-            </adminhtml> -->
+            </adminhtml>
         </routers>
   </admin>
   <layout>
