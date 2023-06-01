@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sonali_Idx>
+            <version>0.2.0</version>
+        </Sonali_Idx>
+    </modules>    
+    <global>
+        <resources>
+            <idx_setup>
+                <setup>
+                    <module>Sonali_Idx</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </idx_setup>
+            <idx_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </idx_write>
+            <idx_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </idx_read>
+        </resources>
+        <models>
+            <idx>
+                <class>Sonali_Idx_Model</class>
+                <resourceModel>idx_resource</resourceModel>
+            </idx>
+            <idx_resource>
+                <class>Sonali_Idx_Model_Resource</class>
+                <deprecatedNode>idx_mysql4</deprecatedNode>
+                <entities>
+                    <idx>
+                        <table>import_product_idx</table>
+                    </idx>
+                </entities>
+            </idx_resource>
+        </models>
+        <blocks>
+            <idx>
+                <class>Sonali_Idx_Block</class>
+            </idx>
+        </blocks>
+        <helpers>
+            <idx>
+                <class>Sonali_Idx_Helper</class>
+            </idx>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <idx>
+                <use>admin</use>
+                <args>
+                    <module>Sonali_Idx</module>
+                    <frontName>idx</frontName>
+                </args>
+            </idx>
+        </routers>
+    </admin>
+    <!-- <adminhtml>
+        <menu>
+            <idx translate="title" module="idx">
+                <title>Idx</title>
+                <sort_order>160</sort_order>
+                <children>
+                    <manage translate="title" module="idx">
+                        <title>Manage Product Idx</title>
+                        <action>idx/adminhtml_idx/index</action>
+                        <sort_order>10</sort_order>
+                    </manage>
+                </children>
+            </idx>
+        </menu>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <idx translate="title" module="idx">
+                            <title>Idx</title>
+                            <sort_order>40</sort_order>
+                            <children>
+                                <managevender translate="title" module="idx">
+                                    <title>Manage Product Idx</title>
+                                    <action>idx/adminhtml_idx/index</action>
+                                    <sort_order>10</sort_order>
+                                </managevender>
+                            </children>
+                        </idx>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <idx translate="title" module="idx">
+                                            <title>Salesmen Section</title>
+                                            <sort_order>50</sort_order>
+                                        </idx>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml> -->
+</config>
