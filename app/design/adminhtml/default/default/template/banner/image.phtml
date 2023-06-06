@@ -1,0 +1,41 @@
+<form action="<?php echo Mage::getUrl('*/*/saveGrid',array('group_id'=>$this->getRequest()->getParam('group_id')));?>" method="POST">
+<?php echo $this->getBlockHtml('formkey'); ?>
+<div style="display:flex;">
+    <div style="width: 90%"><h2><b>Manage Banner Grid</b></h2></div>
+    <div style="width: 10%"><button href="<?php echo $this->getUrl('*/a/uploadImages')?>">Save</button></div>
+</div>
+<div>
+    <table width="100%" border="2px solid black">
+        <tr>
+            <th>Banner Id</th>
+            <th>Group Key</th>
+            <th>Image</th>
+            <th>Status</th>
+            <th>Position</th>
+            <th>Created At</th>
+        </tr>
+        <?php foreach ($this->getBannerCollection() as $data) : ?>
+        <tr>
+            <td><?php echo $data->banner_id ?></td>
+            <td><?php echo $data->group_id ?></td>
+            <td><img src="<?php echo Mage::getBaseUrl('media').DS.'Banner'.DS. 'resized'.DS. $data->image ?>" alt="Invalid Image"></td>
+            <td>
+                <select name="status[<?php echo $data->banner_id ?>]">
+                    <?php $selected = ($data->status == 1) ? "selected" : "" ; ?>
+                    <option value="1" <?php echo $selected ?>>Active</option>
+                    <?php $selected = ($data->status == 2) ? "selected" : "" ; ?>
+                    <option value="2" <?php echo $selected ?>>Inctive</option>
+                </select>
+            </td>
+             <td><input name="position[<?php echo $data->banner_id ?>]" type="text" value="<?php echo $data->position ?>" style='width: 70px;' ></td>
+            <td><?php echo $data->created_at ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+</div>
+</form>
+<form action="<?php echo Mage::getUrl('*/*/uploadImage', array('group_id' => $this->getRequest()->getParam('group_id'))); ?>" method="post" enctype="multipart/form-data">
+<?php echo $this->getBlockHtml('formkey'); ?>
+    <input type="file" name="images[]" multiple>
+    <button type="submit">Upload</button>
+</form>

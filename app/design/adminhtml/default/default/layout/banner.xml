@@ -1,0 +1,7 @@
+<layout>
+    <banner_adminhtml_group_edit>
+        <reference name="content">
+            <block type="sonali_banner/adminhtml_group_edit_tab_banner" name="banner_edit_tab_banner" template="banner/banner.phtml" />
+        </reference>
+    </banner_adminhtml_group_edit>
+</layout>
