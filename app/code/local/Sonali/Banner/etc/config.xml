@@ -1,11 +1,19 @@
-<?xml version="1.0"?>
 <config>
     <modules>
-        <Sonali_Banner>
-            <version>0.1.0</version>
+        <Sonali_Banner>    
+            <version>0.1.1</version>
         </Sonali_Banner>
     </modules>
     <frontend>
+        <routers>
+            <banner>
+                <use>standard</use>
+                <args>
+                    <module>Sonali_Banner</module>
+                    <frontName>banner</frontName>
+                </args>
+            </banner>
+        </routers>
         <layout>
             <updates>
                 <banner module="Sonali_Banner">
@@ -13,12 +21,35 @@
                 </banner>
             </updates>
         </layout>
-    </frontend>    
+    </frontend>
     <global>
+        <models>
+            <banner>
+                <class>Sonali_Banner_Model</class>
+                <resourceModel>banner_resource</resourceModel>
+            </banner>
+            <group>
+                <class>Sonali_Banner_Model_Group</class>
+                <resourceModel>group_resource</resourceModel>
+            </group>
+            <banner_resource>
+                <class>Sonali_Banner_Model_Resource</class>
+                <deprecatedNode>banner_mysql4</deprecatedNode>
+                <entities>
+                    <banner>
+                        <table>banner</table>
+                    </banner>
+                    <group>
+                        <table>banner_group</table>
+                    </group>
+                </entities>
+            </banner_resource>
+        </models>
         <resources>
             <banner_setup>
                 <setup>
                     <module>Sonali_Banner</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
                 </setup>
                 <connection>
                     <use>core_setup</use>
@@ -35,112 +66,26 @@
                 </connection>
             </banner_read>
         </resources>
-        <fieldsets>
-            <catalog_product>
-                <banner>
-                    <banner_attribute>
-                        <is_global>0</is_global>
-                        <frontend_input>select</frontend_input>
-                        <frontend_label>Banner Attribute</frontend_label>
-                        <source_model>sonali_banner/source_model</source_model>
-                        <backend_type>int</backend_type>
-                        <is_required>0</is_required>
-                        <apply_to>simple,configurable,virtual,bundle,downloadable</apply_to>
-                    </banner_attribute>
-                </banner>
-            </catalog_product>
-        </fieldsets>
-        <models>
-            <banner>
-                <class>Sonali_Banner_Model</class>
-                <resourceModel>banner_resource</resourceModel>
-            </banner>
-            <banner_resource>
-                <class>Sonali_Banner_Model_Resource</class>
-                <deprecatedNode>banner_mysql4</deprecatedNode>
-                <entities>
-                    <banner>
-                        <table>banner</table>
-                    </banner>
-                    <group>
-                        <table>banner_group</table>
-                    </group>
-                </entities>
-            </banner_resource>
-        </models>
         <blocks>
             <banner>
                 <class>Sonali_Banner_Block</class>
             </banner>
         </blocks>
         <helpers>
-            <banner>
-                <class>Sonali_Banner_Helper</class>
+           <banner>
+                  <class>Sonali_banner_Helper</class>
             </banner>
         </helpers>
     </global>
     <admin>
         <routers>
-            <banner>
+            <Banner>
                 <use>admin</use>
                 <args>
                     <module>Sonali_Banner</module>
                     <frontName>banner</frontName>
                 </args>
-            </banner>
+            </Banner>
         </routers>
-        <layout>
-            <updates>
-                <banner>
-                    <file>banner.xml</file>
-                </banner>
-            </updates>
-        </layout>
     </admin>
-    <adminhtml>
-        <menu>
-            <banner translate="title" module="banner">
-                <title>Banners</title>
-                <sort_order>170</sort_order>
-                <children>
-                    <managebanner translate="title" module="banner">
-                        <title>Manage Banners</title>
-                        <action>banner/adminhtml_group/index</action>
-                        <sort_order>10</sort_order>
-                    </managebanner>
-                </children>
-            </banner>
-        </menu>
-        <acl>
-            <resources>
-                <admin>
-                    <children>
-                        <banner translate="title" module="banner">
-                            <title>Banners</title>
-                            <sort_order>40</sort_order>
-                            <children>
-                                <managevender translate="title" module="banner">
-                                    <title>Manage Banners</title>
-                                    <action>banner/adminhtml_group/index</action>
-                                    <sort_order>10</sort_order>
-                                </managevender>
-                            </children>
-                        </banner>
-                        <system>
-                            <children>
-                                <config>
-                                    <children>
-                                        <banner translate="title" module="banner">
-                                            <title>Banner Group Section</title>
-                                            <sort_order>50</sort_order>
-                                        </banner>
-                                    </children>
-                                </config>
-                            </children>
-                        </system>
-                    </children>
-                </admin>
-            </resources>
-        </acl>
-    </adminhtml>
 </config>

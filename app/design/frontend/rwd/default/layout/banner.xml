@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+    <banner_banner_index>
+          <remove name="right"></remove>
+          <reference name="content">
+               <block type="banner/slider" name="banner.slider" template="banner/slider.phtml" />
+          </reference>
+    </banner_banner_index>
+</layout>

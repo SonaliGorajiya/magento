@@ -1,0 +1,154 @@
+<?php
+$bannerCollection = $this->getBannerCollection();
+?>
+<style type="text/css">
+#banner_gallery {
+margin-bottom: 20px;
+}
+.data-grid {
+width: 100%;
+border-collapse: collapse;
+}
+.data-grid th,
+.data-grid td {
+padding: 10px;
+border: 1px solid #ccc;
+}
+.data-grid th {
+background-color: #f2f2f2;
+text-align: left;
+}
+.data-grid tbody tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+.data-grid input[type="text"],
+.data-grid select {
+width: 90%;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+.data-grid input[type="checkbox"] {
+margin: 0;
+}
+.data-grid input[type="checkbox"]:focus {
+outline: none;
+}
+.data-grid input[type="checkbox"] + label {
+display: inline-block;
+vertical-align: middle;
+}
+.data-grid input[type="checkbox"] + label:before {
+content: "";
+display: inline-block;
+width: 16px;
+height: 16px;
+border: 1px solid #ccc;
+background-color: #fff;
+margin-right: 5px;
+vertical-align: middle;
+}
+.data-grid input[type="checkbox"]:checked + label:before {
+background-color: #337ab7;
+border-color: #337ab7;
+}
+.data-grid input[type="checkbox"]:checked + label:after {
+content: "\f00c";
+font-family: FontAwesome;
+display: inline-block;
+color: #fff;
+font-size: 12px;
+width: 16px;
+height: 16px;
+text-align: center;
+line-height: 16px;
+vertical-align: middle;
+}
+.switch-container {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch-container input.switch {
+  display: none;
+}
+
+.switch-container label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.switch-container label:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.switch-container input:checked + label {
+  background-color: #337ab7;
+}
+
+.switch-container input:checked + label:before {
+  transform: translateX(20px);
+}
+.Upload{
+margin-top:20px ;
+}
+
+</style> 
+
+<div id="banner_gallery" class="grid">
+    <table class="data-grid">
+        <thead>
+            <tr class="headings">
+                <th><?php echo $this->__('Image'); ?></th>
+                <th><?php echo $this->__('Position'); ?></th>
+                <th><?php echo $this->__('Status'); ?></th>
+                <th><?php echo $this->__('Remove'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($bannerCollection as $banner): ?>
+            <tr>
+                <td><img src="<?php echo $path = Mage::getBaseUrl('media').$banner->getImage(); ?>" height="100px" width="100px"></td>
+                <td><input type="text" name="position[<?php echo $banner->getId(); ?>]" value="<?php echo $this->escapeHtml($banner->getPosition()); ?>" /></td>
+                <!-- <td>
+                    <select name="status[<?php echo $banner->getId(); ?>]">
+                        <option value="1" <?php if ($banner->getStatus() == 1) echo 'selected="selected"'; ?>><?php echo $this->__('Enabled'); ?></option>
+                        <option value="0" <?php if ($banner->getStatus() == 0) echo 'selected="selected"'; ?>><?php echo $this->__('Disabled'); ?></option>
+                    </select>
+                </td> -->
+                <!-- <td>
+                    <input type="range" name="status[<?php echo $banner->getId(); ?>]" min="0" max="1" step="1" value="<?php echo $banner->getStatus(); ?>" />
+                </td> -->
+                <td>
+                    <div class="switch-container">
+                        <input type="checkbox" value="1" name="status[<?php echo $banner->getId(); ?>]" id="status-<?php echo $banner->getId(); ?>" class="switch" <?php if ($banner->getStatus() == 1) echo 'checked="checked"'; ?> />
+                        <label for="status-<?php echo $banner->getId(); ?>"></label>
+                    </div>
+                </td>
+                <td><input type="checkbox" name="remove[<?php echo $banner->getId(); ?>]" /></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
+    <form id="file-upload-form" method="post" action="<?php echo $this->getUrl('*/*/upload',['group_id'=>$this->getRequest()->getParam('group_id')]) ?>" enctype="multipart/form-data">
+        <?php echo $this->getBlockHtml('formkey'); ?>
+    <input type="file" name="file[]" id="file-input" multiple/>
+    <button type="submit" id="upload-button">Upload</button>
+</form>

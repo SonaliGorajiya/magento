@@ -5,7 +5,7 @@ class Sonali_Banner_Model_SourceModel
 
     protected $collection = null;
 
-   public function toOptionArray()
+    public function toOptionArray()
     {
         $options = array();
 

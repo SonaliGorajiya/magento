@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <style>
+    / Add any additional styling for the slider /
+    .slider {
+      width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <?php  ?>
+    <?php
+    $url = Mage::getBaseUrl('media');
+    foreach ($this->getSliderData() as $image) {
+        $path = $url . $image->image;
+      echo '<div><img src="'.$path.'" height = "300px" width = "300px"></div>';
+    }
+    ?>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+
+        autoplay: true,
+        autoplaySpeed: 1000,
+
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+    });
+  </script>
+</body>
+</html>
