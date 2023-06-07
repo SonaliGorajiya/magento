@@ -1,0 +1,33 @@
+<style>
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 10px;
+        width: 300px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .card p {
+        margin-top: 10px;
+    }
+</style>
+<div style="display:flex;">
+  <?php foreach ($this->getBrands() as $brand) : ?>
+    <div class="card" align="center">
+        <img src="<?php echo Mage::getBaseUrl('media').'brand'.DS. $brand->image ?>">
+        <h3><?php echo $brand->name; ?></h3>
+        <a href="brand1.html">Learn More</a>
+    </div>
+  <?php endforeach; ?>
+</div>

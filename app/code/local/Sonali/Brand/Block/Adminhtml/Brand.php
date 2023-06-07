@@ -19,4 +19,6 @@ class Sonali_Brand_Block_Adminhtml_Brand extends Mage_Adminhtml_Block_Widget_Gri
     {
         return Mage::getSingleton('admin/session')->isAllowed('brand/adminhtml_brand/' . $action);
     }
+
+    
 }

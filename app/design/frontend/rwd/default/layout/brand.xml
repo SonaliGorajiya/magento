@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+    <cms_index_index translate="label">
+          <remove name="right"></remove>
+          <label>Brand Home Page</label>
+          <reference name="content">
+               <block type="brand/slider" name="brand.slider" template="brand/slider.phtml" />
+          </reference>
+    </cms_index_index>
+</layout>
