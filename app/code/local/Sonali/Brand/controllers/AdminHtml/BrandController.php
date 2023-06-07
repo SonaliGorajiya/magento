@@ -15,13 +15,6 @@ class Sonali_Brand_Adminhtml_BrandController extends Mage_Adminhtml_Controller_A
 
     public function indexAction()
     {
-        // echo '<pre>';
-        // $model = Mage::getModel('brand/brand')->load(2);
-        // $model->name = 'vijay thakor';
-        // $model->email = 'v@gmial.com';
-        // $model->save();
-        // print_r($model->getCollection()->toArray());
-        // die();
         $this->loadLayout();
         $this->_setActiveMenu('brand/manage');
         $this->_title($this->__("Brand Grid"));
@@ -58,68 +51,43 @@ class Sonali_Brand_Adminhtml_BrandController extends Mage_Adminhtml_Controller_A
         }
     }
 
-    public function saveAction()
+     public function saveAction()
     {
-        if ($this->getRequest()->getParam('back')) {
-            $this->_redirect('*/*/edit', array('id' => $model->getId()));
-            return;
-        }
-
-        if ($data = $this->getRequest()->getPost()) {
-            $brand = $data['brand'];
-            $model = Mage::getModel('brand/brand');
-            $model->setData($brand)->setId($this->getRequest()->getParam('id'));
-            try {
-                if ($model->brand_id != null) {
-                    $model->updated_at = date('Y-m-d H:i:s');
-                } else {
-                    $model->created_at = date('Y-m-d H:i:s');
-                }
-                
-                $model->save();
-
-                if (isset($_FILES['image']['name']) && ($_FILES['image']['name'] != '')) 
-                {
-                    try {
-                        $uploader = new Varien_File_Uploader('image');
-                        $uploader->setAllowedExtensions(array('jpg', 'jpeg', 'gif', 'png', 'webp'));
-                        $uploader->setAllowRenameFiles(false);
-                        $uploader->setFilesDispersion(false);
-                        
-                        $path = Mage::getBaseDir('media') . DS . 'brand' . DS;
-                        $extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
-                        if ($uploader->save($path, $model->getId().'.'.$extension)) {
-                            $model->image = $model->getId().".".$extension;
-                            $model->save();
-                            Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('brand')->__('Image was successfully uploaded'));
-                        }
-                        
-                        // $imageName = $uploader->getUploadedFileName();
-
-                    } catch (Exception $e) {
-                        Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
-                    }
-                }
+        try {
+            $brandModel = Mage::getModel('brand/brand');
+            $brandData = $this->getRequest()->getPost('brand');
+            $brandModel->setData($brandData)
+                ->setId($this->getRequest()->getParam('id'))
+                ->saveImage('image', Mage::getBaseDir('media') . DS . 'Brand')
+                ->saveImage('banner', Mage::getBaseDir('media') . DS . 'Brand' . DS . 'Banner');
 
 
-                Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('brand')->__('Brand was successfully saved'));
-                Mage::getSingleton('adminhtml/session')->setFormData(false);
-                 
-                if ($this->getRequest()->getParam('back')) {
-                $this->_redirect('*/*/edit', array('id' => $model->getId()));
-                return;
-                }
-                $this->_redirect('*/*/');
-                return;
-            } catch (Exception $e) {
-                Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
-                Mage::getSingleton('adminhtml/session')->setFormData($brand);
-                $this->_redirect('*/*/edit', array('id' => $this->getRequest()->getParam('id')));
+            if ($brandModel->brand_id == NULL) {
+                $brandModel->created_at = date("y-m-d H:i:s");
+            } else {
+                $brandModel->updated_at = date("y-m-d H:i:s");
+            }
+
+            $brandModel->save();
+            if ($brandModel->brand_id) {
+                $brandModel->saveRewriteUrlKey();
+            }
+
+            Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('brand')->__('Brand was successfully saved'));
+            Mage::getSingleton('adminhtml/session')->setFormData(true);
+
+            if ($this->getRequest()->getParam('back')) {
+                $this->_redirect('*/*/edit', array('id' => $brandModel->getId()));
                 return;
             }
+            $this->_redirect('*/*/');
+            return;
+        } catch (Exception $e) {
+            Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
+            Mage::getSingleton('adminhtml/session')->setFormData($data);
+            $this->_redirect('*/*/edit', array('id' => $this->getRequest()->getParam('id')));
+            return;
         }
-        Mage::getSingleton('adminhtml/session')->addError(Mage::helper('brand')->__('Unable to find item to save'));
-        $this->_redirect('*/*/');
     }
 
 

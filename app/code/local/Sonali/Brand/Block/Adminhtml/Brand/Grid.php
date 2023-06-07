@@ -8,7 +8,6 @@ class Sonali_Brand_Block_Adminhtml_Brand_Grid extends Mage_Adminhtml_Block_Widge
          
         $this->setDefaultSort('brand_id');
         $this->setId('adminhtmlBrandGrid');
-        // $this->setUseAjax(true);
         $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
 
@@ -21,8 +20,6 @@ class Sonali_Brand_Block_Adminhtml_Brand_Grid extends Mage_Adminhtml_Block_Widge
      
     protected function _prepareCollection()
     {
-        // echo "<pre>";
-        // print_r(Mage::getModel("brand/brand"));
         $collection = Mage::getResourceModel($this->_getCollectionClass());
         $this->setCollection($collection);
          
@@ -31,73 +28,45 @@ class Sonali_Brand_Block_Adminhtml_Brand_Grid extends Mage_Adminhtml_Block_Widge
 
     protected function _prepareColumns()
     {
+$baseUrl = $this->getUrl();
 
-        $this->addColumn('brand_id',
-            array(
-                'header'=> $this->__('Brand Id'),
-                'align' =>'right',
-                'width' => '50px',
-                'index' => 'brand_id'
-            )
-        );
-         
-        $this->addColumn('name',
-            array(
-                'header'=> $this->__('Name'),
-                'index' => 'name'
-            )
-        );    
+        $this->addColumn('brand_id', array(
+            'header'    => Mage::helper('brand')->__('Brand Id'),
+            'align'     => 'left',
+            'index'     => 'brand_id',
+        ));
 
-        $this->addColumn('image',
-            array(
-                'header'=> $this->__('Image'),
-                'index' => 'image',
-                'renderer'=>'Sonali_Brand_Block_Adminhtml_Brand_Grid_Renderer_Grid'
-            )
-        );       
+        $this->addColumn('name', array(
+            'header'    => Mage::helper('brand')->__('Name'),
+            'align'     => 'left',
+            'index'     => 'name'
+        ));
 
-        $this->addColumn('description',
-            array(
-                'header'=> $this->__('Description'),
-                'index' => 'description'
-            )
-        );
+        $this->addColumn('image', array(
+            'header'    => Mage::helper('brand')->__('Image'),
+            'align'     => 'left',
+            'index'     => 'image',
+            'renderer'  => 'Sonali_Brand_Block_Adminhtml_Brand_Grid_Renderer_Grid'
+        ));
 
-        $this->addColumn('created_at',
-            array(
-                'header'=> $this->__('Created Date'),
-                'index' => 'created_at'
-            )
-        );
+        $this->addColumn('description', array(
+            'header'    => Mage::helper('brand')->__('Description'),
+            'align'     => 'left',
+            'index'     => 'description'
+        ));
 
-        $this->addColumn('updated_at',
-            array(
-                'header'=> $this->__('Updated Date'),
-                'index' => 'updated_at'
-            )
-        );
+        $this->addColumn('created_at', array(
+            'header'    => Mage::helper('brand')->__('Created Date'),
+            'align'     => 'left',
+            'index'     => 'created_at'
+        ));
 
-        // $this->addColumn('action',
-        //     array(
-        //         'header'    =>  Mage::helper('brand')->__('Action'),
-        //         'width'     => '100',
-        //         'type'      => 'action',
-        //         'getter'    => 'getId',
-        //         'actions'   => array(
-        //             array(
-        //                 'caption'   => Mage::helper('brand')->__('Edit'),
-        //                 'url'       => array('base'=> '*/*/edit'),
-        //                 'field'     => 'id'
-        //             )
-        //         ),
-        //         'filter'    => false,
-        //         'sortable'  => false,
-        //         'index'     => 'stores',
-        //         'is_system' => true,
-        // ));
+        $this->addColumn('updated_at', array(
+            'header'    => Mage::helper('brand')->__('Updated Date'),
+            'align'     => 'left',
+            'index'     => 'updated_at'
+        ));
 
-        // $this->addExportType('*/*/exportCsv', Mage::helper('brand')->__('CSV'));
-        // $this->addExportType('*/*/exportXml', Mage::helper('brand')->__('Excel XML'));
         return parent::_prepareColumns();
     }
 
@@ -114,11 +83,6 @@ class Sonali_Brand_Block_Adminhtml_Brand_Grid extends Mage_Adminhtml_Block_Widge
 
         return $this;
     }
-
-    // public function getGridUrl()
-    // {
-    //     return $this->getUrl('*/*/grid', array('_current'=> true));
-    // }
 
     public function getRowUrl($row)
     {

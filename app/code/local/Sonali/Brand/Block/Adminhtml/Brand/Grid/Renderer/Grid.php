@@ -5,8 +5,8 @@ class Sonali_Brand_Block_Adminhtml_Brand_Grid_Renderer_Grid extends Mage_Adminht
 
     public function render(Varien_Object $row)
     {   
-        $filename = $row->image;
-        $html = "<img src='http://127.0.0.1/2023/magento/magento-mirror/media/brand/".$filename."' width='80px' height='80px'>";
+        $filename = Mage::getBaseUrl('media') . 'Brand' . DS . $row->getData('image');
+        $html = '<img src="' . $filename . '" width="70" height="70" alt="Image" />';
         return $html;
 
     }
