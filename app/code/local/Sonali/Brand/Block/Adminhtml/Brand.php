@@ -1,5 +1,4 @@
 <?php
- 
 class Sonali_Brand_Block_Adminhtml_Brand extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
     public function __construct()
@@ -7,7 +6,16 @@ class Sonali_Brand_Block_Adminhtml_Brand extends Mage_Adminhtml_Block_Widget_Gri
         $this->_blockGroup = 'brand';
         $this->_controller = 'adminhtml_brand';
         $this->_headerText = Mage::helper('brand')->__('Manage Brands');
-        $this->_addButtonLabel = Mage::helper('brand')->__('Add New Brand');
         parent::__construct();
+        if ($this->_isAllowedAction('save')) {
+            $this->_updateButton('add', 'label', Mage::helper('brand')->__('Add New Brand'));
+        } else {
+            $this->_removeButton('add');
+        }
+    }
+
+    protected function _isAllowedAction($action)
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('brand/adminhtml_brand/' . $action);
     }
 }

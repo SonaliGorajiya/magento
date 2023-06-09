@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <cms_index_index>
+        <remove name="right"></remove>
+        <reference name="content">
+            <block type="brand/brand" name="brand.brand" template="brand/brand.phtml"/>
+        </reference>
+    </cms_index_index>
+    <brand_index_view>
+        <remove name="right"></remove>
+        <reference name="content">
+            <block type="brand/brand" name="brand.brand" template="brand/brand_page.phtml"/>
+        </reference>
+    </brand_index_view>
+</layout>
