@@ -1,36 +1,47 @@
 <?xml version="1.0"?>
 <config>
-   <menu>
+    <menu>
         <brand translate="title" module="brand">
             <title>Brands</title>
             <sort_order>10</sort_order>
             <children>
                 <manage translate="title" module="brand">
                     <title>Manage Brands</title>
-                    <action>adminhtml/brand/index</action>
-                    <sort_order>0</sort_order>
+                    <action>brand/adminhtml_brand/index</action>
+                    <sort_order>10</sort_order>
                 </manage>
             </children>
-         </brand>
+        </brand>
     </menu>
     <acl>
-      <resources>
-        <all>
-          <title>Allow Everything</title>
-        </all>
-        <admin>
-            <children>
-                <brand translate="title" module="brand">
-                <title>brand</title>
-                <sort_order>1000</sort_order>
+        <resources>
+            <admin>
                 <children>
-                <brandbackend translate="title">
-                    <title>Manage Brands</title>
-                </brandbackend>
+                    <brand translate="title" module="brand">
+                        <title>Brands</title>
+                        <sort_order>40</sort_order>
+                        <children>
+                            <managevender translate="title" module="brand">
+                                <title>Manage Brands</title>
+                                <action>brand/adminhtml_brand/index</action>
+                                <sort_order>10</sort_order>
+                            </managevender>
+                        </children>
+                    </brand>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <brand translate="title" module="brand">
+                                        <title>Brands Section</title>
+                                        <sort_order>50</sort_order>
+                                    </brand>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
                 </children>
-            </brand>
-          </children>
-        </admin>
-      </resources>
+            </admin>
+        </resources>
     </acl>
 </config>

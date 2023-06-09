@@ -1,5 +1,4 @@
 <?php
- 
 class Sonali_Brand_Block_Adminhtml_Brand extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
     public function __construct()
@@ -15,10 +14,8 @@ class Sonali_Brand_Block_Adminhtml_Brand extends Mage_Adminhtml_Block_Widget_Gri
         }
     }
 
-    public function _isAllowedAction($action)
+    protected function _isAllowedAction($action)
     {
         return Mage::getSingleton('admin/session')->isAllowed('brand/adminhtml_brand/' . $action);
     }
-
-    
 }

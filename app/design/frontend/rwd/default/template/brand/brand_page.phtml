@@ -1,0 +1,131 @@
+<style type="text/css">
+
+.col3-layout .col-wrapper{
+  float: left;
+  width: inherit;
+}
+
+.col3-layout .col-wrapper .col-main {
+    float: right;
+    width: inherit;
+}
+.container{
+  position: relative;
+  box-shadow: 0px 0px 10px;
+  justify-content: center;
+}
+.card {
+  height: 300px;
+}
+
+pre{
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  font-weight: 10px;
+  left: 0;
+  margin-left: 1em;
+  bottom: 0;
+  width: 80%;
+}
+
+
+.banner-heading{
+  font-weight: bold;
+  color: white;
+}
+
+.banner-image{
+  height: 500px;
+  width: 100%;
+  margin-left: -300px;
+  position: relative;
+  filter: drop-shadow(8px 8px 10px gray);
+  filter: blur(1px);
+}
+
+.banner-text{
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  top: 209px;
+  color: white;
+  left: 36px;
+}
+
+.card-image {
+    height: 175px;
+    width: auto;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.product-div {
+    display: inline-flex;
+    margin-top: 1em;
+    flex-wrap: wrap;
+    justify-content: start-first;
+}
+
+.card{
+  border: 1px solid gray;
+  box-shadow: 5px 5px 4px;
+  border-radius: 10px;
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
+.category-div{
+  display: block;
+  width: 30em;
+  margin-right: 1em;
+  padding: 1em;
+}
+
+.middle{
+  display: flex;
+}
+
+</style>
+
+<div class="container" style="width: 100%;">
+	<?php foreach ($this->getBrands() as $brand_id => $brand): ?>
+	<div>
+		<img src="<?php echo $this->getBaseUrl() . 'media' . DS . 'Brand' . DS . 'Banner' . DS . $brand->banner; ?>" width="100%">
+		<pre>
+			<h2 class="banner-heading"><?php echo $brand->name ?></h2>
+			<p><?php echo $brand->description ?></p>    
+		</pre>
+	</div>
+	<?php endforeach ?>
+</div>
+<div class="middle">
+	<div class="category-div">
+		<?php $categories = $this->getCategory();?>
+		<div>
+			<section>
+				<div>
+				    <h6>CATRGORIES</h6>
+				    <ul>
+				        <?php foreach ($categories as $category):?>
+				             <li><a href="<?php echo Mage::getUrl('', array('_current' => true, '_use_rewrite' => true, '_query' => array('cat' => $category->getId()))); ?>"><?php echo $category->getName() ?></a></li>
+				        <?php endforeach ?>
+				    </ul>
+				</div>
+			</section>
+		</div>
+	</div>
+  <div class="product-div" >
+	<?php foreach ($this->getProducts($brand) as $product): ?>
+      <div class="card m-1" style="width: 17rem; padding: 1em;">
+		<img class="card-img-top card-image" src="<?php echo Mage::getModel('catalog/product_media_config')->getMediaUrl($product->getImage()) ?>" alt="">
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $product->name ?></h5>
+          <p><?php echo $product->getShortDescription() ?></p>
+          <p><b>$ <?php echo number_format($product->getPrice(), 2, '.', ',') ?></b></p>
+          <?php echo $product->getUrlKey(); ?>
+        </div>
+    </div>
+    <?php endforeach ?>
+  </div> 
+</div>

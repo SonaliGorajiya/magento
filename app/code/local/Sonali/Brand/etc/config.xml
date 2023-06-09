@@ -1,9 +1,10 @@
+<?xml version="1.0"?>
 <config>
     <modules>
         <Sonali_Brand>
-            <version>3.0.0.0</version>                
+            <version>0.3.0</version>
         </Sonali_Brand>
-    </modules>
+    </modules> 
     <frontend>
         <routers>
             <brand>
@@ -16,13 +17,23 @@
         </routers>
         <layout>
             <updates>
-                <brand>
+                <brand module="Sonali_Brand">
                     <file>brand.xml</file>
                 </brand>
             </updates>
         </layout>
-    </frontend>
+    </frontend>   
     <global>
+        <events>
+            <brand_save_after>
+                <observers>
+                    <brand>
+                        <class>Sonali_Brand_Model_Observer</class>
+                        <method>generateBrandUrlRewrite</method>
+                    </brand>
+                </observers>
+            </brand_save_after>
+        </events>
         <resources>
             <brand_setup>
                 <setup>
@@ -44,7 +55,7 @@
             </brand_read>
         </resources>
         <fieldsets>
-            <catalog_eavmgmt>
+            <catalog_product>
                 <brand>
                     <brand_attribute>
                         <is_global>0</is_global>
@@ -56,7 +67,7 @@
                         <apply_to>simple,configurable,virtual,bundle,downloadable</apply_to>
                     </brand_attribute>
                 </brand>
-            </catalog_eavmgmt>
+            </catalog_product>
         </fieldsets>
         <models>
             <brand>
@@ -65,10 +76,17 @@
             </brand>
             <brand_resource>
                 <class>Sonali_Brand_Model_Resource</class>
+                <deprecatedNode>brand_mysql4</deprecatedNode>
                 <entities>
                     <brand>
                         <table>brand</table>
                     </brand>
+                    <brand_address>
+                        <table>brand_address</table>
+                    </brand_address>
+                    <brand_price>
+                        <table>brand_price</table>
+                    </brand_price>
                 </entities>
             </brand_resource>
         </models>
@@ -82,24 +100,16 @@
                 <class>Sonali_Brand_Helper</class>
             </brand>
         </helpers>
-        
     </global>
     <admin>
         <routers>
-            <adminhtml>
+            <brand>
+                <use>admin</use>
                 <args>
-                    <modules>
-                        <ccc_brand before="Mage_Adminhtml">Sonali_Brand_Adminhtml</ccc_brand>
-                    </modules>
+                    <module>Sonali_Brand</module>
+                    <frontName>brand</frontName>
                 </args>
-            </adminhtml>
+            </brand>
         </routers>
-  </admin>
-  <layout>
-      <updates>
-        <brand>
-          <file>brand.xml</file>
-        </brand>
-      </updates>
-    </layout>
+    </admin>
 </config>
