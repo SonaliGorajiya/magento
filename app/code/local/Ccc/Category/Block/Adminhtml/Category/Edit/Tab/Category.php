@@ -10,7 +10,7 @@ class Ccc_Category_Block_Adminhtml_Category_Edit_Tab_Category extends Mage_Admin
         
         $fieldset->addField('parent_id', 'text', array(
             'name'      => 'category[parent_id]',
-            'label'     => Mage::helper('category')->__('parent_id'),
+            'label'     => Mage::helper('category')->__('Parent Id'),
             'required'  => true,
         ));
 
