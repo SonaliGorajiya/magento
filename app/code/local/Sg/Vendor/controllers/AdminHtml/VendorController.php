@@ -15,13 +15,6 @@ class Sg_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Act
 
     public function indexAction()
     {
-        // echo '<pre>';
-        // $model = Mage::getModel('vendor/vendor')->load(2);
-        // $model->name = 'vijay thakor';
-        // $model->email = 'v@gmial.com';
-        // $model->save();
-        // print_r($model->getCollection()->toArray());
-        // die();
         $this->loadLayout();
         $this->_setActiveMenu('vendor/manage');
         $this->_title($this->__("vendor Grid"));
@@ -113,6 +106,56 @@ class Sg_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Act
         Mage::getSingleton('adminhtml/session')->addError(Mage::helper('vendor')->__('Unable to find item to save'));
         $this->_redirect('*/*/');
     }
+
+    public function massStatusAction() {
+        $vendorIds = $this->getRequest()->getParam('vendor_id');
+        $status = $this->getRequest()->getParam('status');
+        if ($status != 1) {
+            $status = 0;
+        }
+
+        if (!is_array($vendorIds)) {
+            $this->_getSession()->addError($this->__('Please select vendor(s).'));
+        } else {
+            try {
+                foreach ($vendorIds as $vendorId) {
+                    $vendor = Mage::getModel('vendor/vendor')->load($vendorId);
+                    $vendor->setStatus($status)->save();
+                }
+                $this->_getSession()->addSuccess($this->__('Total of %d vendor(s) have been updated.', count($vendorIds)));
+            } catch (Exception $e) {
+                $this->_getSession()->addError($e->getMessage());
+            }
+        }
+        $this->_redirect('*/*/index');
+    }
+
+    public function updateStateOptionsAction()
+    {
+
+        $countryId = $this->getRequest()->getParam('country_id');
+        Mage::log($countryId,null,'country.log');
+        $options = array();
+
+        // print_r($countryId);die;
+        // Retrieve the state options for the selected country
+        $states = Mage::getModel('directory/region')->getResourceCollection()
+            ->addCountryFilter($countryId)
+            ->load();
+        
+        // Build the options array
+        foreach ($states as $state) {
+            $options[] = array(
+                'value' => $state->getId(),
+                'label' => $state->getName()
+            );
+        }
+        
+        // Return the options as JSON response
+        $this->getResponse()->setHeader('Content-type', 'application/json');
+        $this->getResponse()->setBody(json_encode($options));
+    }
+
 
 
     public function deleteAction()
