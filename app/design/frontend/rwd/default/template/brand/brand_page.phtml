@@ -105,7 +105,7 @@ pre{
 		<div>
 			<section>
 				<div>
-				    <h6>CATRGORIES</h6>
+				    <h6>CATEGORIES</h6>
 				    <ul>
 				        <?php foreach ($categories as $category):?>
 				             <li><a href="<?php echo Mage::getUrl('', array('_current' => true, '_use_rewrite' => true, '_query' => array('cat' => $category->getId()))); ?>"><?php echo $category->getName() ?></a></li>

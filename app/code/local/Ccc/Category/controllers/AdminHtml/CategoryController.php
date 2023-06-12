@@ -15,15 +15,7 @@ class Ccc_Category_Adminhtml_CategoryController extends Mage_Adminhtml_Controlle
 
     public function indexAction()
     {
-        // echo '<pre>';
-        // $model = Mage::getModel('category/category')->load(2);
-        // $model->name = 'vijay thakor';
-        // $model->email = 'v@gmial.com';
-        // $model->save();
-        // print_r($model->getCollection()->toArray());
-        // die();
         $this->loadLayout();
-        $this->_setActiveMenu('category/manage');
         $this->_title($this->__("Category Grid"));
         $this->_addContent($this->getLayout()->createBlock('category/adminhtml_category'));
         $this->renderLayout();

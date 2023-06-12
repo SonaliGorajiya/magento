@@ -1,0 +1,55 @@
+<style>
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 8px;
+/*        width: 300px;*/
+        width: 14em;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .card h3:hover{
+        text-decoration: none;
+    }
+
+    .card p {
+        margin-top: 10px;
+    }
+
+    .heading{
+        font-size: 25px;
+        margin: 10px;
+        text-align: center;
+    }
+    .sub-heading{
+        font-size: 25px;
+        color: blue;
+    }
+</style>
+<div style="font-weight: 600;" class="heading">
+    Shop by
+    <span class="sub-heading">Department</span>
+</div>
+<div style="display:flex; flex-wrap: wrap;justify-content: start; margin-bottom: 3rem;">
+    <?php foreach ($this->getCategories() as $category) : ?>
+        <?php if($category->getId() != 2 && $category->getProductCount() > 1): ?>
+        <div class="card">
+            <a href="<?php echo $this->getCategoryUrl($category); ?>">
+                <img src="<?php echo $category->getImageUrl(); ?>" alt="categories">
+            </a>
+            <h3><center><?php echo $category->name; ?></center></h3>
+        </div>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</div>
