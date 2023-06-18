@@ -1,15 +1,25 @@
 <?xml version="1.0"?>
-<layout version="0.1.0">
+<layout version="1.0.0">
     <cms_index_index>
         <remove name="right"></remove>
+        <!-- <remove name="header"></remove> -->
+        <remove name="footer"></remove>
         <reference name="content">
-            <block type="brand/brand" name="brand.brand" template="brand/brand.phtml"/>
+            <block type="brand/image" name="brand.image" template="brand/cards.phtml" />
         </reference>
     </cms_index_index>
-    <brand_index_view>
-        <remove name="right"></remove>
+    <brand_view_index>
+        <default>
+            <remove name="right"/>
+            <remove name="header"></remove>
+            <remove name="footer"></remove>
+        </default>
+        
         <reference name="content">
-            <block type="brand/brand" name="brand.brand" template="brand/brand_page.phtml"/>
+            <block type="brand/image" name="brand_banner" template="brand/image.phtml" />
         </reference>
-    </brand_index_view>
+        <reference name="left">
+            <block type="brand/image" name="brand.image" template="brand/left.phtml" />
+        </reference>
+    </brand_view_index>
 </layout>
