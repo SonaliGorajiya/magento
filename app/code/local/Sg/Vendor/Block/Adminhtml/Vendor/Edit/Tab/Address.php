@@ -1,30 +1,35 @@
 <?php
-
 class Sg_Vendor_Block_Adminhtml_Vendor_Edit_Tab_Address extends Mage_Adminhtml_Block_Widget_Form
 {
-    protected function _prepareForm()
-    {
-        $form = new Varien_Data_Form();
-        $this->setForm($form);
-        $fieldset = $form->addFieldset('address_form',array('legend'=>Mage::helper('vendor')->__('Vendor Address Information')));
+	protected function _prepareForm()
+	{
+		$form = new Varien_Data_Form();
+		$this->setForm($form);
+		$fieldset = $form->addFieldset('vendor_form',array('legend'=>Mage::helper('vendor')->__('Vendor Address information')));
 
-        $fieldset->addField('address', 'text', array(
+
+		 $fieldset->addField('address', 'text', array(
             'label' => Mage::helper('vendor')->__('Address'),
-            'class' => 'required-entry',
+            'name' => 'vendor_address[address]',
             'required' => true,
-            'name' => 'address[address]',
         ));
 
+        $fieldset->addField('postal_code', 'text', array(
+            'label' => Mage::helper('vendor')->__('Postal Code'),
+            'name' => 'vendor_address[postal_code]',
+            'required' => true,
+        ));
 
         $fieldset->addField('city', 'text', array(
             'label' => Mage::helper('vendor')->__('City'),
-            'class' => 'required-entry',
+            'name' => 'vendor_address[city]',
             'required' => true,
-            'name' => 'address[city]',
         ));
 
+
+   
         $fieldset->addField('country', 'select', array(
-            'name'      => 'address[country]',
+            'name'      => 'vendor_address[country]',
             'label'     => Mage::helper('vendor')->__('Country'),
             'required'  => true,
             'values'    => Mage::getModel('directory/country')->getResourceCollection()
@@ -34,7 +39,7 @@ class Sg_Vendor_Block_Adminhtml_Vendor_Edit_Tab_Address extends Mage_Adminhtml_B
         ));
 
         $fieldset->addField('state', 'select', array(
-            'name'      => 'address[state]',
+            'name'      => 'vendor_address[state]',
             'label'     => Mage::helper('vendor')->__('State'),
             'required'  => true,
             'values'    => Mage::getModel('directory/region')->getResourceCollection()
@@ -42,23 +47,8 @@ class Sg_Vendor_Block_Adminhtml_Vendor_Edit_Tab_Address extends Mage_Adminhtml_B
                             ->load()
                             ->toOptionArray()
         ));
-
-        $fieldset->addField('postal_code', 'text', array(
-            'label' => Mage::helper('vendor')->__('Postal Code'),
-            'class' => 'required-entry',
-            'required' => true,
-            'name' => 'address[postal_code]',
-        ));
-
-        if ( Mage::getSingleton('adminhtml/session')->getvendorData() )
-        {
-            $form->setValues(Mage::getSingleton('adminhtml/session')->getvendorData());
-            Mage::getSingleton('adminhtml/session')->setvendorData(null);
-        } elseif ( Mage::registry('vendor_address_data') ) {
-            $form->setValues(Mage::registry('vendor_address_data')->getData());
-        }
-
-
+        
+        
         $script = '
             <script>
             function updateStateOptions(countryId) {
@@ -83,6 +73,16 @@ class Sg_Vendor_Block_Adminhtml_Vendor_Edit_Tab_Address extends Mage_Adminhtml_B
             'after_element_html' => '',
         ));
 
-        return parent::_prepareForm();
-    }
+    
+		if ( Mage::getSingleton('adminhtml/session')->getsalesmanData() )
+		{
+			$form->setValues(Mage::getSingleton('adminhtml/session')->getsalesmanData());
+			Mage::getSingleton('adminhtml/session')->setsalesmanData(null);
+		} 
+		elseif ( Mage::registry('address_data') ) 
+		{
+			$form->setValues(Mage::registry('address_data')->getData());
+		}
+		return parent::_prepareForm();
+	}
 }

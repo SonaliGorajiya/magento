@@ -1,0 +1,40 @@
+<style>
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 10px;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+/*        max-width: 100%;*/
+        height: 150px;
+        width: 100%;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .card p {
+        margin-top: 10px;
+    }
+
+</style>
+<div style="display:flex;">
+        <?php $url = Mage::getBaseUrl('media'); ?>
+    <?php foreach ($this->getBrands() as $brand) : ?>
+    <?php $path = $url . $brand->image; ?>
+    <div class="card">
+    <a href="<?php echo $this->getRewriteKey($brand); ?>">
+        <img src="<?php echo $path; ?>" height = "100px" width = "100px" alt="Brand 1">
+    </a>
+        <h3><?php echo $brand->name; ?></h3>
+        <!-- <p><?php echo $brand->description; ?></p> -->
+        <!-- <a href="<?php echo $this->getRewriteKey($brand); ?>">View Brand</a> -->
+    </div>
+    <?php endforeach; ?>
+</div>

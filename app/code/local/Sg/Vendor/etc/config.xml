@@ -43,26 +43,6 @@
                 </connection>
             </vendor_read>
         </resources>
-        <resources>
-            <vendor_setup>
-                <setup>
-                    <module>Sg_Vendor</module>
-                </setup>
-                <connection>
-                    <use>core_setup</use>
-                </connection>
-            </vendor_setup>
-            <vendor_write>
-                <connection>
-                    <use>core_write</use>
-                </connection>
-            </vendor_write>
-            <vendor_read>
-                <connection>
-                    <use>core_read</use>
-                </connection>
-            </vendor_read>
-        </resources>
         <models>
             <vendor>
                 <class>Sg_Vendor_Model</class>
@@ -70,7 +50,7 @@
             </vendor>
             <vendor_resource>
                 <class>Sg_Vendor_Model_Resource</class>
-                <!-- <deprecatedNode>vendor_mysql4</deprecatedNode> -->
+                <deprecatedNode>vendor_mysql4</deprecatedNode>
                 <entities>
                     <vendor>
                         <table>vendor</table>
@@ -81,24 +61,15 @@
                 </entities>
             </vendor_resource>
         </models>
-        <!-- <resources>
-             <vendor_setup>
-                 <setup>
-                    <module>Sg_Vendor</module>
-                 </setup>
-             </vendor_setup>
-        </resources> 
-        <vendor_write>
-            <connection>
-                <use>core_write</use>
-            </connection>
-        </vendor_write>
-
-        <vendor_read>
-            <connection>
-                <use>core_read</use>
-            </connection>
-        </vendor_read> -->
+        <template>
+            <email>
+                <vendor_account_details module="vendor">
+                    <label>Welcome Email Template</label>
+                    <file>vendor-new-send.html</file>
+                    <type>html</type>
+                </vendor_account_details>
+            </email>
+        </template>
         <blocks>
             <vendor>
                 <class>Sg_Vendor_Block</class>
@@ -109,7 +80,6 @@
                 <class>Sg_Vendor_Helper</class>
             </vendor>
         </helpers>
-        
     </global>
     <admin>
         <routers>
@@ -122,5 +92,4 @@
             </adminhtml>
         </routers>
   </admin>
-  
 </config>

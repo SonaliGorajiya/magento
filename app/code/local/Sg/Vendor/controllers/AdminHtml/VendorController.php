@@ -61,6 +61,7 @@ class Sg_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Act
         }
     }
 
+        $status = $this->getRequest()->getParam('status');
     public function saveAction()
     {
         if ($this->getRequest()->getParam('back')) {
@@ -109,7 +110,6 @@ class Sg_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Act
 
     public function massStatusAction() {
         $vendorIds = $this->getRequest()->getParam('vendor_id');
-        $status = $this->getRequest()->getParam('status');
         if ($status != 1) {
             $status = 0;
         }

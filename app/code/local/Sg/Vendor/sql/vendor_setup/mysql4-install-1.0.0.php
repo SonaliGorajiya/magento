@@ -8,7 +8,7 @@ $installer->run("
     
     DROP TABLE IF EXISTS {$this->getTable('vendor')};
     CREATE TABLE {$this->getTable('vendor')} (
-      `vendor_id` int(11) NOT NULL,
+    `vendor_id` int(11) NOT NULL,
     `name` varchar(255) NOT NULL,
     `email` varchar(255) NOT NULL,
     `password` varchar(255) NOT NULL,

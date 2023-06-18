@@ -3,7 +3,7 @@
     <cms_index_index>
         <remove name="right"></remove>
         <reference name="content">
-            <block type="category/category" name="category.category" after="brand.brand" template="category/category.phtml"/>
+            <block type="category/category" name="category.category" after="brand.image" template="category/category.phtml"/>
         </reference>
     </cms_index_index>
     <catalog_category_view>
@@ -18,3 +18,4 @@
         </reference>
     </catalog_category_view>
 </layout>
+

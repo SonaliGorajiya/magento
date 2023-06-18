@@ -1,31 +1,31 @@
-<?xml version="1.0"?>
 <config>
-    <menu>
-        <brand translate="title" module="brand">
-            <title>Brands</title>
+	<menu>
+		<brand module="brand">
+            <title>Brand</title>
             <sort_order>10</sort_order>
             <children>
-                <manage translate="title" module="brand">
+                <manageBrand module="brand">
                     <title>Manage Brands</title>
-                    <action>brand/adminhtml_brand/index</action>
+            		<action>brand/adminhtml_brand/index</action>
                     <sort_order>10</sort_order>
-                </manage>
+                </manageBrand>
             </children>
         </brand>
-    </menu>
+	</menu>
     <acl>
         <resources>
+            <all>
+                <title>Allow Everthing</title>
+            </all>
             <admin>
                 <children>
-                    <brand translate="title" module="brand">
+                    <brand template="title" module="brand">
                         <title>Brands</title>
-                        <sort_order>40</sort_order>
+                        <sort_order>100</sort_order>
                         <children>
-                            <managevender translate="title" module="brand">
-                                <title>Manage Brands</title>
-                                <action>brand/adminhtml_brand/index</action>
-                                <sort_order>10</sort_order>
-                            </managevender>
+                            <manageBrand template="title" >
+                                <title>Manaage Brand</title>
+                            </manageBrand>
                         </children>
                     </brand>
                     <system>
@@ -33,7 +33,7 @@
                             <config>
                                 <children>
                                     <brand translate="title" module="brand">
-                                        <title>Brands Section</title>
+                                        <title>brands Section</title>
                                         <sort_order>50</sort_order>
                                     </brand>
                                 </children>

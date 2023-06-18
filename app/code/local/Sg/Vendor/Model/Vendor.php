@@ -1,35 +1,22 @@
-<?php 
+<?php
 
-/**
- * 
- */
 class Sg_Vendor_Model_Vendor extends Mage_Core_Model_Abstract
 {
 	protected function _construct()
-    {  
+    {
         $this->_init('vendor/vendor');
-    }  
+    }
 
-    public function reset()
+    public function setPasswordConfirmation($passwordConfirmation)
     {
-        $this->setData(array());
-        $this->setOrigData();
-        $this->_attributes = null;
-
+        $this->_getData('password_confirmation', $passwordConfirmation);
         return $this;
     }
 
-    public function getStatuses()
+    public function setForceConfirmed($forceConfirmed)
     {
-        return [
-            '1' => 'Active',
-            '0' => 'Non Active'
-        ]; 
-    }
-
-    public function setPassword($password)
-    {
-        $this->setData('password', md5($password));
+        $this->_getData('force_confirmed', $forceConfirmed);
         return $this;
     }
+    
 }

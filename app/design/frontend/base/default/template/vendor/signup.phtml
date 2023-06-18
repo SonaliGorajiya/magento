@@ -1,0 +1,97 @@
+<div class="account-create">
+    <div class="page-title">
+        <h1>Create an Account</h1>
+    </div>
+   <form action="<?php echo $this->getSignupActionUrl() ?>" method="post" id="signup-form">
+    <div class="fieldset">
+            <h2 class="legend">Personal Information</h2>
+            <ul class="form-list">
+                <li class="fields">
+                    <!-- Name input fields -->
+                </li>
+                <li>
+                    <label for="fname" class="required"><em>*</em>First Name</label>
+                    <div class="input-box">
+                        <input type="text" name="vendor[fname]" id="fname" class="input-text" />
+                    </div>
+                </li>
+                <!-- Newsletter checkbox -->
+            </ul>
+        </div>
+         <div class="fieldset">
+            <ul class="form-list">
+                <li class="fields">
+                    <!-- Name input fields -->
+                </li>
+                <li>
+                    <label for="lname" class="required"><em>*</em>Last Name</label>
+                    <div class="input-box">
+                        <input type="text" name="vendor[lname]" id="lname" class="input-text" />
+                    </div>
+                </li>
+                <!-- Newsletter checkbox -->
+            </ul>
+        </div>
+        <div class="fieldset">
+            <ul class="form-list">
+                <li class="fields">
+                    <!-- Name input fields -->
+                </li>
+                <li>
+                    <label for="email_address" class="required"><em>*</em>Email Address</label>
+                    <div class="input-box">
+                        <input type="text" name="vendor[email]" id="email_address" class="input-text validate-email required-entry" />
+                    </div>
+                </li>
+                <!-- Newsletter checkbox -->
+            </ul>
+        </div>
+        <!-- Address Information fields -->
+        <div class="fieldset">
+            <h2 class="legend">Address Information</h2>
+            <ul class="form-list">
+                <li class="fields">
+                    <div class="field">
+                        <label for="company">Company</label>
+                        <div class="input-box">
+                            <input type="text" name="vendor[company]" id="company" class="input-text" />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="telephone" class="required"><em>*</em>Telephone</label>
+                        <div class="input-box">
+                            <input type="text" name="vendor[telephone]" id="telephone" class="input-text" />
+                        </div>
+                    </div>
+                </li>
+                <!-- Other address fields -->
+            </ul>
+        </div>
+        <div class="fieldset">
+            <h2 class="legend">Login Information</h2>
+            <ul class="form-list">
+                <li class="fields">
+                    <div class="field">
+                        <label for="password" class="required"><em>*</em>Password</label>
+                        <div class="input-box">
+                            <input type="password" name="vendor[password]" id="password" class="input-text required-entry" />
+                            <p class="form-instructions">The minimum password length is X</p>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="confirmation" class="required"><em>*</em>Confirm Password</label>
+                        <div class="input-box">
+                            <input type="password" name="vendor[confirmation]" id="confirmation" class="input-text required-entry" />
+                        </div>
+                    </div>
+                </li>
+                <!-- Additional form fields -->
+            </ul>
+        </div>
+        <div class="buttons-set">
+            <p class="required">* Required Fields</p>
+            <p class="back-link"><a href="#" class="back-link"><small>&laquo; </small>Back</a></p>
+            <button type="submit" class="button"><span><span>Submit</span></span></button>
+        </div>
+    </form>
+</div>

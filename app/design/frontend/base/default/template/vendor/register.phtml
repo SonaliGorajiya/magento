@@ -1,0 +1,81 @@
+
+<body>
+    <div class="container">
+        <h2>Vendor Sign In</h2>
+        <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+             <div class="buttons-set">
+                <button type="submit" class="button" title="<?php echo $this->__('Login') ?>"><span><span><?php echo $this->__('Login') ?></span></span></button>
+                <a href="<?php echo $this->getUrl('vendor/index/forgotpassword') ?>" class="forgot-password"><?php echo $this->__('Forgot Your Password?') ?></a>
+            </div>
+
+        </form>
+        
+          <div class="register-link">
+            <p>If you don't have an account, <a href="<?php echo $this->getUrl('vendor/index/signup') ?>">register here</a>.</p>
+        </div>
+    </div>
+</body>
+<style>
+    .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+</style>

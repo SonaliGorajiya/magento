@@ -1,24 +1,30 @@
 <?php
-class Sonali_Brand_Model_Observer extends Varien_Event_Observer
+
+
+class Sonali_Brand_Model_Observer
 {
-    public function generateBrandUrlRewrite(Varien_Event_Observer $observer)
+     public function prepareRewrite($brandModel)
     {
-        $brand = $observer->getData('brand'); 
+        $brandId = $brandModel->getId();
+        $requestPath = strtolower(str_replace(" ", "-", $brandModel->getData('name'))).'.html';
+        $targetPath = 'brand/view/view/brand_id/'.$brandId;
+        return $requestPath;
+    }
 
-        $urlKey = $brand->url_key;
-        $rewriteUrl = $urlKey;
-
-        $rewrite = Mage::getModel('core/url_rewrite')->getCollection()
-            ->addFieldToFilter('request_path', $rewriteUrl)
-            ->getFirstItem();
-
-        if (!$rewrite->getId()) {
-            $rewrite->setStoreId(0) 
+    public function generateBrandRewriteUrl($observer)
+    {
+        $brand = $observer->getBrand();
+        $urlKey = $brand->getUrlKey();
+        $urlKey = $this->prepareRewrite($brand);
+        echo $brand->getId();
+        $rewrite = Mage::getModel('core/url_rewrite');
+        $rewrite->setStoreId($brand->getStoreId())
                 ->setIdPath('brand/' . $brand->getId())
-                ->setRequestPath($rewriteUrl)
-                ->setTargetPath('brand/index/view/id/' . $brand->getId())
+                ->setRequestPath($urlKey)
+                ->setTargetPath('brand/view/index/brand_id/'. $brand->getId())
                 ->setIsSystem(0)
+                ->setOptions('')
+                ->setDescription('')
                 ->save();
-        }
     }
 }

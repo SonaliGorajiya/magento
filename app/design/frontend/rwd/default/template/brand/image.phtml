@@ -1,0 +1,61 @@
+<?php $brandId =  $this->getRequest()->getParam('brand_id'); 
+
+$products = $this->getProductsByBrand();
+
+$brand = Mage::getModel('brand/brand')->load($brandId);
+?>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                
+<div class="container">
+    <div class="banner">
+      <img class="banner-image" src="<?php echo Mage::getBaseUrl('media').$brand->banner_image;?>" alt="Banner Image">
+      <div class="banner-text">
+       <h1><?php echo $brand->name ?></h1>
+        <p><?php echo $brand->description; ?></p>
+      </div>
+    </div>
+  </div>
+
+<div style="display:flex;flex-wrap: wrap;width: 70vw;">
+  <?php foreach ($products as $key => $value): ?>   
+  <div class="card m-2 mt-5" style="width: 18rem; ">
+  <img class="card-image" src="<?php echo Mage::getBaseUrl('media').'catalog/product' . $value->getImage() ?>" alt="Card image cap">
+  <div class="card-body" style="width: 50%; margin: auto;">   
+    <h5 class="card-title"><?php echo $value->name ?></h5>
+    <p class=""><b>$ <?php echo $value->getPrice() ?></b></p>
+    <a href="<?php echo $this->getUrl($this->getProductUrl($value)); ?>" class="btn btn-primary">View</a>
+  </div>
+</div>
+  <?php endforeach ?>
+</div>
+
+<style type="text/css">
+.banner-image{
+  height: 350px;
+  width: 1290px;
+  margin-left: -320px;
+  position: relative;
+  filter: drop-shadow(8px 8px 10px gray);
+  filter: blur(1px);
+
+}
+.banner-text{
+  width: 50%;
+  position: absolute;
+  top: 209px;
+  color: white;
+  left: 36px;
+}
+
+.card-image{
+  align-self: center;
+  margin: auto;
+  height: 190px;
+  width: 70%;
+}
+
+</style>
