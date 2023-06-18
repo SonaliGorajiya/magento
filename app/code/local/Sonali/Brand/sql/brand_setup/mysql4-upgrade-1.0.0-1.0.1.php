@@ -24,3 +24,4 @@ $installer->addAttribute(4, 'brand', array(
     'comparable'                  => ''
 ));
 $installer->endSetup();
+

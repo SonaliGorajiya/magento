@@ -86,7 +86,6 @@ class Sonali_Brand_Block_Adminhtml_Brand_Grid extends Mage_Adminhtml_Block_Widge
         return parent::_prepareColumns();
     }
 
-    
     public function getRowUrl($row)
     {
         return $this->getUrl('*/*/edit', array('brand_id' => $row->getId()));
