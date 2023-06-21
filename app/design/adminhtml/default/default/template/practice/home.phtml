@@ -1,0 +1,107 @@
+<style type="text/css">
+    .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 80%;
+}
+
+.styled-table thead tr {
+    background-color: darkkhaki;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid darkkhaki;
+}
+
+.container-grid {
+    font-size: 11pt;
+}
+
+.desc {
+    width: 85%;
+}
+
+</style>
+
+<div class="container-grid" align="center">
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Sr no.</th>
+                <th class="desc">Description</th>
+                <th>Grid</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Need a list of product with these columns product name, sku, cost, price, color.</td>
+                <td><a href="<?php echo Mage::helper('adminhtml')->getUrl("*/*/One"); ?>">grid</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Need a list of attribute & options. return an array with attribute id, attribute code, option Id, option name.</td>
+                <td><a href="<?php echo Mage::helper('adminhtml')->getUrl("*/*/Two"); ?>">grid</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Need a list of attribute having options count greater than 10. return array with attribute id, attribute code, option count.</td>
+                <td><a href="<?php echo Mage::helper('adminhtml')->getUrl("*/*/Three"); ?>">grid</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Need list of product with assigned images. return an array with product Id, sku, base image, thumb image, small image.</td>
+                <td><a href="<?php echo Mage::helper('adminhtml')->getUrl("*/*/Four"); ?>">grid</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Need list of product with gallery image count. return an array with product sku, gallery images count, without consideration of thumb, small, base</td>
+                <td><a href="<?php echo Mage::helper('adminhtml')->getUrl("*/*/Five"); ?>">grid</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Need list of top to bottom customers with their total order counts. return an array with customer id, customer name, customer email, order count.</td>
+                <td><a href="<?php echo Mage::helper('adminhtml')->getUrl("*/*/Six"); ?>">grid</a></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Need list of top to bottom customers with their total order counts, order status wise. return an array with customer id, customer name, customer email, status, order count.</td>
+                <td><a href="<?php echo Mage::helper('adminhtml')->getUrl("*/*/Seven"); ?>">grid</a></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Need list product with number of quantity sold till now for each. return an array with product id, sku, sold quantity.</td>
+                <td><a href="<?php echo Mage::helper('adminhtml')->getUrl("*/*/Eight"); ?>">grid</a></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Need list of those attributes for whose value is not assigned to product. return an array result product wise with these columns product Id, sku, attribute Id, attribute code</td>
+                <td><a href="<?php echo Mage::helper('adminhtml')->getUrl("*/*/Nine"); ?>">grid</a></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Need list of those attributes for whose value is not assigned to product. return an array result product wise with these columns product Id, sku, attribute Id, attribute code, value.</td>
+                <td><a href="<?php echo Mage::helper('adminhtml')->getUrl("*/*/Ten"); ?>">grid</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

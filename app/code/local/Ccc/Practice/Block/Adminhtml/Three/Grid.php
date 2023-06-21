@@ -5,15 +5,14 @@ class Ccc_Practice_Block_Adminhtml_Three_Grid extends Mage_Adminhtml_Block_Widge
     public function __construct()
     {
         parent::__construct();
-        $this->setId('PracticeAdminhtmlPracticeGrid');
-        $this->setDefaultSort('category_id');
+        $this->setId('practiceAdminhtmlPracticeGrid');
+        $this->setDefaultSort('attribute_id');
         $this->setDefaultDir('ASC');
     }
 
-    protected function _prepareCollection()
+     protected function _prepareCollection()
     {
-       $attributeOptionCollection = Mage::getResourceModel('eav/entity_attribute_option_collection')
-            ->addFieldToFilter('option_id', array('gt' => 0))
+        $collection = Mage::getResourceModel('eav/entity_attribute_option_collection')
             ->getSelect()
             ->join(
                 array('attribute' => Mage::getSingleton('core/resource')->getTableName('eav/attribute')),
@@ -25,7 +24,8 @@ class Ccc_Practice_Block_Adminhtml_Three_Grid extends Mage_Adminhtml_Block_Widge
             ->having('option_count > ?', 10);
 
         $resultCollection = Mage::getModel('eav/entity_attribute')->getCollection();
-        $resultCollection->getSelect()->reset()->from(array('main_table' => $attributeOptionCollection));
+        $resultCollection->getSelect()->reset()->from(array('main_table' => $collection));
+
         $this->setCollection($resultCollection);
 
         return parent::_prepareCollection();
@@ -33,33 +33,25 @@ class Ccc_Practice_Block_Adminhtml_Three_Grid extends Mage_Adminhtml_Block_Widge
 
     protected function _prepareColumns()
     {
-        $baseUrl = $this->getUrl();
 
         $this->addColumn('attribute_id', array(
-            'header'    => Mage::helper('category')->__('Attribute Id'),
+            'header'    => Mage::helper('product')->__('Attribute Id'),
             'align'     => 'left',
-            'index'     => 'attribute_id',
+            'index'     => 'attribute_id'
         ));
 
         $this->addColumn('attribute_code', array(
-            'header'    => Mage::helper('category')->__('Attribute Code'),
+            'header'    => Mage::helper('product')->__('Attribute Code'),
             'align'     => 'left',
-            'index'     => 'attribute_code',
+            'index'     => 'attribute_code'
         ));
 
         $this->addColumn('option_count', array(
-            'header'    => Mage::helper('category')->__('Option Count'),
+            'header'    => Mage::helper('product')->__('Option Count'),
             'align'     => 'left',
-            'index'     => 'option_count',
+            'index'     => 'option_count'
         ));
 
         return parent::_prepareColumns();
     }
-
-    
-    public function getRowUrl($row)
-    {
-        return $this->getUrl('*/*/edit', array('category_id' => $row->getId()));
-    }
-   
 }
