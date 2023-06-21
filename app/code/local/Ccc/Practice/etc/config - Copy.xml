@@ -1,0 +1,45 @@
+<config>    
+    <modules>
+        <Ccc_Practice>    
+            <version>1.0.0</version>
+        </Ccc_Practice>
+    </modules>
+ <global>
+           <!-- <models>
+            <practice>
+                <class>Ccc_practice_Model</class>
+                <resourceModel>practice_resource</resourceModel>
+            </practice>
+            <practice_resource>
+                <class>Ccc_practice_Model_Resource</class>
+                <deprecatedNode>practice_mysql4</deprecatedNode>
+                <entities>
+                    <practice>
+                        <table>practice</table>
+                    </practice>
+                </entities>
+            </practice_resource>
+        </models> -->
+        <blocks>
+            <practice>
+                <class>Ccc_Practice_Block</class>
+            </practice>
+        </blocks> 
+        <helpers> 
+           <practice>
+                  <class>Ccc_Practice_Helper</class>
+            </practice>
+        </helpers>
+    </global> 
+    <admin>
+        <routers>
+            <practice>
+                <use>admin</use>
+                <args>
+                    <module>Ccc_Practice</module>
+                    <frontName>practice</frontName>
+                </args>
+            </practice>
+        </routers>  
+    </admin>
+</config>
