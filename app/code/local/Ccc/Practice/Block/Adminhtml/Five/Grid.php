@@ -5,51 +5,51 @@ class Ccc_Practice_Block_Adminhtml_Five_Grid extends Mage_Adminhtml_Block_Widget
     public function __construct()
     {
         parent::__construct();
-        $this->setId('PracticeAdminhtmlPracticeGrid');
-        $this->setDefaultSort('category_id');
+        $this->setId('practiceAdminhtmlPracticeGrid');
+        $this->setDefaultSort('attribute_id');
         $this->setDefaultDir('ASC');
     }
 
-    protected function _prepareCollection()
+     protected function _prepareCollection()
     {
-        $products = Mage::getModel('catalog/product')->getCollection();
-        $products->addAttributeToSelect(array('sku','media_gallery'));
-        $this->setCollection($products);
+        $collection = Mage::getModel('catalog/product')->getCollection()
+            ->addAttributeToSelect('entity_id')
+            ->addAttributeToSelect('sku');
 
+        $collection->getSelect()->joinLeft(
+            array('mg' => $collection->getTable('catalog/product_attribute_media_gallery')),
+            'mg.entity_id = e.entity_id',
+            array('gallery_image_count' => 'COUNT(mg.value_id)')
+        );
+
+        $collection->getSelect()->group('e.entity_id');
+
+        $this->setCollection($collection);
         return parent::_prepareCollection();
     }
 
     protected function _prepareColumns()
     {
-        $baseUrl = $this->getUrl();
 
         $this->addColumn('product_id', array(
-            'header'    => Mage::helper('practice')->__('Product Id'),
+            'header'    => Mage::helper('product')->__('Product Id'),
             'align'     => 'left',
-            'index'     => 'entity_id',
+            'index'     => 'entity_id'
         ));
 
         $this->addColumn('sku', array(
-            'header'    => Mage::helper('practice')->__('SKU'),
+            'header'    => Mage::helper('product')->__('SKU'),
             'align'     => 'left',
-            'index'     => 'sku',
+            'index'     => 'sku'
         ));
 
-        $this->addColumn('gallary_count', array(
-            'header'    => Mage::helper('practice')->__('Gallary Images Count'),
+        $this->addColumn('gallery_image_count', array(
+            'header'    => Mage::helper('product')->__('Gallery Image Count'),
             'align'     => 'left',
-            'index'     => 'media_gallery',
-            'renderer'  =>'Ccc_Practice_Block_Adminhtml_Five_Renderer_Count'
+            'index'     => 'gallery_image_count',
         ));
 
 
         return parent::_prepareColumns();
     }
-
-    
-    public function getRowUrl($row)
-    {
-        return $this->getUrl('*/*/edit', array('category_id' => $row->getId()));
-    }
-   
 }

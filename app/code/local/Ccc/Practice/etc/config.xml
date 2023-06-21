@@ -31,7 +31,7 @@
                 <class>Ccc_Practice_Model_Resource</class>
                 <entities>
                     <practice>
-                        <table>practice</table>
+                        <table>catalog_product_entity</table>
                     </practice>
                 </entities>
             </practice_resource>

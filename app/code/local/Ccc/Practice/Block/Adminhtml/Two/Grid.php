@@ -1,82 +1,88 @@
+
 <?php
+
 class Ccc_Practice_Block_Adminhtml_Two_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
-
-
     public function __construct()
     {
         parent::__construct();
-        $this->setId('PracticeAdminhtmlPracticeGrid');
-        $this->setDefaultSort('category_id');
+        $this->setId('practiceAdminhtmlPracticeGrid');
+        $this->setDefaultSort('attribute_id');
         $this->setDefaultDir('ASC');
     }
 
-    protected function _prepareCollection()
+   protected function _prepareCollection()
     {
-       $attributeCollection = Mage::getResourceModel('eav/entity_attribute_collection');
-            // ->addFieldToFilter('entity_type_id', Mage_Catalog_Model_Product::ENTITY);
 
-        $attributeOptionCollection = Mage::getResourceModel('eav/entity_attribute_option_collection');
+        $attributeCollection = Mage::getResourceModel('eav/entity_attribute_collection');
+        $attributeCollection->addFieldToFilter('frontend_input', 'select');
 
-        $attributeOptionCollection->getSelect()
-            ->join(
-                array('attribute' => $attributeCollection->getTable('eav/attribute')),
-                'attribute.attribute_id = main_table.attribute_id',
-                array('attribute_code' => 'attribute.attribute_code')
-            );
+        $resultArray = array();
 
-        $attributeOptionCollection->getSelect()->columns(array(
-            'attribute_id' => 'main_table.attribute_id',
-            'attribute_code' => 'attribute.attribute_code',
-            'option_id' => 'main_table.option_id',
-        ));
+        foreach ($attributeCollection as $attribute) {
+            $attributeId = $attribute->getAttributeId();
+            $attributeCode = $attribute->getAttributeCode();
 
+            if ($attribute->usesSource()) {
+                $options = Mage::getModel('eav/entity_attribute_option')
+                    ->getCollection()
+                    ->setAttributeFilter($attributeId)
+                    ->setPositionOrder('asc', true)
+                    ->load();
 
+                foreach ($options as $option) {
+                    $optionId = $option->getOptionId();
+                    $optionName = $option->getValue();
 
-        /* @var $collection Mage_Cms_Model_Mysql4_Page_Collection */
-        $this->setCollection($attributeOptionCollection);
+                    $resultArray[] = array(
+                        'attribute_id' => $attributeId,
+                        'attribute_code' => $attributeCode,
+                        'option_id' => $optionId,
+                        'option_name' => $optionName
+                    );
+                }
+            }
+        }
 
+        $collection = new Varien_Data_Collection();
+
+        foreach ($resultArray as $data) {
+            $row = new Varien_Object();
+            $row->setData($data);
+            $collection->addItem($row);
+        }
+
+        $this->setCollection($collection);
         return parent::_prepareCollection();
     }
 
     protected function _prepareColumns()
     {
-        $baseUrl = $this->getUrl();
 
         $this->addColumn('attribute_id', array(
-            'header'    => Mage::helper('category')->__('Attribute Id'),
+            'header'    => Mage::helper('product')->__('Attribute Id'),
             'align'     => 'left',
-            'index'     => 'attribute_id',
+            'index'     => 'attribute_id'
         ));
 
         $this->addColumn('attribute_code', array(
-            'header'    => Mage::helper('category')->__('Attribute Code'),
+            'header'    => Mage::helper('product')->__('Attribute Code'),
             'align'     => 'left',
-            'index'     => 'attribute_code',
+            'index'     => 'attribute_code'
         ));
 
         $this->addColumn('option_id', array(
-            'header'    => Mage::helper('category')->__('Option Id'),
+            'header'    => Mage::helper('product')->__('Option Id'),
             'align'     => 'left',
-            'index'     => 'option_id',
+            'index'     => 'option_id'
         ));
 
-        $this->addColumn('oprion_name', array(
-            'header'    => Mage::helper('category')->__('Option Name'),
+        $this->addColumn('option_name', array(
+            'header'    => Mage::helper('product')->__('Option Name'),
             'align'     => 'left',
-            'index'     => 'oprion_name',
-            'renderer'  =>'ccc_practice_block_adminhtml_two_renderer_value'
+            'index'     => 'option_name'
         ));
-
-        
 
         return parent::_prepareColumns();
     }
-
-    
-    public function getRowUrl($row)
-    {
-        return $this->getUrl('*/*/edit', array('category_id' => $row->getId()));
-    }
-   
 }

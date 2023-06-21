@@ -5,16 +5,13 @@ class Ccc_Practice_Block_Adminhtml_Ten_Grid extends Mage_Adminhtml_Block_Widget_
     public function __construct()
     {
         parent::__construct();
-        $this->setId('PracticeAdminhtmlPracticeGrid');
-        $this->setDefaultSort('practice_id');
+        $this->setId('practiceAdminhtmlPracticeGrid');
+        $this->setDefaultSort('name');
         $this->setDefaultDir('ASC');
     }
 
     protected function _prepareCollection()
     {
-        $collection = Mage::getResourceModel('catalog/product_collection')
-            ->addAttributeToSelect('sku');
-
         $attributes = Mage::getResourceModel('catalog/product_attribute_collection')
             ->addFieldToFilter('is_user_defined', 1)
             ->getItems();
@@ -60,6 +57,7 @@ class Ccc_Practice_Block_Adminhtml_Ten_Grid extends Mage_Adminhtml_Block_Widget_
             $collection->addItem($item);
         }
 
+
         $this->setCollection($collection);
 
         return parent::_prepareCollection();
@@ -67,45 +65,38 @@ class Ccc_Practice_Block_Adminhtml_Ten_Grid extends Mage_Adminhtml_Block_Widget_
 
     protected function _prepareColumns()
     {
-        $baseUrl = $this->getUrl();
 
         $this->addColumn('product_id', array(
-            'header'    => Mage::helper('category')->__('Product Id'),
+            'header'    => Mage::helper('product')->__('Product Id'),
             'align'     => 'left',
-            'index'     => 'product_id',
+            'index'     => 'product_id'
         ));
 
         $this->addColumn('sku', array(
-            'header'    => Mage::helper('category')->__('SKU'),
+            'header'    => Mage::helper('product')->__('SKU'),
             'align'     => 'left',
-            'index'     => 'sku',
+            'index'     => 'sku'
         ));
 
-         $this->addColumn('attribute_id', array(
-            'header'    => Mage::helper('category')->__('Attribute Id'),
+        $this->addColumn('attribute_id', array(
+            'header'    => Mage::helper('product')->__('Attribute Id'),
             'align'     => 'left',
-            'index'     => 'attribute_id',
+            'index'     => 'attribute_id'
         ));
 
         $this->addColumn('attribute_code', array(
-            'header'    => Mage::helper('category')->__('Attribute Code'),
+            'header'    => Mage::helper('product')->__('Attribute Code'),
             'align'     => 'left',
-            'index'     => 'attribute_code',
+            'index'     => 'attribute_code'
         ));
 
         $this->addColumn('value', array(
-            'header'    => Mage::helper('category')->__('Value'),
+            'header'    => Mage::helper('product')->__('Value'),
             'align'     => 'left',
             'index'     => 'value',
-            'renderer'  =>'Ccc_Practice_Block_Adminhtml_Ten_renderer_Value',
+            'renderer'  => 'Ccc_Practice_Block_Adminhtml_Ten_Renderer_Value'
         ));
-        
+
         return parent::_prepareColumns();
     }
-    
-    public function getRowUrl($row)
-    {
-        return $this->getUrl('*/*/edit', array('practice_id' => $row->getId()));
-    }
-   
 }

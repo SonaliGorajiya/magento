@@ -5,58 +5,55 @@ class Ccc_Practice_Block_Adminhtml_Six_Grid extends Mage_Adminhtml_Block_Widget_
     public function __construct()
     {
         parent::__construct();
-        $this->setId('PracticeAdminhtmlPracticeGrid');
-        $this->setDefaultSort('order_count');
-        $this->setDefaultDir('DESC');
+        $this->setId('practiceAdminhtmlPracticeGrid');
+        $this->setDefaultSort('name');
+        $this->setDefaultDir('ASC');
     }
 
     protected function _prepareCollection()
     {
         $collection = Mage::getModel('customer/customer')->getCollection()
-        ->addAttributeToSelect('*');
-        $this->setCollection($collection);
+            ->addAttributeToSelect(array('entity_id', 'firstname','email'));
 
+        $collection->getSelect()->joinLeft(
+            array('o' => Mage::getSingleton('core/resource')->getTableName('sales/order')),
+            'o.customer_id = e.entity_id',
+            array('order_count' => 'COUNT(o.entity_id)')
+        );
+
+        $collection->getSelect()->group('e.entity_id');
+        
+        $this->setCollection($collection);
         return parent::_prepareCollection();
     }
 
     protected function _prepareColumns()
     {
-        $baseUrl = $this->getUrl();
 
         $this->addColumn('customer_id', array(
-            'header'    => Mage::helper('category')->__('Customer Id'),
+            'header'    => Mage::helper('product')->__('Customer Id'),
             'align'     => 'left',
-            'index'     => 'entity_id',
+            'index'     => 'entity_id'
         ));
 
         $this->addColumn('name', array(
-            'header'    => Mage::helper('category')->__('Customer Name'),
+            'header'    => Mage::helper('product')->__('Name'),
             'align'     => 'left',
-            'index'     => 'name',
-            'renderer'  =>'Ccc_Practice_Block_Adminhtml_Six_Renderer_Name'
+            'index'     => 'firstname'
         ));
 
         $this->addColumn('email', array(
-            'header'    => Mage::helper('category')->__('Customer Email'),
+            'header'    => Mage::helper('product')->__('Email'),
             'align'     => 'left',
-            'index'     => 'email',
+            'index'     => 'email'
         ));
 
         $this->addColumn('order_count', array(
-            'header'    => Mage::helper('category')->__('Order Count'),
+            'header'    => Mage::helper('product')->__('Order Count'),
             'align'     => 'left',
-            'index'     => 'order_count',
-            'renderer'  => 'Ccc_Practice_Block_Adminhtml_Six_Renderer_Ordercount'
+            'index'     => 'order_count'
         ));
-
 
         return parent::_prepareColumns();
     }
-
-    
-    public function getRowUrl($row)
-    {
-        return $this->getUrl('*/*/edit', array('category_id' => $row->getId()));
-    }
-   
 }
