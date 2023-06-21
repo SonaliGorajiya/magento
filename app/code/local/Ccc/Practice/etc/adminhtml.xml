@@ -16,51 +16,56 @@
                     <action>practice/adminhtml_query/one</action>
                     <sort_order>0</sort_order>
                 </practicegrid1>
-                <practicegrid12 translate="title" module="practice">
+                <practicegrid2 translate="title" module="practice">
                     <title>Manage Practice Query 2</title>
                     <action>practice/adminhtml_query/two</action>
                     <sort_order>0</sort_order>
-                </practicegrid12>
-                <practicegrid123 translate="title" module="practice">
+                </practicegrid2>
+                <practicegrid3 translate="title" module="practice">
                     <title>Manage Practice Query 3</title>
                     <action>practice/adminhtml_query/three</action>
                     <sort_order>0</sort_order>
-                </practicegrid123>
-                <practicegrid1234 translate="title" module="practice">
+                </practicegrid3>
+                <practicegrid4 translate="title" module="practice">
                     <title>Manage Practice Query 4</title>
                     <action>practice/adminhtml_query/four</action>
                     <sort_order>0</sort_order>
-                </practicegrid1234>
-                <practicegrid12345 translate="title" module="practice">
+                </practicegrid4>
+                <practicegrid5 translate="title" module="practice">
                     <title>Manage Practice Query 5</title>
                     <action>practice/adminhtml_query/five</action>
                     <sort_order>0</sort_order>
-                </practicegrid12345>
-                <practicegrid123456 translate="title" module="practice">
+                </practicegrid5>
+                <practicegrid6 translate="title" module="practice">
                     <title>Manage Practice Query 6</title>
                     <action>practice/adminhtml_query/six</action>
                     <sort_order>0</sort_order>
-                </practicegrid123456>
-                <practicegrid1234567 translate="title" module="practice">
+                </practicegrid6>
+                <practicegrid7 translate="title" module="practice">
                     <title>Manage Practice Query 7</title>
                     <action>practice/adminhtml_query/seven</action>
                     <sort_order>0</sort_order>
-                </practicegrid1234567>
-                <practicegrid12345678 translate="title" module="practice">
+                </practicegrid7>
+                <practicegrid8 translate="title" module="practice">
                     <title>Manage Practice Query 8</title>
                     <action>practice/adminhtml_query/eight</action>
                     <sort_order>0</sort_order>
-                </practicegrid12345678>
-                <practicegrid123456789 translate="title" module="practice">
+                </practicegrid8>
+                <practicegrid9 translate="title" module="practice">
                     <title>Manage Practice Query 9</title>
                     <action>practice/adminhtml_query/nine</action>
                     <sort_order>0</sort_order>
-                </practicegrid123456789>
-                <practicegrid1234567890 translate="title" module="practice">
+                </practicegrid9>
+                <practicegrid10 translate="title" module="practice">
                     <title>Manage Practice Query 10</title>
                     <action>practice/adminhtml_query/ten</action>
                     <sort_order>0</sort_order>
-                </practicegrid1234567890>
+                </practicegrid10>
+                <practicegrid11 translate="title" module="practice">
+                    <title>Manage Csv File</title>
+                    <action>practice/adminhtml_csv/index</action>
+                    <sort_order>0</sort_order>
+                </practicegrid11>
             </children>
          </practice>
     </menu>

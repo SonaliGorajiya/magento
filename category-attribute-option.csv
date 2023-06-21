@@ -1,0 +1,1123 @@
+"Category ID","Category Name","Attribute ID",Option
+1,"BEDROOM > BEDROOM SETS",color,White
+1,"BEDROOM > BEDROOM SETS",color,Black
+1,"BEDROOM > BEDROOM SETS",color,Orange
+1,"BEDROOM > BEDROOM SETS",color,Maroon
+1,"BEDROOM > BEDROOM SETS",color,Red
+1,"BEDROOM > BEDROOM SETS",color,Yellow
+1,"BEDROOM > BEDROOM SETS",color,"Lime green"
+1,"BEDROOM > BEDROOM SETS",color,Salmon
+1,"BEDROOM > BEDROOM SETS",color,Green
+1,"BEDROOM > BEDROOM SETS",color,"Sky blue"
+1,"BEDROOM > BEDROOM SETS",color,Crimson
+1,"BEDROOM > BEDROOM SETS",color,Aqua
+1,"BEDROOM > BEDROOM SETS",color,Grey
+1,"BEDROOM > BEDROOM SETS",color,Purple
+1,"BEDROOM > BEDROOM SETS",color,Mustard
+1,"BEDROOM > BEDROOM SETS",color,Peach
+1,"BEDROOM > BEDROOM SETS",color,Violet
+1,"BEDROOM > BEDROOM SETS",color,Magenta
+1,"BEDROOM > BEDROOM SETS",color,Coral
+1,"BEDROOM > BEDROOM SETS",color,Saffron
+1,"BEDROOM > BEDROOM SETS",color,Brown
+1,"BEDROOM > BEDROOM SETS",color,Pink
+1,"BEDROOM > BEDROOM SETS",color,Tan
+1,"BEDROOM > BEDROOM SETS",color,Teal
+1,"BEDROOM > BEDROOM SETS",color,"Navy Blue"
+1,"BEDROOM > BEDROOM SETS",color,Turquoise
+1,"BEDROOM > BEDROOM SETS",color,Lavender
+1,"BEDROOM > BEDROOM SETS",color,Beige
+1,"BEDROOM > BEDROOM SETS",color,"Lemon yellow"
+1,"BEDROOM > BEDROOM SETS",color,"Grape vine"
+1,"BEDROOM > BEDROOM SETS",color,Indigo
+1,"BEDROOM > BEDROOM SETS",color,Fuchsia
+1,"BEDROOM > BEDROOM SETS",color,Amber
+1,"BEDROOM > BEDROOM SETS",color,"Sea green"
+1,"BEDROOM > BEDROOM SETS",color,"Dark green"
+1,"BEDROOM > BEDROOM SETS",color,Burgundy
+1,"BEDROOM > BEDROOM SETS",color,Charcoal
+1,"BEDROOM > BEDROOM SETS",color,Bronze
+1,"BEDROOM > BEDROOM SETS",color,Cream
+1,"BEDROOM > BEDROOM SETS",color,Mauve
+1,"BEDROOM > BEDROOM SETS",color,Olive
+1,"BEDROOM > BEDROOM SETS",color,Cyan
+1,"BEDROOM > BEDROOM SETS",color,Silver
+1,"BEDROOM > BEDROOM SETS",color,Rust
+1,"BEDROOM > BEDROOM SETS",color,Ruby
+1,"BEDROOM > BEDROOM SETS",color,Azure
+1,"BEDROOM > BEDROOM SETS",color,Mint
+1,"BEDROOM > BEDROOM SETS",color,Pearl
+1,"BEDROOM > BEDROOM SETS",color,Ivory
+1,"BEDROOM > BEDROOM SETS",color,Tangerine
+1,"BEDROOM > BEDROOM SETS",color,"Cherry red"
+1,"BEDROOM > BEDROOM SETS",color,Garnet
+1,"BEDROOM > BEDROOM SETS",color,Emerald
+1,"BEDROOM > BEDROOM SETS",color,Sapphire
+1,"BEDROOM > BEDROOM SETS",material,Plastic
+1,"BEDROOM > BEDROOM SETS",material,Metals
+1,"BEDROOM > BEDROOM SETS",material,Wood
+1,"BEDROOM > BEDROOM SETS",material,Paper
+1,"BEDROOM > BEDROOM SETS",material,"Natural Textiles"
+1,"BEDROOM > BEDROOM SETS",material,"Synthetic Textiles"
+1,"BEDROOM > BEDROOM SETS",material,Leather
+1,"BEDROOM > BEDROOM SETS",material,Fibers
+1,"BEDROOM > BEDROOM SETS",design,modern
+1,"BEDROOM > BEDROOM SETS",design,contemporary
+1,"BEDROOM > BEDROOM SETS",design,natural
+1,"BEDROOM > BEDROOM SETS",design,regular
+2,"BEDROOM > BEDS",color,White
+2,"BEDROOM > BEDS",color,Black
+2,"BEDROOM > BEDS",color,Orange
+2,"BEDROOM > BEDS",color,Maroon
+2,"BEDROOM > BEDS",color,Red
+2,"BEDROOM > BEDS",color,Yellow
+2,"BEDROOM > BEDS",color,"Lime green"
+2,"BEDROOM > BEDS",color,Salmon
+2,"BEDROOM > BEDS",color,Green
+2,"BEDROOM > BEDS",color,"Sky blue"
+2,"BEDROOM > BEDS",color,Crimson
+2,"BEDROOM > BEDS",color,Aqua
+2,"BEDROOM > BEDS",color,Grey
+2,"BEDROOM > BEDS",color,Purple
+2,"BEDROOM > BEDS",color,Mustard
+2,"BEDROOM > BEDS",color,Peach
+2,"BEDROOM > BEDS",color,Violet
+2,"BEDROOM > BEDS",color,Magenta
+2,"BEDROOM > BEDS",color,Coral
+2,"BEDROOM > BEDS",color,Saffron
+2,"BEDROOM > BEDS",color,Brown
+2,"BEDROOM > BEDS",color,Pink
+2,"BEDROOM > BEDS",color,Tan
+2,"BEDROOM > BEDS",color,Teal
+2,"BEDROOM > BEDS",color,"Navy Blue"
+2,"BEDROOM > BEDS",color,Turquoise
+2,"BEDROOM > BEDS",color,Lavender
+2,"BEDROOM > BEDS",color,Beige
+2,"BEDROOM > BEDS",color,"Lemon yellow"
+2,"BEDROOM > BEDS",color,"Grape vine"
+2,"BEDROOM > BEDS",color,Indigo
+2,"BEDROOM > BEDS",color,Fuchsia
+2,"BEDROOM > BEDS",color,Amber
+2,"BEDROOM > BEDS",color,"Sea green"
+2,"BEDROOM > BEDS",color,"Dark green"
+2,"BEDROOM > BEDS",color,Burgundy
+2,"BEDROOM > BEDS",color,Charcoal
+2,"BEDROOM > BEDS",color,Bronze
+2,"BEDROOM > BEDS",color,Cream
+2,"BEDROOM > BEDS",color,Mauve
+2,"BEDROOM > BEDS",color,Olive
+2,"BEDROOM > BEDS",color,Cyan
+2,"BEDROOM > BEDS",color,Silver
+2,"BEDROOM > BEDS",color,Rust
+2,"BEDROOM > BEDS",color,Ruby
+2,"BEDROOM > BEDS",color,Azure
+2,"BEDROOM > BEDS",color,Mint
+2,"BEDROOM > BEDS",color,Pearl
+2,"BEDROOM > BEDS",color,Ivory
+2,"BEDROOM > BEDS",color,Tangerine
+2,"BEDROOM > BEDS",color,"Cherry red"
+2,"BEDROOM > BEDS",color,Garnet
+2,"BEDROOM > BEDS",color,Emerald
+2,"BEDROOM > BEDS",color,Sapphire
+2,"BEDROOM > BEDS",material,Plastic
+2,"BEDROOM > BEDS",material,Metals
+2,"BEDROOM > BEDS",material,Wood
+2,"BEDROOM > BEDS",material,Paper
+2,"BEDROOM > BEDS",material,"Natural Textiles"
+2,"BEDROOM > BEDS",material,"Synthetic Textiles"
+2,"BEDROOM > BEDS",material,Leather
+2,"BEDROOM > BEDS",material,Fibers
+2,"BEDROOM > BEDS",design,modern
+2,"BEDROOM > BEDS",design,contemporary
+2,"BEDROOM > BEDS",design,natural
+2,"BEDROOM > BEDS",design,regular
+3,"BEDROOM > NIGHTSTAND",color,White
+3,"BEDROOM > NIGHTSTAND",color,Black
+3,"BEDROOM > NIGHTSTAND",color,Orange
+3,"BEDROOM > NIGHTSTAND",color,Maroon
+3,"BEDROOM > NIGHTSTAND",color,Red
+3,"BEDROOM > NIGHTSTAND",color,Yellow
+3,"BEDROOM > NIGHTSTAND",color,"Lime green"
+3,"BEDROOM > NIGHTSTAND",color,Salmon
+3,"BEDROOM > NIGHTSTAND",color,Green
+3,"BEDROOM > NIGHTSTAND",color,"Sky blue"
+3,"BEDROOM > NIGHTSTAND",color,Crimson
+3,"BEDROOM > NIGHTSTAND",color,Aqua
+3,"BEDROOM > NIGHTSTAND",color,Grey
+3,"BEDROOM > NIGHTSTAND",color,Purple
+3,"BEDROOM > NIGHTSTAND",color,Mustard
+3,"BEDROOM > NIGHTSTAND",color,Peach
+3,"BEDROOM > NIGHTSTAND",color,Violet
+3,"BEDROOM > NIGHTSTAND",color,Magenta
+3,"BEDROOM > NIGHTSTAND",color,Coral
+3,"BEDROOM > NIGHTSTAND",color,Saffron
+3,"BEDROOM > NIGHTSTAND",color,Brown
+3,"BEDROOM > NIGHTSTAND",color,Pink
+3,"BEDROOM > NIGHTSTAND",color,Tan
+3,"BEDROOM > NIGHTSTAND",color,Teal
+3,"BEDROOM > NIGHTSTAND",color,"Navy Blue"
+3,"BEDROOM > NIGHTSTAND",color,Turquoise
+3,"BEDROOM > NIGHTSTAND",color,Lavender
+3,"BEDROOM > NIGHTSTAND",color,Beige
+3,"BEDROOM > NIGHTSTAND",color,"Lemon yellow"
+3,"BEDROOM > NIGHTSTAND",color,"Grape vine"
+3,"BEDROOM > NIGHTSTAND",color,Indigo
+3,"BEDROOM > NIGHTSTAND",color,Fuchsia
+3,"BEDROOM > NIGHTSTAND",color,Amber
+3,"BEDROOM > NIGHTSTAND",color,"Sea green"
+3,"BEDROOM > NIGHTSTAND",color,"Dark green"
+3,"BEDROOM > NIGHTSTAND",color,Burgundy
+3,"BEDROOM > NIGHTSTAND",color,Charcoal
+3,"BEDROOM > NIGHTSTAND",color,Bronze
+3,"BEDROOM > NIGHTSTAND",color,Cream
+3,"BEDROOM > NIGHTSTAND",color,Mauve
+3,"BEDROOM > NIGHTSTAND",color,Olive
+3,"BEDROOM > NIGHTSTAND",color,Cyan
+3,"BEDROOM > NIGHTSTAND",color,Silver
+3,"BEDROOM > NIGHTSTAND",color,Rust
+3,"BEDROOM > NIGHTSTAND",color,Ruby
+3,"BEDROOM > NIGHTSTAND",color,Azure
+3,"BEDROOM > NIGHTSTAND",color,Mint
+3,"BEDROOM > NIGHTSTAND",color,Pearl
+3,"BEDROOM > NIGHTSTAND",color,Ivory
+3,"BEDROOM > NIGHTSTAND",color,Tangerine
+3,"BEDROOM > NIGHTSTAND",color,"Cherry red"
+3,"BEDROOM > NIGHTSTAND",color,Garnet
+3,"BEDROOM > NIGHTSTAND",color,Emerald
+3,"BEDROOM > NIGHTSTAND",color,Sapphire
+3,"BEDROOM > NIGHTSTAND",material,Plastic
+3,"BEDROOM > NIGHTSTAND",material,Metals
+3,"BEDROOM > NIGHTSTAND",material,Wood
+3,"BEDROOM > NIGHTSTAND",material,Paper
+3,"BEDROOM > NIGHTSTAND",material,"Natural Textiles"
+3,"BEDROOM > NIGHTSTAND",material,"Synthetic Textiles"
+3,"BEDROOM > NIGHTSTAND",material,Leather
+3,"BEDROOM > NIGHTSTAND",material,Fibers
+3,"BEDROOM > NIGHTSTAND",design,modern
+3,"BEDROOM > NIGHTSTAND",design,contemporary
+3,"BEDROOM > NIGHTSTAND",design,natural
+3,"BEDROOM > NIGHTSTAND",design,regular
+4,"BEDROOM > DRESSER",color,White
+4,"BEDROOM > DRESSER",color,Black
+4,"BEDROOM > DRESSER",color,Orange
+4,"BEDROOM > DRESSER",color,Maroon
+4,"BEDROOM > DRESSER",color,Red
+4,"BEDROOM > DRESSER",color,Yellow
+4,"BEDROOM > DRESSER",color,"Lime green"
+4,"BEDROOM > DRESSER",color,Salmon
+4,"BEDROOM > DRESSER",color,Green
+4,"BEDROOM > DRESSER",color,"Sky blue"
+4,"BEDROOM > DRESSER",color,Crimson
+4,"BEDROOM > DRESSER",color,Aqua
+4,"BEDROOM > DRESSER",color,Grey
+4,"BEDROOM > DRESSER",color,Purple
+4,"BEDROOM > DRESSER",color,Mustard
+4,"BEDROOM > DRESSER",color,Peach
+4,"BEDROOM > DRESSER",color,Violet
+4,"BEDROOM > DRESSER",color,Magenta
+4,"BEDROOM > DRESSER",color,Coral
+4,"BEDROOM > DRESSER",color,Saffron
+4,"BEDROOM > DRESSER",color,Brown
+4,"BEDROOM > DRESSER",color,Pink
+4,"BEDROOM > DRESSER",color,Tan
+4,"BEDROOM > DRESSER",color,Teal
+4,"BEDROOM > DRESSER",color,"Navy Blue"
+4,"BEDROOM > DRESSER",color,Turquoise
+4,"BEDROOM > DRESSER",color,Lavender
+4,"BEDROOM > DRESSER",color,Beige
+4,"BEDROOM > DRESSER",color,"Lemon yellow"
+4,"BEDROOM > DRESSER",color,"Grape vine"
+4,"BEDROOM > DRESSER",color,Indigo
+4,"BEDROOM > DRESSER",color,Fuchsia
+4,"BEDROOM > DRESSER",color,Amber
+4,"BEDROOM > DRESSER",color,"Sea green"
+4,"BEDROOM > DRESSER",color,"Dark green"
+4,"BEDROOM > DRESSER",color,Burgundy
+4,"BEDROOM > DRESSER",color,Charcoal
+4,"BEDROOM > DRESSER",color,Bronze
+4,"BEDROOM > DRESSER",color,Cream
+4,"BEDROOM > DRESSER",color,Mauve
+4,"BEDROOM > DRESSER",color,Olive
+4,"BEDROOM > DRESSER",color,Cyan
+4,"BEDROOM > DRESSER",color,Silver
+4,"BEDROOM > DRESSER",color,Rust
+4,"BEDROOM > DRESSER",color,Ruby
+4,"BEDROOM > DRESSER",color,Azure
+4,"BEDROOM > DRESSER",color,Mint
+4,"BEDROOM > DRESSER",color,Pearl
+4,"BEDROOM > DRESSER",color,Ivory
+4,"BEDROOM > DRESSER",color,Tangerine
+4,"BEDROOM > DRESSER",color,"Cherry red"
+4,"BEDROOM > DRESSER",color,Garnet
+4,"BEDROOM > DRESSER",color,Emerald
+4,"BEDROOM > DRESSER",color,Sapphire
+4,"BEDROOM > DRESSER",material,Plastic
+4,"BEDROOM > DRESSER",material,Metals
+4,"BEDROOM > DRESSER",material,Wood
+4,"BEDROOM > DRESSER",material,Paper
+4,"BEDROOM > DRESSER",material,"Natural Textiles"
+4,"BEDROOM > DRESSER",material,"Synthetic Textiles"
+4,"BEDROOM > DRESSER",material,Leather
+4,"BEDROOM > DRESSER",material,Fibers
+4,"BEDROOM > DRESSER",design,modern
+4,"BEDROOM > DRESSER",design,contemporary
+4,"BEDROOM > DRESSER",design,natural
+4,"BEDROOM > DRESSER",design,regular
+5,"BEDROOM > MIRRORS",color,White
+5,"BEDROOM > MIRRORS",color,Black
+5,"BEDROOM > MIRRORS",color,Orange
+5,"BEDROOM > MIRRORS",color,Maroon
+5,"BEDROOM > MIRRORS",color,Red
+5,"BEDROOM > MIRRORS",color,Yellow
+5,"BEDROOM > MIRRORS",color,"Lime green"
+5,"BEDROOM > MIRRORS",color,Salmon
+5,"BEDROOM > MIRRORS",color,Green
+5,"BEDROOM > MIRRORS",color,"Sky blue"
+5,"BEDROOM > MIRRORS",color,Crimson
+5,"BEDROOM > MIRRORS",color,Aqua
+5,"BEDROOM > MIRRORS",color,Grey
+5,"BEDROOM > MIRRORS",color,Purple
+5,"BEDROOM > MIRRORS",color,Mustard
+5,"BEDROOM > MIRRORS",color,Peach
+5,"BEDROOM > MIRRORS",color,Violet
+5,"BEDROOM > MIRRORS",color,Magenta
+5,"BEDROOM > MIRRORS",color,Coral
+5,"BEDROOM > MIRRORS",color,Saffron
+5,"BEDROOM > MIRRORS",color,Brown
+5,"BEDROOM > MIRRORS",color,Pink
+5,"BEDROOM > MIRRORS",color,Tan
+5,"BEDROOM > MIRRORS",color,Teal
+5,"BEDROOM > MIRRORS",color,"Navy Blue"
+5,"BEDROOM > MIRRORS",color,Turquoise
+5,"BEDROOM > MIRRORS",color,Lavender
+5,"BEDROOM > MIRRORS",color,Beige
+5,"BEDROOM > MIRRORS",color,"Lemon yellow"
+5,"BEDROOM > MIRRORS",color,"Grape vine"
+5,"BEDROOM > MIRRORS",color,Indigo
+5,"BEDROOM > MIRRORS",color,Fuchsia
+5,"BEDROOM > MIRRORS",color,Amber
+5,"BEDROOM > MIRRORS",color,"Sea green"
+5,"BEDROOM > MIRRORS",color,"Dark green"
+5,"BEDROOM > MIRRORS",color,Burgundy
+5,"BEDROOM > MIRRORS",color,Charcoal
+5,"BEDROOM > MIRRORS",color,Bronze
+5,"BEDROOM > MIRRORS",color,Cream
+5,"BEDROOM > MIRRORS",color,Mauve
+5,"BEDROOM > MIRRORS",color,Olive
+5,"BEDROOM > MIRRORS",color,Cyan
+5,"BEDROOM > MIRRORS",color,Silver
+5,"BEDROOM > MIRRORS",color,Rust
+5,"BEDROOM > MIRRORS",color,Ruby
+5,"BEDROOM > MIRRORS",color,Azure
+5,"BEDROOM > MIRRORS",color,Mint
+5,"BEDROOM > MIRRORS",color,Pearl
+5,"BEDROOM > MIRRORS",color,Ivory
+5,"BEDROOM > MIRRORS",color,Tangerine
+5,"BEDROOM > MIRRORS",color,"Cherry red"
+5,"BEDROOM > MIRRORS",color,Garnet
+5,"BEDROOM > MIRRORS",color,Emerald
+5,"BEDROOM > MIRRORS",color,Sapphire
+5,"BEDROOM > MIRRORS",material,Plastic
+5,"BEDROOM > MIRRORS",material,Metals
+5,"BEDROOM > MIRRORS",material,Wood
+5,"BEDROOM > MIRRORS",material,Paper
+5,"BEDROOM > MIRRORS",material,"Natural Textiles"
+5,"BEDROOM > MIRRORS",material,"Synthetic Textiles"
+5,"BEDROOM > MIRRORS",material,Leather
+5,"BEDROOM > MIRRORS",material,Fibers
+5,"BEDROOM > MIRRORS",design,modern
+5,"BEDROOM > MIRRORS",design,contemporary
+5,"BEDROOM > MIRRORS",design,natural
+5,"BEDROOM > MIRRORS",design,regular
+6,"BEDROOM > CUBBOARDS",color,White
+6,"BEDROOM > CUBBOARDS",color,Black
+6,"BEDROOM > CUBBOARDS",color,Orange
+6,"BEDROOM > CUBBOARDS",color,Maroon
+6,"BEDROOM > CUBBOARDS",color,Red
+6,"BEDROOM > CUBBOARDS",color,Yellow
+6,"BEDROOM > CUBBOARDS",color,"Lime green"
+6,"BEDROOM > CUBBOARDS",color,Salmon
+6,"BEDROOM > CUBBOARDS",color,Green
+6,"BEDROOM > CUBBOARDS",color,"Sky blue"
+6,"BEDROOM > CUBBOARDS",color,Crimson
+6,"BEDROOM > CUBBOARDS",color,Aqua
+6,"BEDROOM > CUBBOARDS",color,Grey
+6,"BEDROOM > CUBBOARDS",color,Purple
+6,"BEDROOM > CUBBOARDS",color,Mustard
+6,"BEDROOM > CUBBOARDS",color,Peach
+6,"BEDROOM > CUBBOARDS",color,Violet
+6,"BEDROOM > CUBBOARDS",color,Magenta
+6,"BEDROOM > CUBBOARDS",color,Coral
+6,"BEDROOM > CUBBOARDS",color,Saffron
+6,"BEDROOM > CUBBOARDS",color,Brown
+6,"BEDROOM > CUBBOARDS",color,Pink
+6,"BEDROOM > CUBBOARDS",color,Tan
+6,"BEDROOM > CUBBOARDS",color,Teal
+6,"BEDROOM > CUBBOARDS",color,"Navy Blue"
+6,"BEDROOM > CUBBOARDS",color,Turquoise
+6,"BEDROOM > CUBBOARDS",color,Lavender
+6,"BEDROOM > CUBBOARDS",color,Beige
+6,"BEDROOM > CUBBOARDS",color,"Lemon yellow"
+6,"BEDROOM > CUBBOARDS",color,"Grape vine"
+6,"BEDROOM > CUBBOARDS",color,Indigo
+6,"BEDROOM > CUBBOARDS",color,Fuchsia
+6,"BEDROOM > CUBBOARDS",color,Amber
+6,"BEDROOM > CUBBOARDS",color,"Sea green"
+6,"BEDROOM > CUBBOARDS",color,"Dark green"
+6,"BEDROOM > CUBBOARDS",color,Burgundy
+6,"BEDROOM > CUBBOARDS",color,Charcoal
+6,"BEDROOM > CUBBOARDS",color,Bronze
+6,"BEDROOM > CUBBOARDS",color,Cream
+6,"BEDROOM > CUBBOARDS",color,Mauve
+6,"BEDROOM > CUBBOARDS",color,Olive
+6,"BEDROOM > CUBBOARDS",color,Cyan
+6,"BEDROOM > CUBBOARDS",color,Silver
+6,"BEDROOM > CUBBOARDS",color,Rust
+6,"BEDROOM > CUBBOARDS",color,Ruby
+6,"BEDROOM > CUBBOARDS",color,Azure
+6,"BEDROOM > CUBBOARDS",color,Mint
+6,"BEDROOM > CUBBOARDS",color,Pearl
+6,"BEDROOM > CUBBOARDS",color,Ivory
+6,"BEDROOM > CUBBOARDS",color,Tangerine
+6,"BEDROOM > CUBBOARDS",color,"Cherry red"
+6,"BEDROOM > CUBBOARDS",color,Garnet
+6,"BEDROOM > CUBBOARDS",color,Emerald
+6,"BEDROOM > CUBBOARDS",color,Sapphire
+6,"BEDROOM > CUBBOARDS",material,Plastic
+6,"BEDROOM > CUBBOARDS",material,Metals
+6,"BEDROOM > CUBBOARDS",material,Wood
+6,"BEDROOM > CUBBOARDS",material,Paper
+6,"BEDROOM > CUBBOARDS",material,"Natural Textiles"
+6,"BEDROOM > CUBBOARDS",material,"Synthetic Textiles"
+6,"BEDROOM > CUBBOARDS",material,Leather
+6,"BEDROOM > CUBBOARDS",material,Fibers
+6,"BEDROOM > CUBBOARDS",design,modern
+6,"BEDROOM > CUBBOARDS",design,contemporary
+6,"BEDROOM > CUBBOARDS",design,natural
+6,"BEDROOM > CUBBOARDS",design,regular
+7,"BEDROOM > BENCHES",color,White
+7,"BEDROOM > BENCHES",color,Black
+7,"BEDROOM > BENCHES",color,Orange
+7,"BEDROOM > BENCHES",color,Maroon
+7,"BEDROOM > BENCHES",color,Red
+7,"BEDROOM > BENCHES",color,Yellow
+7,"BEDROOM > BENCHES",color,"Lime green"
+7,"BEDROOM > BENCHES",color,Salmon
+7,"BEDROOM > BENCHES",color,Green
+7,"BEDROOM > BENCHES",color,"Sky blue"
+7,"BEDROOM > BENCHES",color,Crimson
+7,"BEDROOM > BENCHES",color,Aqua
+7,"BEDROOM > BENCHES",color,Grey
+7,"BEDROOM > BENCHES",color,Purple
+7,"BEDROOM > BENCHES",color,Mustard
+7,"BEDROOM > BENCHES",color,Peach
+7,"BEDROOM > BENCHES",color,Violet
+7,"BEDROOM > BENCHES",color,Magenta
+7,"BEDROOM > BENCHES",color,Coral
+7,"BEDROOM > BENCHES",color,Saffron
+7,"BEDROOM > BENCHES",color,Brown
+7,"BEDROOM > BENCHES",color,Pink
+7,"BEDROOM > BENCHES",color,Tan
+7,"BEDROOM > BENCHES",color,Teal
+7,"BEDROOM > BENCHES",color,"Navy Blue"
+7,"BEDROOM > BENCHES",color,Turquoise
+7,"BEDROOM > BENCHES",color,Lavender
+7,"BEDROOM > BENCHES",color,Beige
+7,"BEDROOM > BENCHES",color,"Lemon yellow"
+7,"BEDROOM > BENCHES",color,"Grape vine"
+7,"BEDROOM > BENCHES",color,Indigo
+7,"BEDROOM > BENCHES",color,Fuchsia
+7,"BEDROOM > BENCHES",color,Amber
+7,"BEDROOM > BENCHES",color,"Sea green"
+7,"BEDROOM > BENCHES",color,"Dark green"
+7,"BEDROOM > BENCHES",color,Burgundy
+7,"BEDROOM > BENCHES",color,Charcoal
+7,"BEDROOM > BENCHES",color,Bronze
+7,"BEDROOM > BENCHES",color,Cream
+7,"BEDROOM > BENCHES",color,Mauve
+7,"BEDROOM > BENCHES",color,Olive
+7,"BEDROOM > BENCHES",color,Cyan
+7,"BEDROOM > BENCHES",color,Silver
+7,"BEDROOM > BENCHES",color,Rust
+7,"BEDROOM > BENCHES",color,Ruby
+7,"BEDROOM > BENCHES",color,Azure
+7,"BEDROOM > BENCHES",color,Mint
+7,"BEDROOM > BENCHES",color,Pearl
+7,"BEDROOM > BENCHES",color,Ivory
+7,"BEDROOM > BENCHES",color,Tangerine
+7,"BEDROOM > BENCHES",color,"Cherry red"
+7,"BEDROOM > BENCHES",color,Garnet
+7,"BEDROOM > BENCHES",color,Emerald
+7,"BEDROOM > BENCHES",color,Sapphire
+7,"BEDROOM > BENCHES",material,Plastic
+7,"BEDROOM > BENCHES",material,Metals
+7,"BEDROOM > BENCHES",material,Wood
+7,"BEDROOM > BENCHES",material,Paper
+7,"BEDROOM > BENCHES",material,"Natural Textiles"
+7,"BEDROOM > BENCHES",material,"Synthetic Textiles"
+7,"BEDROOM > BENCHES",material,Leather
+7,"BEDROOM > BENCHES",material,Fibers
+7,"BEDROOM > BENCHES",design,modern
+7,"BEDROOM > BENCHES",design,contemporary
+7,"BEDROOM > BENCHES",design,natural
+7,"BEDROOM > BENCHES",design,regular
+8,"LIVING ROOM > CHAIRS",color,White
+8,"LIVING ROOM > CHAIRS",color,Black
+8,"LIVING ROOM > CHAIRS",color,Orange
+8,"LIVING ROOM > CHAIRS",color,Maroon
+8,"LIVING ROOM > CHAIRS",color,Red
+8,"LIVING ROOM > CHAIRS",color,Yellow
+8,"LIVING ROOM > CHAIRS",color,"Lime green"
+8,"LIVING ROOM > CHAIRS",color,Salmon
+8,"LIVING ROOM > CHAIRS",color,Green
+8,"LIVING ROOM > CHAIRS",color,"Sky blue"
+8,"LIVING ROOM > CHAIRS",color,Crimson
+8,"LIVING ROOM > CHAIRS",color,Aqua
+8,"LIVING ROOM > CHAIRS",color,Grey
+8,"LIVING ROOM > CHAIRS",color,Purple
+8,"LIVING ROOM > CHAIRS",color,Mustard
+8,"LIVING ROOM > CHAIRS",color,Peach
+8,"LIVING ROOM > CHAIRS",color,Violet
+8,"LIVING ROOM > CHAIRS",color,Magenta
+8,"LIVING ROOM > CHAIRS",color,Coral
+8,"LIVING ROOM > CHAIRS",color,Saffron
+8,"LIVING ROOM > CHAIRS",color,Brown
+8,"LIVING ROOM > CHAIRS",color,Pink
+8,"LIVING ROOM > CHAIRS",color,Tan
+8,"LIVING ROOM > CHAIRS",color,Teal
+8,"LIVING ROOM > CHAIRS",color,"Navy Blue"
+8,"LIVING ROOM > CHAIRS",color,Turquoise
+8,"LIVING ROOM > CHAIRS",color,Lavender
+8,"LIVING ROOM > CHAIRS",color,Beige
+8,"LIVING ROOM > CHAIRS",color,"Lemon yellow"
+8,"LIVING ROOM > CHAIRS",color,"Grape vine"
+8,"LIVING ROOM > CHAIRS",color,Indigo
+8,"LIVING ROOM > CHAIRS",color,Fuchsia
+8,"LIVING ROOM > CHAIRS",color,Amber
+8,"LIVING ROOM > CHAIRS",color,"Sea green"
+8,"LIVING ROOM > CHAIRS",color,"Dark green"
+8,"LIVING ROOM > CHAIRS",color,Burgundy
+8,"LIVING ROOM > CHAIRS",color,Charcoal
+8,"LIVING ROOM > CHAIRS",color,Bronze
+8,"LIVING ROOM > CHAIRS",color,Cream
+8,"LIVING ROOM > CHAIRS",color,Mauve
+8,"LIVING ROOM > CHAIRS",color,Olive
+8,"LIVING ROOM > CHAIRS",color,Cyan
+8,"LIVING ROOM > CHAIRS",color,Silver
+8,"LIVING ROOM > CHAIRS",color,Rust
+8,"LIVING ROOM > CHAIRS",color,Ruby
+8,"LIVING ROOM > CHAIRS",color,Azure
+8,"LIVING ROOM > CHAIRS",color,Mint
+8,"LIVING ROOM > CHAIRS",color,Pearl
+8,"LIVING ROOM > CHAIRS",color,Ivory
+8,"LIVING ROOM > CHAIRS",color,Tangerine
+8,"LIVING ROOM > CHAIRS",color,"Cherry red"
+8,"LIVING ROOM > CHAIRS",color,Garnet
+8,"LIVING ROOM > CHAIRS",color,Emerald
+8,"LIVING ROOM > CHAIRS",color,Sapphire
+8,"LIVING ROOM > CHAIRS",material,Plastic
+8,"LIVING ROOM > CHAIRS",material,Metals
+8,"LIVING ROOM > CHAIRS",material,Wood
+8,"LIVING ROOM > CHAIRS",material,Paper
+8,"LIVING ROOM > CHAIRS",material,"Natural Textiles"
+8,"LIVING ROOM > CHAIRS",material,"Synthetic Textiles"
+8,"LIVING ROOM > CHAIRS",material,Leather
+8,"LIVING ROOM > CHAIRS",material,Fibers
+8,"LIVING ROOM > CHAIRS",design,modern
+8,"LIVING ROOM > CHAIRS",design,contemporary
+8,"LIVING ROOM > CHAIRS",design,natural
+8,"LIVING ROOM > CHAIRS",design,regular
+9,"LIVING ROOM > SOFAS",color,White
+9,"LIVING ROOM > SOFAS",color,Black
+9,"LIVING ROOM > SOFAS",color,Orange
+9,"LIVING ROOM > SOFAS",color,Maroon
+9,"LIVING ROOM > SOFAS",color,Red
+9,"LIVING ROOM > SOFAS",color,Yellow
+9,"LIVING ROOM > SOFAS",color,"Lime green"
+9,"LIVING ROOM > SOFAS",color,Salmon
+9,"LIVING ROOM > SOFAS",color,Green
+9,"LIVING ROOM > SOFAS",color,"Sky blue"
+9,"LIVING ROOM > SOFAS",color,Crimson
+9,"LIVING ROOM > SOFAS",color,Aqua
+9,"LIVING ROOM > SOFAS",color,Grey
+9,"LIVING ROOM > SOFAS",color,Purple
+9,"LIVING ROOM > SOFAS",color,Mustard
+9,"LIVING ROOM > SOFAS",color,Peach
+9,"LIVING ROOM > SOFAS",color,Violet
+9,"LIVING ROOM > SOFAS",color,Magenta
+9,"LIVING ROOM > SOFAS",color,Coral
+9,"LIVING ROOM > SOFAS",color,Saffron
+9,"LIVING ROOM > SOFAS",color,Brown
+9,"LIVING ROOM > SOFAS",color,Pink
+9,"LIVING ROOM > SOFAS",color,Tan
+9,"LIVING ROOM > SOFAS",color,Teal
+9,"LIVING ROOM > SOFAS",color,"Navy Blue"
+9,"LIVING ROOM > SOFAS",color,Turquoise
+9,"LIVING ROOM > SOFAS",color,Lavender
+9,"LIVING ROOM > SOFAS",color,Beige
+9,"LIVING ROOM > SOFAS",color,"Lemon yellow"
+9,"LIVING ROOM > SOFAS",color,"Grape vine"
+9,"LIVING ROOM > SOFAS",color,Indigo
+9,"LIVING ROOM > SOFAS",color,Fuchsia
+9,"LIVING ROOM > SOFAS",color,Amber
+9,"LIVING ROOM > SOFAS",color,"Sea green"
+9,"LIVING ROOM > SOFAS",color,"Dark green"
+9,"LIVING ROOM > SOFAS",color,Burgundy
+9,"LIVING ROOM > SOFAS",color,Charcoal
+9,"LIVING ROOM > SOFAS",color,Bronze
+9,"LIVING ROOM > SOFAS",color,Cream
+9,"LIVING ROOM > SOFAS",color,Mauve
+9,"LIVING ROOM > SOFAS",color,Olive
+9,"LIVING ROOM > SOFAS",color,Cyan
+9,"LIVING ROOM > SOFAS",color,Silver
+9,"LIVING ROOM > SOFAS",color,Rust
+9,"LIVING ROOM > SOFAS",color,Ruby
+9,"LIVING ROOM > SOFAS",color,Azure
+9,"LIVING ROOM > SOFAS",color,Mint
+9,"LIVING ROOM > SOFAS",color,Pearl
+9,"LIVING ROOM > SOFAS",color,Ivory
+9,"LIVING ROOM > SOFAS",color,Tangerine
+9,"LIVING ROOM > SOFAS",color,"Cherry red"
+9,"LIVING ROOM > SOFAS",color,Garnet
+9,"LIVING ROOM > SOFAS",color,Emerald
+9,"LIVING ROOM > SOFAS",color,Sapphire
+9,"LIVING ROOM > SOFAS",material,Plastic
+9,"LIVING ROOM > SOFAS",material,Metals
+9,"LIVING ROOM > SOFAS",material,Wood
+9,"LIVING ROOM > SOFAS",material,Paper
+9,"LIVING ROOM > SOFAS",material,"Natural Textiles"
+9,"LIVING ROOM > SOFAS",material,"Synthetic Textiles"
+9,"LIVING ROOM > SOFAS",material,Leather
+9,"LIVING ROOM > SOFAS",material,Fibers
+9,"LIVING ROOM > SOFAS",design,modern
+9,"LIVING ROOM > SOFAS",design,contemporary
+9,"LIVING ROOM > SOFAS",design,natural
+9,"LIVING ROOM > SOFAS",design,regular
+10,"LIVING ROOM > LOVESEATS",color,White
+10,"LIVING ROOM > LOVESEATS",color,Black
+10,"LIVING ROOM > LOVESEATS",color,Orange
+10,"LIVING ROOM > LOVESEATS",color,Maroon
+10,"LIVING ROOM > LOVESEATS",color,Red
+10,"LIVING ROOM > LOVESEATS",color,Yellow
+10,"LIVING ROOM > LOVESEATS",color,"Lime green"
+10,"LIVING ROOM > LOVESEATS",color,Salmon
+10,"LIVING ROOM > LOVESEATS",color,Green
+10,"LIVING ROOM > LOVESEATS",color,"Sky blue"
+10,"LIVING ROOM > LOVESEATS",color,Crimson
+10,"LIVING ROOM > LOVESEATS",color,Aqua
+10,"LIVING ROOM > LOVESEATS",color,Grey
+10,"LIVING ROOM > LOVESEATS",color,Purple
+10,"LIVING ROOM > LOVESEATS",color,Mustard
+10,"LIVING ROOM > LOVESEATS",color,Peach
+10,"LIVING ROOM > LOVESEATS",color,Violet
+10,"LIVING ROOM > LOVESEATS",color,Magenta
+10,"LIVING ROOM > LOVESEATS",color,Coral
+10,"LIVING ROOM > LOVESEATS",color,Saffron
+10,"LIVING ROOM > LOVESEATS",color,Brown
+10,"LIVING ROOM > LOVESEATS",color,Pink
+10,"LIVING ROOM > LOVESEATS",color,Tan
+10,"LIVING ROOM > LOVESEATS",color,Teal
+10,"LIVING ROOM > LOVESEATS",color,"Navy Blue"
+10,"LIVING ROOM > LOVESEATS",color,Turquoise
+10,"LIVING ROOM > LOVESEATS",color,Lavender
+10,"LIVING ROOM > LOVESEATS",color,Beige
+10,"LIVING ROOM > LOVESEATS",color,"Lemon yellow"
+10,"LIVING ROOM > LOVESEATS",color,"Grape vine"
+10,"LIVING ROOM > LOVESEATS",color,Indigo
+10,"LIVING ROOM > LOVESEATS",color,Fuchsia
+10,"LIVING ROOM > LOVESEATS",color,Amber
+10,"LIVING ROOM > LOVESEATS",color,"Sea green"
+10,"LIVING ROOM > LOVESEATS",color,"Dark green"
+10,"LIVING ROOM > LOVESEATS",color,Burgundy
+10,"LIVING ROOM > LOVESEATS",color,Charcoal
+10,"LIVING ROOM > LOVESEATS",color,Bronze
+10,"LIVING ROOM > LOVESEATS",color,Cream
+10,"LIVING ROOM > LOVESEATS",color,Mauve
+10,"LIVING ROOM > LOVESEATS",color,Olive
+10,"LIVING ROOM > LOVESEATS",color,Cyan
+10,"LIVING ROOM > LOVESEATS",color,Silver
+10,"LIVING ROOM > LOVESEATS",color,Rust
+10,"LIVING ROOM > LOVESEATS",color,Ruby
+10,"LIVING ROOM > LOVESEATS",color,Azure
+10,"LIVING ROOM > LOVESEATS",color,Mint
+10,"LIVING ROOM > LOVESEATS",color,Pearl
+10,"LIVING ROOM > LOVESEATS",color,Ivory
+10,"LIVING ROOM > LOVESEATS",color,Tangerine
+10,"LIVING ROOM > LOVESEATS",color,"Cherry red"
+10,"LIVING ROOM > LOVESEATS",color,Garnet
+10,"LIVING ROOM > LOVESEATS",color,Emerald
+10,"LIVING ROOM > LOVESEATS",color,Sapphire
+10,"LIVING ROOM > LOVESEATS",material,Plastic
+10,"LIVING ROOM > LOVESEATS",material,Metals
+10,"LIVING ROOM > LOVESEATS",material,Wood
+10,"LIVING ROOM > LOVESEATS",material,Paper
+10,"LIVING ROOM > LOVESEATS",material,"Natural Textiles"
+10,"LIVING ROOM > LOVESEATS",material,"Synthetic Textiles"
+10,"LIVING ROOM > LOVESEATS",material,Leather
+10,"LIVING ROOM > LOVESEATS",material,Fibers
+10,"LIVING ROOM > LOVESEATS",design,modern
+10,"LIVING ROOM > LOVESEATS",design,contemporary
+10,"LIVING ROOM > LOVESEATS",design,natural
+10,"LIVING ROOM > LOVESEATS",design,regular
+11,"LIVING ROOM > TABLES",color,White
+11,"LIVING ROOM > TABLES",color,Black
+11,"LIVING ROOM > TABLES",color,Orange
+11,"LIVING ROOM > TABLES",color,Maroon
+11,"LIVING ROOM > TABLES",color,Red
+11,"LIVING ROOM > TABLES",color,Yellow
+11,"LIVING ROOM > TABLES",color,"Lime green"
+11,"LIVING ROOM > TABLES",color,Salmon
+11,"LIVING ROOM > TABLES",color,Green
+11,"LIVING ROOM > TABLES",color,"Sky blue"
+11,"LIVING ROOM > TABLES",color,Crimson
+11,"LIVING ROOM > TABLES",color,Aqua
+11,"LIVING ROOM > TABLES",color,Grey
+11,"LIVING ROOM > TABLES",color,Purple
+11,"LIVING ROOM > TABLES",color,Mustard
+11,"LIVING ROOM > TABLES",color,Peach
+11,"LIVING ROOM > TABLES",color,Violet
+11,"LIVING ROOM > TABLES",color,Magenta
+11,"LIVING ROOM > TABLES",color,Coral
+11,"LIVING ROOM > TABLES",color,Saffron
+11,"LIVING ROOM > TABLES",color,Brown
+11,"LIVING ROOM > TABLES",color,Pink
+11,"LIVING ROOM > TABLES",color,Tan
+11,"LIVING ROOM > TABLES",color,Teal
+11,"LIVING ROOM > TABLES",color,"Navy Blue"
+11,"LIVING ROOM > TABLES",color,Turquoise
+11,"LIVING ROOM > TABLES",color,Lavender
+11,"LIVING ROOM > TABLES",color,Beige
+11,"LIVING ROOM > TABLES",color,"Lemon yellow"
+11,"LIVING ROOM > TABLES",color,"Grape vine"
+11,"LIVING ROOM > TABLES",color,Indigo
+11,"LIVING ROOM > TABLES",color,Fuchsia
+11,"LIVING ROOM > TABLES",color,Amber
+11,"LIVING ROOM > TABLES",color,"Sea green"
+11,"LIVING ROOM > TABLES",color,"Dark green"
+11,"LIVING ROOM > TABLES",color,Burgundy
+11,"LIVING ROOM > TABLES",color,Charcoal
+11,"LIVING ROOM > TABLES",color,Bronze
+11,"LIVING ROOM > TABLES",color,Cream
+11,"LIVING ROOM > TABLES",color,Mauve
+11,"LIVING ROOM > TABLES",color,Olive
+11,"LIVING ROOM > TABLES",color,Cyan
+11,"LIVING ROOM > TABLES",color,Silver
+11,"LIVING ROOM > TABLES",color,Rust
+11,"LIVING ROOM > TABLES",color,Ruby
+11,"LIVING ROOM > TABLES",color,Azure
+11,"LIVING ROOM > TABLES",color,Mint
+11,"LIVING ROOM > TABLES",color,Pearl
+11,"LIVING ROOM > TABLES",color,Ivory
+11,"LIVING ROOM > TABLES",color,Tangerine
+11,"LIVING ROOM > TABLES",color,"Cherry red"
+11,"LIVING ROOM > TABLES",color,Garnet
+11,"LIVING ROOM > TABLES",color,Emerald
+11,"LIVING ROOM > TABLES",color,Sapphire
+11,"LIVING ROOM > TABLES",material,Plastic
+11,"LIVING ROOM > TABLES",material,Metals
+11,"LIVING ROOM > TABLES",material,Wood
+11,"LIVING ROOM > TABLES",material,Paper
+11,"LIVING ROOM > TABLES",material,"Natural Textiles"
+11,"LIVING ROOM > TABLES",material,"Synthetic Textiles"
+11,"LIVING ROOM > TABLES",material,Leather
+11,"LIVING ROOM > TABLES",material,Fibers
+11,"LIVING ROOM > TABLES",design,modern
+11,"LIVING ROOM > TABLES",design,contemporary
+11,"LIVING ROOM > TABLES",design,natural
+11,"LIVING ROOM > TABLES",design,regular
+12,"LIVING ROOM > SECTIONALS",color,White
+12,"LIVING ROOM > SECTIONALS",color,Black
+12,"LIVING ROOM > SECTIONALS",color,Orange
+12,"LIVING ROOM > SECTIONALS",color,Maroon
+12,"LIVING ROOM > SECTIONALS",color,Red
+12,"LIVING ROOM > SECTIONALS",color,Yellow
+12,"LIVING ROOM > SECTIONALS",color,"Lime green"
+12,"LIVING ROOM > SECTIONALS",color,Salmon
+12,"LIVING ROOM > SECTIONALS",color,Green
+12,"LIVING ROOM > SECTIONALS",color,"Sky blue"
+12,"LIVING ROOM > SECTIONALS",color,Crimson
+12,"LIVING ROOM > SECTIONALS",color,Aqua
+12,"LIVING ROOM > SECTIONALS",color,Grey
+12,"LIVING ROOM > SECTIONALS",color,Purple
+12,"LIVING ROOM > SECTIONALS",color,Mustard
+12,"LIVING ROOM > SECTIONALS",color,Peach
+12,"LIVING ROOM > SECTIONALS",color,Violet
+12,"LIVING ROOM > SECTIONALS",color,Magenta
+12,"LIVING ROOM > SECTIONALS",color,Coral
+12,"LIVING ROOM > SECTIONALS",color,Saffron
+12,"LIVING ROOM > SECTIONALS",color,Brown
+12,"LIVING ROOM > SECTIONALS",color,Pink
+12,"LIVING ROOM > SECTIONALS",color,Tan
+12,"LIVING ROOM > SECTIONALS",color,Teal
+12,"LIVING ROOM > SECTIONALS",color,"Navy Blue"
+12,"LIVING ROOM > SECTIONALS",color,Turquoise
+12,"LIVING ROOM > SECTIONALS",color,Lavender
+12,"LIVING ROOM > SECTIONALS",color,Beige
+12,"LIVING ROOM > SECTIONALS",color,"Lemon yellow"
+12,"LIVING ROOM > SECTIONALS",color,"Grape vine"
+12,"LIVING ROOM > SECTIONALS",color,Indigo
+12,"LIVING ROOM > SECTIONALS",color,Fuchsia
+12,"LIVING ROOM > SECTIONALS",color,Amber
+12,"LIVING ROOM > SECTIONALS",color,"Sea green"
+12,"LIVING ROOM > SECTIONALS",color,"Dark green"
+12,"LIVING ROOM > SECTIONALS",color,Burgundy
+12,"LIVING ROOM > SECTIONALS",color,Charcoal
+12,"LIVING ROOM > SECTIONALS",color,Bronze
+12,"LIVING ROOM > SECTIONALS",color,Cream
+12,"LIVING ROOM > SECTIONALS",color,Mauve
+12,"LIVING ROOM > SECTIONALS",color,Olive
+12,"LIVING ROOM > SECTIONALS",color,Cyan
+12,"LIVING ROOM > SECTIONALS",color,Silver
+12,"LIVING ROOM > SECTIONALS",color,Rust
+12,"LIVING ROOM > SECTIONALS",color,Ruby
+12,"LIVING ROOM > SECTIONALS",color,Azure
+12,"LIVING ROOM > SECTIONALS",color,Mint
+12,"LIVING ROOM > SECTIONALS",color,Pearl
+12,"LIVING ROOM > SECTIONALS",color,Ivory
+12,"LIVING ROOM > SECTIONALS",color,Tangerine
+12,"LIVING ROOM > SECTIONALS",color,"Cherry red"
+12,"LIVING ROOM > SECTIONALS",color,Garnet
+12,"LIVING ROOM > SECTIONALS",color,Emerald
+12,"LIVING ROOM > SECTIONALS",color,Sapphire
+12,"LIVING ROOM > SECTIONALS",material,Plastic
+12,"LIVING ROOM > SECTIONALS",material,Metals
+12,"LIVING ROOM > SECTIONALS",material,Wood
+12,"LIVING ROOM > SECTIONALS",material,Paper
+12,"LIVING ROOM > SECTIONALS",material,"Natural Textiles"
+12,"LIVING ROOM > SECTIONALS",material,"Synthetic Textiles"
+12,"LIVING ROOM > SECTIONALS",material,Leather
+12,"LIVING ROOM > SECTIONALS",material,Fibers
+12,"LIVING ROOM > SECTIONALS",design,modern
+12,"LIVING ROOM > SECTIONALS",design,contemporary
+12,"LIVING ROOM > SECTIONALS",design,natural
+12,"LIVING ROOM > SECTIONALS",design,regular
+13,"LIVING ROOM > LIVING ROOM SETS",color,White
+13,"LIVING ROOM > LIVING ROOM SETS",color,Black
+13,"LIVING ROOM > LIVING ROOM SETS",color,Orange
+13,"LIVING ROOM > LIVING ROOM SETS",color,Maroon
+13,"LIVING ROOM > LIVING ROOM SETS",color,Red
+13,"LIVING ROOM > LIVING ROOM SETS",color,Yellow
+13,"LIVING ROOM > LIVING ROOM SETS",color,"Lime green"
+13,"LIVING ROOM > LIVING ROOM SETS",color,Salmon
+13,"LIVING ROOM > LIVING ROOM SETS",color,Green
+13,"LIVING ROOM > LIVING ROOM SETS",color,"Sky blue"
+13,"LIVING ROOM > LIVING ROOM SETS",color,Crimson
+13,"LIVING ROOM > LIVING ROOM SETS",color,Aqua
+13,"LIVING ROOM > LIVING ROOM SETS",color,Grey
+13,"LIVING ROOM > LIVING ROOM SETS",color,Purple
+13,"LIVING ROOM > LIVING ROOM SETS",color,Mustard
+13,"LIVING ROOM > LIVING ROOM SETS",color,Peach
+13,"LIVING ROOM > LIVING ROOM SETS",color,Violet
+13,"LIVING ROOM > LIVING ROOM SETS",color,Magenta
+13,"LIVING ROOM > LIVING ROOM SETS",color,Coral
+13,"LIVING ROOM > LIVING ROOM SETS",color,Saffron
+13,"LIVING ROOM > LIVING ROOM SETS",color,Brown
+13,"LIVING ROOM > LIVING ROOM SETS",color,Pink
+13,"LIVING ROOM > LIVING ROOM SETS",color,Tan
+13,"LIVING ROOM > LIVING ROOM SETS",color,Teal
+13,"LIVING ROOM > LIVING ROOM SETS",color,"Navy Blue"
+13,"LIVING ROOM > LIVING ROOM SETS",color,Turquoise
+13,"LIVING ROOM > LIVING ROOM SETS",color,Lavender
+13,"LIVING ROOM > LIVING ROOM SETS",color,Beige
+13,"LIVING ROOM > LIVING ROOM SETS",color,"Lemon yellow"
+13,"LIVING ROOM > LIVING ROOM SETS",color,"Grape vine"
+13,"LIVING ROOM > LIVING ROOM SETS",color,Indigo
+13,"LIVING ROOM > LIVING ROOM SETS",color,Fuchsia
+13,"LIVING ROOM > LIVING ROOM SETS",color,Amber
+13,"LIVING ROOM > LIVING ROOM SETS",color,"Sea green"
+13,"LIVING ROOM > LIVING ROOM SETS",color,"Dark green"
+13,"LIVING ROOM > LIVING ROOM SETS",color,Burgundy
+13,"LIVING ROOM > LIVING ROOM SETS",color,Charcoal
+13,"LIVING ROOM > LIVING ROOM SETS",color,Bronze
+13,"LIVING ROOM > LIVING ROOM SETS",color,Cream
+13,"LIVING ROOM > LIVING ROOM SETS",color,Mauve
+13,"LIVING ROOM > LIVING ROOM SETS",color,Olive
+13,"LIVING ROOM > LIVING ROOM SETS",color,Cyan
+13,"LIVING ROOM > LIVING ROOM SETS",color,Silver
+13,"LIVING ROOM > LIVING ROOM SETS",color,Rust
+13,"LIVING ROOM > LIVING ROOM SETS",color,Ruby
+13,"LIVING ROOM > LIVING ROOM SETS",color,Azure
+13,"LIVING ROOM > LIVING ROOM SETS",color,Mint
+13,"LIVING ROOM > LIVING ROOM SETS",color,Pearl
+13,"LIVING ROOM > LIVING ROOM SETS",color,Ivory
+13,"LIVING ROOM > LIVING ROOM SETS",color,Tangerine
+13,"LIVING ROOM > LIVING ROOM SETS",color,"Cherry red"
+13,"LIVING ROOM > LIVING ROOM SETS",color,Garnet
+13,"LIVING ROOM > LIVING ROOM SETS",color,Emerald
+13,"LIVING ROOM > LIVING ROOM SETS",color,Sapphire
+13,"LIVING ROOM > LIVING ROOM SETS",material,Plastic
+13,"LIVING ROOM > LIVING ROOM SETS",material,Metals
+13,"LIVING ROOM > LIVING ROOM SETS",material,Wood
+13,"LIVING ROOM > LIVING ROOM SETS",material,Paper
+13,"LIVING ROOM > LIVING ROOM SETS",material,"Natural Textiles"
+13,"LIVING ROOM > LIVING ROOM SETS",material,"Synthetic Textiles"
+13,"LIVING ROOM > LIVING ROOM SETS",material,Leather
+13,"LIVING ROOM > LIVING ROOM SETS",material,Fibers
+13,"LIVING ROOM > LIVING ROOM SETS",design,modern
+13,"LIVING ROOM > LIVING ROOM SETS",design,contemporary
+13,"LIVING ROOM > LIVING ROOM SETS",design,natural
+13,"LIVING ROOM > LIVING ROOM SETS",design,regular
+21,"OUTDOOR > TABLE",color,White
+21,"OUTDOOR > TABLE",color,Black
+21,"OUTDOOR > TABLE",color,Orange
+21,"OUTDOOR > TABLE",color,Maroon
+21,"OUTDOOR > TABLE",color,Red
+21,"OUTDOOR > TABLE",color,Yellow
+21,"OUTDOOR > TABLE",color,"Lime green"
+21,"OUTDOOR > TABLE",color,Salmon
+21,"OUTDOOR > TABLE",color,Green
+21,"OUTDOOR > TABLE",color,"Sky blue"
+21,"OUTDOOR > TABLE",color,Crimson
+21,"OUTDOOR > TABLE",color,Aqua
+21,"OUTDOOR > TABLE",color,Grey
+21,"OUTDOOR > TABLE",color,Purple
+21,"OUTDOOR > TABLE",color,Mustard
+21,"OUTDOOR > TABLE",color,Peach
+21,"OUTDOOR > TABLE",color,Violet
+21,"OUTDOOR > TABLE",color,Magenta
+21,"OUTDOOR > TABLE",color,Coral
+21,"OUTDOOR > TABLE",color,Saffron
+21,"OUTDOOR > TABLE",color,Brown
+21,"OUTDOOR > TABLE",color,Pink
+21,"OUTDOOR > TABLE",color,Tan
+21,"OUTDOOR > TABLE",color,Teal
+21,"OUTDOOR > TABLE",color,"Navy Blue"
+21,"OUTDOOR > TABLE",color,Turquoise
+21,"OUTDOOR > TABLE",color,Lavender
+21,"OUTDOOR > TABLE",color,Beige
+21,"OUTDOOR > TABLE",color,"Lemon yellow"
+21,"OUTDOOR > TABLE",color,"Grape vine"
+21,"OUTDOOR > TABLE",color,Indigo
+21,"OUTDOOR > TABLE",color,Fuchsia
+21,"OUTDOOR > TABLE",color,Amber
+21,"OUTDOOR > TABLE",color,"Sea green"
+21,"OUTDOOR > TABLE",color,"Dark green"
+21,"OUTDOOR > TABLE",color,Burgundy
+21,"OUTDOOR > TABLE",color,Charcoal
+21,"OUTDOOR > TABLE",color,Bronze
+21,"OUTDOOR > TABLE",color,Cream
+21,"OUTDOOR > TABLE",color,Mauve
+21,"OUTDOOR > TABLE",color,Olive
+21,"OUTDOOR > TABLE",color,Cyan
+21,"OUTDOOR > TABLE",color,Silver
+21,"OUTDOOR > TABLE",color,Rust
+21,"OUTDOOR > TABLE",color,Ruby
+21,"OUTDOOR > TABLE",color,Azure
+21,"OUTDOOR > TABLE",color,Mint
+21,"OUTDOOR > TABLE",color,Pearl
+21,"OUTDOOR > TABLE",color,Ivory
+21,"OUTDOOR > TABLE",color,Tangerine
+21,"OUTDOOR > TABLE",color,"Cherry red"
+21,"OUTDOOR > TABLE",color,Garnet
+21,"OUTDOOR > TABLE",color,Emerald
+21,"OUTDOOR > TABLE",color,Sapphire
+21,"OUTDOOR > TABLE",material,Plastic
+21,"OUTDOOR > TABLE",material,Metals
+21,"OUTDOOR > TABLE",material,Wood
+21,"OUTDOOR > TABLE",material,Paper
+21,"OUTDOOR > TABLE",material,"Natural Textiles"
+21,"OUTDOOR > TABLE",material,"Synthetic Textiles"
+21,"OUTDOOR > TABLE",material,Leather
+21,"OUTDOOR > TABLE",material,Fibers
+21,"OUTDOOR > TABLE",design,modern
+21,"OUTDOOR > TABLE",design,contemporary
+21,"OUTDOOR > TABLE",design,natural
+21,"OUTDOOR > TABLE",design,regular
+22,"OUTDOOR > CHAIR",color,White
+22,"OUTDOOR > CHAIR",color,Black
+22,"OUTDOOR > CHAIR",color,Orange
+22,"OUTDOOR > CHAIR",color,Maroon
+22,"OUTDOOR > CHAIR",color,Red
+22,"OUTDOOR > CHAIR",color,Yellow
+22,"OUTDOOR > CHAIR",color,"Lime green"
+22,"OUTDOOR > CHAIR",color,Salmon
+22,"OUTDOOR > CHAIR",color,Green
+22,"OUTDOOR > CHAIR",color,"Sky blue"
+22,"OUTDOOR > CHAIR",color,Crimson
+22,"OUTDOOR > CHAIR",color,Aqua
+22,"OUTDOOR > CHAIR",color,Grey
+22,"OUTDOOR > CHAIR",color,Purple
+22,"OUTDOOR > CHAIR",color,Mustard
+22,"OUTDOOR > CHAIR",color,Peach
+22,"OUTDOOR > CHAIR",color,Violet
+22,"OUTDOOR > CHAIR",color,Magenta
+22,"OUTDOOR > CHAIR",color,Coral
+22,"OUTDOOR > CHAIR",color,Saffron
+22,"OUTDOOR > CHAIR",color,Brown
+22,"OUTDOOR > CHAIR",color,Pink
+22,"OUTDOOR > CHAIR",color,Tan
+22,"OUTDOOR > CHAIR",color,Teal
+22,"OUTDOOR > CHAIR",color,"Navy Blue"
+22,"OUTDOOR > CHAIR",color,Turquoise
+22,"OUTDOOR > CHAIR",color,Lavender
+22,"OUTDOOR > CHAIR",color,Beige
+22,"OUTDOOR > CHAIR",color,"Lemon yellow"
+22,"OUTDOOR > CHAIR",color,"Grape vine"
+22,"OUTDOOR > CHAIR",color,Indigo
+22,"OUTDOOR > CHAIR",color,Fuchsia
+22,"OUTDOOR > CHAIR",color,Amber
+22,"OUTDOOR > CHAIR",color,"Sea green"
+22,"OUTDOOR > CHAIR",color,"Dark green"
+22,"OUTDOOR > CHAIR",color,Burgundy
+22,"OUTDOOR > CHAIR",color,Charcoal
+22,"OUTDOOR > CHAIR",color,Bronze
+22,"OUTDOOR > CHAIR",color,Cream
+22,"OUTDOOR > CHAIR",color,Mauve
+22,"OUTDOOR > CHAIR",color,Olive
+22,"OUTDOOR > CHAIR",color,Cyan
+22,"OUTDOOR > CHAIR",color,Silver
+22,"OUTDOOR > CHAIR",color,Rust
+22,"OUTDOOR > CHAIR",color,Ruby
+22,"OUTDOOR > CHAIR",color,Azure
+22,"OUTDOOR > CHAIR",color,Mint
+22,"OUTDOOR > CHAIR",color,Pearl
+22,"OUTDOOR > CHAIR",color,Ivory
+22,"OUTDOOR > CHAIR",color,Tangerine
+22,"OUTDOOR > CHAIR",color,"Cherry red"
+22,"OUTDOOR > CHAIR",color,Garnet
+22,"OUTDOOR > CHAIR",color,Emerald
+22,"OUTDOOR > CHAIR",color,Sapphire
+22,"OUTDOOR > CHAIR",material,Plastic
+22,"OUTDOOR > CHAIR",material,Metals
+22,"OUTDOOR > CHAIR",material,Wood
+22,"OUTDOOR > CHAIR",material,Paper
+22,"OUTDOOR > CHAIR",material,"Natural Textiles"
+22,"OUTDOOR > CHAIR",material,"Synthetic Textiles"
+22,"OUTDOOR > CHAIR",material,Leather
+22,"OUTDOOR > CHAIR",material,Fibers
+22,"OUTDOOR > CHAIR",design,modern
+22,"OUTDOOR > CHAIR",design,contemporary
+22,"OUTDOOR > CHAIR",design,natural
+22,"OUTDOOR > CHAIR",design,regular
+23,"OUTDOOR > SOFA",color,White
+23,"OUTDOOR > SOFA",color,Black
+23,"OUTDOOR > SOFA",color,Orange
+23,"OUTDOOR > SOFA",color,Maroon
+23,"OUTDOOR > SOFA",color,Red
+23,"OUTDOOR > SOFA",color,Yellow
+23,"OUTDOOR > SOFA",color,"Lime green"
+23,"OUTDOOR > SOFA",color,Salmon
+23,"OUTDOOR > SOFA",color,Green
+23,"OUTDOOR > SOFA",color,"Sky blue"
+23,"OUTDOOR > SOFA",color,Crimson
+23,"OUTDOOR > SOFA",color,Aqua
+23,"OUTDOOR > SOFA",color,Grey
+23,"OUTDOOR > SOFA",color,Purple
+23,"OUTDOOR > SOFA",color,Mustard
+23,"OUTDOOR > SOFA",color,Peach
+23,"OUTDOOR > SOFA",color,Violet
+23,"OUTDOOR > SOFA",color,Magenta
+23,"OUTDOOR > SOFA",color,Coral
+23,"OUTDOOR > SOFA",color,Saffron
+23,"OUTDOOR > SOFA",color,Brown
+23,"OUTDOOR > SOFA",color,Pink
+23,"OUTDOOR > SOFA",color,Tan
+23,"OUTDOOR > SOFA",color,Teal
+23,"OUTDOOR > SOFA",color,"Navy Blue"
+23,"OUTDOOR > SOFA",color,Turquoise
+23,"OUTDOOR > SOFA",color,Lavender
+23,"OUTDOOR > SOFA",color,Beige
+23,"OUTDOOR > SOFA",color,"Lemon yellow"
+23,"OUTDOOR > SOFA",color,"Grape vine"
+23,"OUTDOOR > SOFA",color,Indigo
+23,"OUTDOOR > SOFA",color,Fuchsia
+23,"OUTDOOR > SOFA",color,Amber
+23,"OUTDOOR > SOFA",color,"Sea green"
+23,"OUTDOOR > SOFA",color,"Dark green"
+23,"OUTDOOR > SOFA",color,Burgundy
+23,"OUTDOOR > SOFA",color,Charcoal
+23,"OUTDOOR > SOFA",color,Bronze
+23,"OUTDOOR > SOFA",color,Cream
+23,"OUTDOOR > SOFA",color,Mauve
+23,"OUTDOOR > SOFA",color,Olive
+23,"OUTDOOR > SOFA",color,Cyan
+23,"OUTDOOR > SOFA",color,Silver
+23,"OUTDOOR > SOFA",color,Rust
+23,"OUTDOOR > SOFA",color,Ruby
+23,"OUTDOOR > SOFA",color,Azure
+23,"OUTDOOR > SOFA",color,Mint
+23,"OUTDOOR > SOFA",color,Pearl
+23,"OUTDOOR > SOFA",color,Ivory
+23,"OUTDOOR > SOFA",color,Tangerine
+23,"OUTDOOR > SOFA",color,"Cherry red"
+23,"OUTDOOR > SOFA",color,Garnet
+23,"OUTDOOR > SOFA",color,Emerald
+23,"OUTDOOR > SOFA",color,Sapphire
+23,"OUTDOOR > SOFA",material,Plastic
+23,"OUTDOOR > SOFA",material,Metals
+23,"OUTDOOR > SOFA",material,Wood
+23,"OUTDOOR > SOFA",material,Paper
+23,"OUTDOOR > SOFA",material,"Natural Textiles"
+23,"OUTDOOR > SOFA",material,"Synthetic Textiles"
+23,"OUTDOOR > SOFA",material,Leather
+23,"OUTDOOR > SOFA",material,Fibers
+23,"OUTDOOR > SOFA",design,modern
+23,"OUTDOOR > SOFA",design,contemporary
+23,"OUTDOOR > SOFA",design,natural
+23,"OUTDOOR > SOFA",design,regular
+24,"OUTDOOR > OTTOMAN",color,White
+24,"OUTDOOR > OTTOMAN",color,Black
+24,"OUTDOOR > OTTOMAN",color,Orange
+24,"OUTDOOR > OTTOMAN",color,Maroon
+24,"OUTDOOR > OTTOMAN",color,Red
+24,"OUTDOOR > OTTOMAN",color,Yellow
+24,"OUTDOOR > OTTOMAN",color,"Lime green"
+24,"OUTDOOR > OTTOMAN",color,Salmon
+24,"OUTDOOR > OTTOMAN",color,Green
+24,"OUTDOOR > OTTOMAN",color,"Sky blue"
+24,"OUTDOOR > OTTOMAN",color,Crimson
+24,"OUTDOOR > OTTOMAN",color,Aqua
+24,"OUTDOOR > OTTOMAN",color,Grey
+24,"OUTDOOR > OTTOMAN",color,Purple
+24,"OUTDOOR > OTTOMAN",color,Mustard
+24,"OUTDOOR > OTTOMAN",color,Peach
+24,"OUTDOOR > OTTOMAN",color,Violet
+24,"OUTDOOR > OTTOMAN",color,Magenta
+24,"OUTDOOR > OTTOMAN",color,Coral
+24,"OUTDOOR > OTTOMAN",color,Saffron
+24,"OUTDOOR > OTTOMAN",color,Brown
+24,"OUTDOOR > OTTOMAN",color,Pink
+24,"OUTDOOR > OTTOMAN",color,Tan
+24,"OUTDOOR > OTTOMAN",color,Teal
+24,"OUTDOOR > OTTOMAN",color,"Navy Blue"
+24,"OUTDOOR > OTTOMAN",color,Turquoise
+24,"OUTDOOR > OTTOMAN",color,Lavender
+24,"OUTDOOR > OTTOMAN",color,Beige
+24,"OUTDOOR > OTTOMAN",color,"Lemon yellow"
+24,"OUTDOOR > OTTOMAN",color,"Grape vine"
+24,"OUTDOOR > OTTOMAN",color,Indigo
+24,"OUTDOOR > OTTOMAN",color,Fuchsia
+24,"OUTDOOR > OTTOMAN",color,Amber
+24,"OUTDOOR > OTTOMAN",color,"Sea green"
+24,"OUTDOOR > OTTOMAN",color,"Dark green"
+24,"OUTDOOR > OTTOMAN",color,Burgundy
+24,"OUTDOOR > OTTOMAN",color,Charcoal
+24,"OUTDOOR > OTTOMAN",color,Bronze
+24,"OUTDOOR > OTTOMAN",color,Cream
+24,"OUTDOOR > OTTOMAN",color,Mauve
+24,"OUTDOOR > OTTOMAN",color,Olive
+24,"OUTDOOR > OTTOMAN",color,Cyan
+24,"OUTDOOR > OTTOMAN",color,Silver
+24,"OUTDOOR > OTTOMAN",color,Rust
+24,"OUTDOOR > OTTOMAN",color,Ruby
+24,"OUTDOOR > OTTOMAN",color,Azure
+24,"OUTDOOR > OTTOMAN",color,Mint
+24,"OUTDOOR > OTTOMAN",color,Pearl
+24,"OUTDOOR > OTTOMAN",color,Ivory
+24,"OUTDOOR > OTTOMAN",color,Tangerine
+24,"OUTDOOR > OTTOMAN",color,"Cherry red"
+24,"OUTDOOR > OTTOMAN",color,Garnet
+24,"OUTDOOR > OTTOMAN",color,Emerald
+24,"OUTDOOR > OTTOMAN",color,Sapphire
+24,"OUTDOOR > OTTOMAN",material,Plastic
+24,"OUTDOOR > OTTOMAN",material,Metals
+24,"OUTDOOR > OTTOMAN",material,Wood
+24,"OUTDOOR > OTTOMAN",material,Paper
+24,"OUTDOOR > OTTOMAN",material,"Natural Textiles"
+24,"OUTDOOR > OTTOMAN",material,"Synthetic Textiles"
+24,"OUTDOOR > OTTOMAN",material,Leather
+24,"OUTDOOR > OTTOMAN",material,Fibers
+24,"OUTDOOR > OTTOMAN",design,modern
+24,"OUTDOOR > OTTOMAN",design,contemporary
+24,"OUTDOOR > OTTOMAN",design,natural
+24,"OUTDOOR > OTTOMAN",design,regular
