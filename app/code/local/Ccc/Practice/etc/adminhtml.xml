@@ -4,7 +4,6 @@
         <practice translate="title" module="practice">
             <title>Practice</title>
             <sort_order>10</sort_order>
-            <!-- action>adminhtml/customer/</action -->
             <children>
                 <practicegrid translate="title" module="practice">
                     <title>Manage Practice</title>
