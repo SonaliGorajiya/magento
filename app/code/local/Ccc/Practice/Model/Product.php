@@ -1,11 +1,9 @@
-<?php 
+<?php
 
-class Ccc_Practice_Model_Product extends Mage_Catalog_Model_Product
+class Ccc_Product_Model_Product extends Mage_Core_Model_Abstract
 {
-	protected function _construct()
-    {  
-        parent::__construct();
-    }  
-
-    
+    function __construct()
+    {
+        $this->_init('product/product');
+    }
 }
