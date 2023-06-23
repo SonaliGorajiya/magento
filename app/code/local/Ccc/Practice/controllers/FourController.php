@@ -2,7 +2,6 @@
 
 class Ccc_Practice_FourController extends Mage_Core_Controller_Front_Action
 {
-    
     public function indexAction()
     {
         echo'<pre>';
@@ -35,8 +34,5 @@ class Ccc_Practice_FourController extends Mage_Core_Controller_Front_Action
         $collection->getConnection()->insertMultiple('vendor',$data);
 
         print_r($collection->getData());
-
     }
-
-
 }

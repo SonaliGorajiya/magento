@@ -1,4 +1,5 @@
 <?php
+
 class Ccc_Practice_ClassthreeController extends Mage_Adminhtml_Controller_Action
 {
 	public function indexAction()
@@ -14,5 +15,4 @@ class Ccc_Practice_ClassthreeController extends Mage_Adminhtml_Controller_Action
         die;
 
     }
-
 }

@@ -2,9 +2,6 @@
 
 class Ccc_Practice_TwoController extends Mage_Core_Controller_Front_Action
 {
-    
-
-    
     public function indexAction()
     {
         echo'<pre>';
@@ -16,9 +13,5 @@ class Ccc_Practice_TwoController extends Mage_Core_Controller_Front_Action
         $collection->getConnection('core_write')->query($query);
 
         print_r($collection->getData());
-
-
     }
-
-
 }

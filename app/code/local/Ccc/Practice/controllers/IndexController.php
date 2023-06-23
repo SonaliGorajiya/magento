@@ -11,7 +11,5 @@ class Ccc_Practice_IndexController extends Mage_Adminhtml_Controller_Action
             echo "query executed";
         }
         die;
-
     }
-
 }

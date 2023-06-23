@@ -2,71 +2,133 @@
 
 class Ccc_Practice_Adminhtml_CsvController extends Mage_Adminhtml_Controller_Action
 {
+
+    protected $_data = array();
+    protected $_header = array();
+    
+    protected $_categoryData = array();
+    protected $_categoryHeader = array();
+    
+    protected $_dataFinal = array();
+    
+    protected $_categoryFile = 'C:\Users\User\Downloads\Csv _file\CATEGORY.csv';
+    protected $_file = 'C:\Users\User\Downloads\Csv _file\ATTRIBUTE-OPTIONS.csv';
+    protected $_fileReport = 'C:\Users\User\Downloads\Csv _file\category-attribute-option.csv';
+
     public function indexAction()
-    {
-        $categoryCsvFilePath = "C:\Users\User\Downloads\Csv _file\CATEGORY.csv";
-        $attributeOptionCsvFilePath = "C:\Users\User\Downloads\Csv _file\ATTRIBUTE-OPTIONS.csv";
-        $finalCsvFilePath = 'category-attribute-option.csv';
+    {   
+        echo "<pre>";
+        $csv = new Varien_File_Csv();
 
+        $this->_prepareData();
+        $this->_formatData();
+        $csv->saveData($this->_fileReport, $this->_dataFinal);
+
+        echo "DONE";
+        die;
+    }
         
-        // Open the final CSV file for writing
-        $finalCsvFile = fopen($finalCsvFilePath, 'w');
+    protected function _prepareData()
+    {
+        $csv = new Varien_File_Csv();
 
-        // Write the CSV header
-        $header = ['Category ID', 'Category Name', 'Attribute ID', 'Option'];
-        fputcsv($finalCsvFile, $header);
+        $data = $csv->getData($this->_file);
+        $categoryData = $csv->getData($this->_categoryFile);
 
-        // Load the category data from the category.csv file and remove duplicate categories
-        $categoryCsvData = array_map('str_getcsv', file($categoryCsvFilePath));
-        $categoryData = array_unique(array_column($categoryCsvData, 1)); // Get unique category names
-        $categoryData = array_values($categoryData); // Reindex the array
-        $categoryHeaders = array_shift($categoryData); // Remove the header row
-
-        // Load the attribute-option data from the attribute-option.csv file and remove duplicates
-        $attributeOptionData = array_map('str_getcsv', file($attributeOptionCsvFilePath));
-        $attributeOptionData = array_unique($attributeOptionData, SORT_REGULAR);
-        $attributeOptionHeaders = array_shift($attributeOptionData); // Remove the header row
-
-        // Iterate through each category
-        foreach ($categoryData as $categoryName) {
-            // Find the category ID based on the category name
-            $categoryId = null;
-            foreach ($categoryCsvData as $categoryRow) {
-                if ($categoryRow[1] === $categoryName) {
-                    $categoryId = $categoryRow[0];
-                    break;
-                }
-            }
-
-            // Keep track of written attribute-option combinations
-            $writtenCombinations = [];
-
-            // Iterate through each attribute-option mapping
-            foreach ($attributeOptionData as $attributeOptionRow) {
-                $attributeId = $attributeOptionRow[0];
-                $option = $attributeOptionRow[1];
-
-                // Generate a unique key for the attribute-option combination
-                $combinationKey = $attributeId . '_' . $option;
-
-                // Check if the combination has been written
-                if (!isset($writtenCombinations[$combinationKey])) {
-                    // Write the category, attribute, and option to the final CSV file
-                    $row = [$categoryId, $categoryName, $attributeId, $option];
-                    fputcsv($finalCsvFile, $row);
-
-                    // Mark the combination as written
-                    $writtenCombinations[$combinationKey] = true;
-                }
-            }
+         if(!$data)
+        {
+            throw new Exception("Data is not available in file");
+        }
+        
+        if(!$categoryData)
+        {
+            throw new Exception("Category data is not available in file");
         }
 
-        echo "<pre>";print_r($writtenCombinations);die();
-        // Close the final CSV file
-        fclose($finalCsvFile);
+        foreach ($categoryData as $row)
+        {
+            if(!$this->_categoryHeader)
+            {
+                $this->_categoryHeader = $row;
+            }
+            else
+            {
+                $row = array_combine($this->_categoryHeader, $row);
+                $this->_categoryData[] = $row;
+            }
+        }    
 
-        // Set the file download headers
-        $this->_prepareDownloadResponse('category-attribute-option.csv', file_get_contents($finalCsvFilePath));
+        foreach ($data as $row) 
+        {
+            if(!$this->_header)
+            {
+                $this->_header = $row;
+            }
+            else
+            {
+                $row = array_combine($this->_header, $row);
+                $option = $row['OPTION'];
+                $this->_data[$option] = $row;
+            }
+        }  
+    }
+    
+    protected function _formatData()
+    {
+        if(!$this->_data)
+        {
+            throw new Exception("Data is not available");
+        }
+        
+        if(!$this->_categoryData)
+        {
+            throw new Exception("Category data is not available");
+        }
+        $this->_dataFinal[] = array('index','category','attribute' ,'option');
+        $categoryData = array_unique(array_column($this->_categoryData,'CATEGORY'));
+        $index = 1;
+        foreach($categoryData as $_category)
+        {
+            foreach($this->_data as $opt =>$data)
+            {
+                $output = array(
+                    'index' => $index,
+                    'category' => $_category,
+                    'attribute' => $data['ATTRIBUTE'],
+                    'option' => $data['OPTION'],
+                );
+                $this->_dataFinal[] = $output; 
+                $index ++;
+            }
+        }
+    }
+    
+    public function getData()
+    {
+        return $this->_data;
+    }
 
+    public function getCategoryData()
+    {
+        return $this->_categoryData;
+    }
+
+    public function getDataFinal()
+    {
+        return $this->_dataFinal;
+    }
+
+
+    public function twoAction()
+    {
+        $csvMergeObj = Mage::getModel('practice/csvmerge');
+        
+        $csvMergeObj->setCategoryFile('C:\Users\User\Downloads\CATEGORY.csv');
+        $csvMergeObj->setOptionFile('C:\Users\User\Downloads\ATTRIBUTE-OPTIONS.csv');
+        $csvMergeObj->setFinalFile('C:\Users\User\Downloads\category-attribute-option.csv');
+
+        $file = $csvMergeObj->run();
+        
+        $this->_prepareDownloadResponse('category-attribute-option.csv', file_get_contents($file));
     }
 }

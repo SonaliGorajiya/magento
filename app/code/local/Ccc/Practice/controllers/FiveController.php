@@ -2,8 +2,6 @@
 
 class Ccc_Practice_FiveController extends Mage_Core_Controller_Front_Action
 {
-    
-
     public function indexAction()
     {
         echo'<pre>';
@@ -12,8 +10,5 @@ class Ccc_Practice_FiveController extends Mage_Core_Controller_Front_Action
         print_r($collection->toArray());
         print_r($collection->getItems());
         print_r($collection->getData());
-
     }
-
-
 }

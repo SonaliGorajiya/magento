@@ -1,10 +1,7 @@
 <?php
-/**
- * 
- */
+
 class Ccc_Practice_QueryController extends Mage_Core_Controller_Front_Action
 {
-	
 	public function indexAction()
 	{
 		echo "<pre>";
@@ -13,7 +10,6 @@ class Ccc_Practice_QueryController extends Mage_Core_Controller_Front_Action
 
 class Ccc_Practice_QueryController extends Mage_Core_Controller_Front_Action
 {
-    
     public function indexAction()
     {
         echo "<pre>";
@@ -46,7 +42,6 @@ class Ccc_Practice_QueryController extends Mage_Core_Controller_Front_Action
             ['sku' => 'ABCSD', 'cost' => 5000],
             ['product_id = ?' => 12]
         );
-
 
 
         // Delete:

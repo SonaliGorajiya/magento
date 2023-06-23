@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Ccc_Practice>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </Ccc_Practice>
     </modules>
      <frontend>
@@ -22,6 +22,16 @@
         </routers>
     </frontend>
     <global>
+        <resources>
+            <practice_setup>
+                <setup>
+                    <module>Ccc_Practice</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </practice_setup>
+        </resources>
         <models>
             <practice>
                 <class>Ccc_Practice_Model</class>
