@@ -9,13 +9,6 @@ class Ccc_Practice_Adminhtml_QueryController extends Mage_Adminhtml_Controller_A
         $this->renderLayout();
     }
 
-    public function oneaAction()
-    {
-        $this->loadLayout();
-        $this->_addContent($this->getLayout()->createBlock('practice/adminhtml_one'));
-        $this->renderLayout();
-    }
-
     public function oneAction()
     {
         $this->loadLayout();
@@ -131,6 +124,74 @@ class Ccc_Practice_Adminhtml_QueryController extends Mage_Adminhtml_Controller_A
             ->addAttributeToSelect("cost")
             ->addAttributeToSelect("price")
             ->addAttributeToSelect("color");');
+        echo "<br><br>";
+
+        echo "Core Query : <br><br>
+        SELECT
+                p.sku,
+                pv.value AS name,
+                pdc.value AS cost,
+                pdp.value AS price,
+                pi.value AS color
+            FROM
+                catalog_product_entity p
+            LEFT JOIN
+                catalog_product_entity_varchar pv
+            ON
+                pv.entity_id = p.entity_id
+                AND pv.attribute_id = (
+                    SELECT attribute_id
+                    FROM eav_attribute
+                    WHERE attribute_code = 'name'
+                    AND entity_type_id = (
+                        SELECT entity_type_id
+                        FROM eav_entity_type
+                        WHERE entity_type_code = 'catalog_product'
+                    )
+                )
+            LEFT JOIN
+                catalog_product_entity_decimal pdc
+            ON
+                pdc.entity_id = p.entity_id
+                AND pdc.attribute_id = (
+                    SELECT attribute_id
+                    FROM eav_attribute
+                    WHERE attribute_code = 'cost'
+                    AND entity_type_id = (
+                        SELECT entity_type_id
+                        FROM eav_entity_type
+                        WHERE entity_type_code = 'catalog_product'
+                    )
+                )
+            LEFT JOIN
+                catalog_product_entity_decimal pdp
+            ON
+                pdp.entity_id = p.entity_id
+                AND pdp.attribute_id = (
+                    SELECT attribute_id
+                    FROM eav_attribute
+                    WHERE attribute_code = 'price'
+                    AND entity_type_id = (
+                        SELECT entity_type_id
+                        FROM eav_entity_type
+                        WHERE entity_type_code = 'catalog_product'
+                    )
+                )
+                LEFT JOIN
+                    catalog_product_entity_int pi
+                ON
+                    pi.entity_id = p.entity_id
+                    AND pi.attribute_id = (
+                        SELECT attribute_id
+                        FROM eav_attribute
+                        WHERE attribute_code = 'color'
+                        AND entity_type_id = (
+                            SELECT entity_type_id
+                            FROM eav_entity_type
+                            WHERE entity_type_code = 'catalog_product'
+                        )
+                    );
+                <br><br>";
 
 
         }catch(Exception $e){
@@ -279,6 +340,30 @@ $collection->addAttributeToSelect("entity_id")
            ->addAttributeToSelect("thumbnail")
            ->addAttributeToFilter("image", array("notnull" => true));
             ';
+            echo "<br>";
+            echo "New Core Query : <br>";
+            $resource = Mage::getSingleton('core/resource');
+        $readConnection = $resource->getConnection('core_read');
+        echo $select = $readConnection->select()
+            ->from(
+                array('main_table'=> $resource->getTableName('catalog_product_entity')),
+                array('entity_id','sku')
+            )
+            ->joinLeft(
+                array('image'=>$resource->getTableName('catalog_product_entity_varchar')),
+                'image.entity_id = main_table.entity_id AND image.attribute_id = 87',
+                array('image' => 'image.value')
+            )
+            ->joinLeft(
+                array('thumb'=>$resource->getTableName('catalog_product_entity_varchar')),
+                'thumb.entity_id = main_table.entity_id AND thumb.attribute_id = 89',
+                array('thumbnail' => 'thumb.value')
+            )
+            ->joinLeft(
+                array('small'=>$resource->getTableName('catalog_product_entity_varchar')),
+                'small.entity_id = main_table.entity_id AND small.attribute_id = 88',
+                array('small' => 'small.value')
+            );
 
 
         }catch(Exception $e){
@@ -593,6 +678,4 @@ $collection->addAttributeToSelect("entity_id")
         
     }
 
-
-    
 }

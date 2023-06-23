@@ -1,4 +1,5 @@
 <?php
+
 class Ccc_Practice_ClasstwoController extends Mage_Core_Controller_Front_Action
 {
 	public function indexAction()
@@ -11,7 +12,5 @@ class Ccc_Practice_ClasstwoController extends Mage_Core_Controller_Front_Action
             echo "query executed";
         }
         die;
-
     }
-
 }

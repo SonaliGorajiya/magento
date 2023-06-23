@@ -2,9 +2,6 @@
 
 class Ccc_Practice_ThreeController extends Mage_Core_Controller_Front_Action
 {
-    
-
-    
     public function indexAction()
     {
         echo'<pre>';
@@ -25,9 +22,5 @@ class Ccc_Practice_ThreeController extends Mage_Core_Controller_Front_Action
         print_r($model->addData($data)->save());
 
         print_r($collection->getData());
-
-
     }
-
-
 }

@@ -2,8 +2,6 @@
 
 class Ccc_Practice_OneController extends Mage_Core_Controller_Front_Action
 {
-    
-
     public function indexAction()
     {
         echo'<pre>';
@@ -47,6 +45,4 @@ class Ccc_Practice_OneController extends Mage_Core_Controller_Front_Action
         print_r(get_class_methods(Mage));
         echo "<br>";
     }
-
-
 }

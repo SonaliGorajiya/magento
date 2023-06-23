@@ -1,0 +1,210 @@
+stdClass Object
+(
+    [kind] => customsearch#search
+    [url] => stdClass Object
+        (
+            [type] => application/json
+            [template] => https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json
+        )
+
+    [queries] => stdClass Object
+        (
+            [request] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [title] => Google Custom Search - https://www.bedroomfurniturediscounts.com/media/catalog/product/9/5/95973.jpg
+                            [totalResults] => 7
+                            [searchTerms] => https://www.bedroomfurniturediscounts.com/media/catalog/product/9/5/95973.jpg
+                            [count] => 7
+                            [startIndex] => 1
+                            [inputEncoding] => utf8
+                            [outputEncoding] => utf8
+                            [safe] => off
+                            [cx] => 015541756871453609816:kxoep9sn1p8
+                            [searchType] => image
+                        )
+
+                )
+
+        )
+
+    [context] => stdClass Object
+        (
+            [title] => Onestepfurniture
+        )
+
+    [searchInformation] => stdClass Object
+        (
+            [searchTime] => 0.114657
+            [formattedSearchTime] => 0.11
+            [totalResults] => 7
+            [formattedTotalResults] => 7
+        )
+
+    [items] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [kind] => customsearch#result
+                    [title] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlTitle] => Liberty Furniture Amelia Bedroom Collection
+                    [link] => https://www.bedroomfurniturediscounts.com/media/catalog/product/cache/1/image/de872f0ebe2788fbb19ed4dd7db27516/9/5/95996.jpg
+                    [displayLink] => www.bedroomfurniturediscounts.com
+                    [snippet] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlSnippet] => Liberty Furniture Amelia Bedroom Collection
+                    [mime] => image/jpeg
+                    [image] => stdClass Object
+                        (
+                            [contextLink] => https://www.bedroomfurniturediscounts.com/b/liberty-furniture/amelia-collection.html
+                            [height] => 914
+                            [width] => 1243
+                            [byteSize] => 191572
+                            [thumbnailLink] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcH9Zh8FihXoKj2RTRWW1I9NYonNMO4VQVAskZcr1zMedvLuJZXMGfAfQ
+                            [thumbnailHeight] => 110
+                            [thumbnailWidth] => 150
+                        )
+
+                )
+
+            [1] => stdClass Object
+                (
+                    [kind] => customsearch#result
+                    [title] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlTitle] => Liberty Furniture Amelia Bedroom Collection
+                    [link] => https://www.bedroomfurniturediscounts.com/media/catalog/product/cache/1/image/de872f0ebe2788fbb19ed4dd7db27516/9/5/95995.jpg
+                    [displayLink] => www.bedroomfurniturediscounts.com
+                    [snippet] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlSnippet] => Liberty Furniture Amelia Bedroom Collection
+                    [mime] => image/jpeg
+                    [image] => stdClass Object
+                        (
+                            [contextLink] => https://www.bedroomfurniturediscounts.com/b/liberty-furniture/amelia-collection.html
+                            [height] => 1051
+                            [width] => 1243
+                            [byteSize] => 205858
+                            [thumbnailLink] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv6vLYYneUdgre8Rt34I7BGkepI2QBgJSsM_jpwMnLNVnip1D2HATNYFA9
+                            [thumbnailHeight] => 127
+                            [thumbnailWidth] => 150
+                        )
+
+                )
+
+            [2] => stdClass Object
+                (
+                    [kind] => customsearch#result
+                    [title] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlTitle] => Liberty Furniture Amelia Bedroom Collection
+                    [link] => https://www.bedroomfurniturediscounts.com/media/catalog/product/cache/1/thumbnail/161x161/de872f0ebe2788fbb19ed4dd7db27516/9/5/95973.jpg
+                    [displayLink] => www.bedroomfurniturediscounts.com
+                    [snippet] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlSnippet] => Liberty Furniture Amelia Bedroom Collection
+                    [mime] => image/jpeg
+                    [image] => stdClass Object
+                        (
+                            [contextLink] => https://www.bedroomfurniturediscounts.com/b/liberty-furniture/amelia-collection.html
+                            [height] => 161
+                            [width] => 161
+                            [byteSize] => 4530
+                            [thumbnailLink] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLD8jXkTvew5y4YXCLnwyE6RGJSeZHxeIjmqCG993Ann0JzuWYgtlFypg
+                            [thumbnailHeight] => 98
+                            [thumbnailWidth] => 98
+                        )
+
+                )
+
+            [3] => stdClass Object
+                (
+                    [kind] => customsearch#result
+                    [title] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlTitle] => Liberty Furniture Amelia Bedroom Collection
+                    [link] => https://www.bedroomfurniturediscounts.com/media/catalog/product/cache/1/thumbnail/161x161/de872f0ebe2788fbb19ed4dd7db27516/9/5/95976.jpg
+                    [displayLink] => www.bedroomfurniturediscounts.com
+                    [snippet] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlSnippet] => Liberty Furniture Amelia Bedroom Collection
+                    [mime] => image/jpeg
+                    [image] => stdClass Object
+                        (
+                            [contextLink] => https://www.bedroomfurniturediscounts.com/b/liberty-furniture/amelia-collection.html
+                            [height] => 161
+                            [width] => 161
+                            [byteSize] => 6224
+                            [thumbnailLink] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0OXb8rT7yi6ftKi3wuoy4xIeFpfIbn-fPxmNcPVcvMcoR7hEntZcuMQ
+                            [thumbnailHeight] => 98
+                            [thumbnailWidth] => 98
+                        )
+
+                )
+
+            [4] => stdClass Object
+                (
+                    [kind] => customsearch#result
+                    [title] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlTitle] => Liberty Furniture Amelia Bedroom Collection
+                    [link] => https://www.bedroomfurniturediscounts.com/media/catalog/product/cache/1/thumbnail/161x161/de872f0ebe2788fbb19ed4dd7db27516/9/5/95974.jpg
+                    [displayLink] => www.bedroomfurniturediscounts.com
+                    [snippet] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlSnippet] => Liberty Furniture Amelia Bedroom Collection
+                    [mime] => image/jpeg
+                    [image] => stdClass Object
+                        (
+                            [contextLink] => https://www.bedroomfurniturediscounts.com/b/liberty-furniture/amelia-collection.html
+                            [height] => 161
+                            [width] => 161
+                            [byteSize] => 5434
+                            [thumbnailLink] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScMmj7_nhm3qhuGarFlMX5cQbw7zY_xKUusWci8xbpYXSapBXToEF7yw
+                            [thumbnailHeight] => 98
+                            [thumbnailWidth] => 98
+                        )
+
+                )
+
+            [5] => stdClass Object
+                (
+                    [kind] => customsearch#result
+                    [title] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlTitle] => Liberty Furniture Amelia Bedroom Collection
+                    [link] => https://www.bedroomfurniturediscounts.com/media/catalog/product/cache/1/thumbnail/161x161/de872f0ebe2788fbb19ed4dd7db27516/9/5/95979.jpg
+                    [displayLink] => www.bedroomfurniturediscounts.com
+                    [snippet] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlSnippet] => Liberty Furniture Amelia Bedroom Collection
+                    [mime] => image/jpeg
+                    [image] => stdClass Object
+                        (
+                            [contextLink] => https://www.bedroomfurniturediscounts.com/b/liberty-furniture/amelia-collection.html
+                            [height] => 161
+                            [width] => 161
+                            [byteSize] => 4829
+                            [thumbnailLink] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnCNU3MKmFpIC7wEqx661pzgbkDxtRbAkL4UK0O2mbEuh5TKhWuNaJ2g
+                            [thumbnailHeight] => 98
+                            [thumbnailWidth] => 98
+                        )
+
+                )
+
+            [6] => stdClass Object
+                (
+                    [kind] => customsearch#result
+                    [title] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlTitle] => Liberty Furniture Amelia Bedroom Collection
+                    [link] => https://www.bedroomfurniturediscounts.com/media/catalog/product/cache/1/thumbnail/161x161/de872f0ebe2788fbb19ed4dd7db27516/9/5/95978.jpg
+                    [displayLink] => www.bedroomfurniturediscounts.com
+                    [snippet] => Liberty Furniture Amelia Bedroom Collection
+                    [htmlSnippet] => Liberty Furniture Amelia Bedroom Collection
+                    [mime] => image/jpeg
+                    [image] => stdClass Object
+                        (
+                            [contextLink] => https://www.bedroomfurniturediscounts.com/b/liberty-furniture/amelia-collection.html
+                            [height] => 161
+                            [width] => 161
+                            [byteSize] => 4327
+                            [thumbnailLink] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzrqlSl18Ldkmr3du_ZqGuwnFFu186D3Yoan5UuHy16MG-8HDvjy37jlQ
+                            [thumbnailHeight] => 98
+                            [thumbnailWidth] => 98
+                        )
+
+                )
+
+        )
+
+)

@@ -3,7 +3,6 @@ class Ccc_Practice_ClassoneController extends Mage_Adminhtml_Controller_Action
 {
 	public function indexAction()
     {
-
         //1. How you will prepare different types of queries and take a collection of rows in  object format and array format.
 
         $collection = Mage::getModel('product/product')->getCollection();
@@ -27,5 +26,4 @@ class Ccc_Practice_ClassoneController extends Mage_Adminhtml_Controller_Action
 
         die;
     }
-
 }

@@ -63,9 +63,24 @@
                 </practicegrid10>
                 <practicegrid11 translate="title" module="practice">
                     <title>Manage Csv File</title>
-                    <action>practice/adminhtml_csv/index</action>
+                    <action>practice/adminhtml_csvdirect/two</action>
                     <sort_order>0</sort_order>
                 </practicegrid11>
+                <!-- <practicegrid12 translate="title" module="practice">
+                    <title>Manage Csv File Using Magento</title>
+                    <action>practice/adminhtml_csvfile/index</action>
+                    <sort_order>0</sort_order>
+                </practicegrid12> -->
+                <practicegrid13 translate="title" module="practice">
+                    <title>Csv using core functions</title>
+                    <action>practice/adminhtml_csvcore</action>
+                    <sort_order>0</sort_order>
+                </practicegrid13>
+                 <practicegrid14 translate="title" module="practice">
+                    <title>Csv using library</title>
+                    <action>practice/adminhtml_csv</action>
+                    <sort_order>0</sort_order>
+                </practicegrid14>
             </children>
          </practice>
     </menu>
